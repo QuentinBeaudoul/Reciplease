@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Framework">
+      <Group
+         location = "container:"
+         name = "Interface">
+         <FileRef
+            location = "group:Frameworks/RSearch/RSearch.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Frameworks/RFavorite/RFavorite.xcodeproj">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Frameworks/RStorage/RStorage.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Frameworks/RNetwork/RNetwork.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Frameworks/RExtension/RExtension.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Reciplease/Reciplease.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
