@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23E13D5029CE07873300047F /* Pods_RSearch_RSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C09CE7C8AE81E5F066A1005 /* Pods_RSearch_RSearchTests.framework */; };
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
 		664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* RSearchTests.swift */; };
 		664B538827C8D1D800D9CEBF /* RSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B537C27C8D1D700D9CEBF /* RSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9B8DD8476F20F190E3469E8 /* Pods_RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0317BA1EAA2DCAF90F57CA82 /* Pods_RSearch.framework */; };
+		7366C5B3E1F996F6D1441377 /* Pods_RSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2315D899B386AF353D5BF79 /* Pods_RSearchTests.framework */; };
+		BBD65B710F4EA74F5B466652 /* Pods_Shared_RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C62F53773FC308FFE895EC2 /* Pods_Shared_RSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,16 +25,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0317BA1EAA2DCAF90F57CA82 /* Pods_RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16832CC7B388A294C88DD0E6 /* Pods-RSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearch.release.xcconfig"; path = "Target Support Files/Pods-RSearch/Pods-RSearch.release.xcconfig"; sourceTree = "<group>"; };
 		189D1983119624EA9E924E2B /* Pods-RSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearch.debug.xcconfig"; path = "Target Support Files/Pods-RSearch/Pods-RSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		1979A2B5C7840E86F08140DA /* Pods-RSearch-RSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearch-RSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-RSearch-RSearchTests/Pods-RSearch-RSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21597B74892F4818DFD620DC /* Pods-RSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-RSearchTests/Pods-RSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		447211399B56C86EB40010A6 /* Pods-Global-RSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RSearch.debug.xcconfig"; path = "Target Support Files/Pods-Global-RSearch/Pods-Global-RSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		44C717C5B9C7AC080A7CB9E7 /* Pods-Global-RSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RSearch.release.xcconfig"; path = "Target Support Files/Pods-Global-RSearch/Pods-Global-RSearch.release.xcconfig"; sourceTree = "<group>"; };
+		4C62F53773FC308FFE895EC2 /* Pods_Shared_RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B537927C8D1D700D9CEBF /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B537C27C8D1D700D9CEBF /* RSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSearch.h; sourceTree = "<group>"; };
 		664B538127C8D1D800D9CEBF /* RSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B538627C8D1D800D9CEBF /* RSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTests.swift; sourceTree = "<group>"; };
-		9C09CE7C8AE81E5F066A1005 /* Pods_RSearch_RSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSearch_RSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FCD35EB536C3AC8B2F67E71 /* Pods-Shared-RSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RSearch.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RSearch/Pods-Shared-RSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		A39FCFEBFF63A4D83DF90953 /* Pods-Shared-RSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RSearch.release.xcconfig"; path = "Target Support Files/Pods-Shared-RSearch/Pods-Shared-RSearch.release.xcconfig"; sourceTree = "<group>"; };
 		DB5F3A80869F158F20548A67 /* Pods-RSearch-RSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearch-RSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RSearch-RSearchTests/Pods-RSearch-RSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		F2315D899B386AF353D5BF79 /* Pods_RSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29DA7343B505BF2DDA9FFCB /* Pods-RSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RSearchTests/Pods-RSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9B8DD8476F20F190E3469E8 /* Pods_RSearch.framework in Frameworks */,
+				BBD65B710F4EA74F5B466652 /* Pods_Shared_RSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */,
-				23E13D5029CE07873300047F /* Pods_RSearch_RSearchTests.framework in Frameworks */,
+				7366C5B3E1F996F6D1441377 /* Pods_RSearchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,12 @@
 				16832CC7B388A294C88DD0E6 /* Pods-RSearch.release.xcconfig */,
 				1979A2B5C7840E86F08140DA /* Pods-RSearch-RSearchTests.debug.xcconfig */,
 				DB5F3A80869F158F20548A67 /* Pods-RSearch-RSearchTests.release.xcconfig */,
+				447211399B56C86EB40010A6 /* Pods-Global-RSearch.debug.xcconfig */,
+				44C717C5B9C7AC080A7CB9E7 /* Pods-Global-RSearch.release.xcconfig */,
+				21597B74892F4818DFD620DC /* Pods-RSearchTests.debug.xcconfig */,
+				F29DA7343B505BF2DDA9FFCB /* Pods-RSearchTests.release.xcconfig */,
+				6FCD35EB536C3AC8B2F67E71 /* Pods-Shared-RSearch.debug.xcconfig */,
+				A39FCFEBFF63A4D83DF90953 /* Pods-Shared-RSearch.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -109,8 +121,8 @@
 		F3E2B41DB9E9D94D00A81E77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0317BA1EAA2DCAF90F57CA82 /* Pods_RSearch.framework */,
-				9C09CE7C8AE81E5F066A1005 /* Pods_RSearch_RSearchTests.framework */,
+				F2315D899B386AF353D5BF79 /* Pods_RSearchTests.framework */,
+				4C62F53773FC308FFE895EC2 /* Pods_Shared_RSearch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +168,6 @@
 				664B537D27C8D1D800D9CEBF /* Sources */,
 				664B537E27C8D1D800D9CEBF /* Frameworks */,
 				664B537F27C8D1D800D9CEBF /* Resources */,
-				161E4562CC6C1A3B7F66EF11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,23 +234,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		161E4562CC6C1A3B7F66EF11 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RSearch-RSearchTests/Pods-RSearch-RSearchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RSearch-RSearchTests/Pods-RSearch-RSearchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSearch-RSearchTests/Pods-RSearch-RSearchTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		630C8029B999C33E0CF0ACAC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,7 +249,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RSearch-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Shared-RSearch-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -277,7 +271,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RSearch-RSearchTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RSearchTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -437,7 +431,7 @@
 		};
 		664B538C27C8D1D800D9CEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 189D1983119624EA9E924E2B /* Pods-RSearch.debug.xcconfig */;
+			baseConfigurationReference = 6FCD35EB536C3AC8B2F67E71 /* Pods-Shared-RSearch.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -467,7 +461,7 @@
 		};
 		664B538D27C8D1D800D9CEBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16832CC7B388A294C88DD0E6 /* Pods-RSearch.release.xcconfig */;
+			baseConfigurationReference = A39FCFEBFF63A4D83DF90953 /* Pods-Shared-RSearch.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -497,7 +491,7 @@
 		};
 		664B538F27C8D1D800D9CEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1979A2B5C7840E86F08140DA /* Pods-RSearch-RSearchTests.debug.xcconfig */;
+			baseConfigurationReference = 21597B74892F4818DFD620DC /* Pods-RSearchTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -514,7 +508,7 @@
 		};
 		664B539027C8D1D800D9CEBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB5F3A80869F158F20548A67 /* Pods-RSearch-RSearchTests.release.xcconfig */;
+			baseConfigurationReference = F29DA7343B505BF2DDA9FFCB /* Pods-RSearchTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

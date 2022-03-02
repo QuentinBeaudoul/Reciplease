@@ -1,43 +1,42 @@
 platform :ios, '15.2'
 workspace 'Reciplease.xcworkspace'
+
+abstract_target 'Shared' do
 use_frameworks!
 
-# Globale Pods
+	pod 'SwiftLint'
+	pod 'R.swift'
+	pod 'Alamofire'
 
-pod 'SwiftLint'
-pod 'R.swift'
-pod 'Alamofire'
+	target 'RSearch' do
+		project 'Frameworks/RSearch/RSearch.xcodeproj'
 
-###############
-
-target 'RExtension' do
-	project 'Frameworks/RExtension/RExtension.xcodeproj'
-end
-
-target 'RFavorite' do 
-	project 'Frameworks/RFavorite/RFavorite.xcodeporj'
-	
-	target 'RFavoriteTests' do
-		inherit! :complete
+		target 'RSearchTests' do
+                		inherit! :search_paths
+        		end
 	end
-end
 
-target 'RNetwork' do
-	project 'Frameworks/RNetwork/RNetwork.xcodeproj'
-end
+	target 'RFavorite' do 
+		project 'Frameworks/RFavorite/RFavorite.xcodeporj'		
+	
+		target 'RFavoriteTests' do
+			inherit! :search_paths
+		end
+	end
 
-target 'RSearch' do
-	project 'Frameworks/RSearch/RSearch.xcodeproj'
+	target 'RExtension' do
+		project 'Frameworks/RExtension/RExtension.xcodeproj'
+	end
 
-	target 'RSearchTests' do
-                inherit! :complete
-        end
-end
+	target 'RNetwork' do
+		project 'Frameworks/RNetwork/RNetwork.xcodeproj'
+	end
 
-target 'RStorage' do
-	project 'Frameworks/RStorage/RStorage.xcodeproj'
-end		
+	target 'RStorage' do
+		project 'Frameworks/RStorage/RStorage.xcodeproj'
+	end		
 
-target 'Reciplease' do
-	project 'Reciplease/Reciplease.xcodeproj'
+	target 'Reciplease' do
+		project 'Reciplease/Reciplease.xcodeproj'
+	end
 end

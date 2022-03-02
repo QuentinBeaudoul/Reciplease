@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61EA519D90F146324BD23700 /* Pods_RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3310FD68D31739B24624C9A /* Pods_RExtension.framework */; };
+		44427BD0FDD0533242649D59 /* Pods_Shared_RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852B23C837156A89FC54F2D4 /* Pods_Shared_RExtension.framework */; };
 		664B534C27C8CFBF00D9CEBF /* RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B534327C8CFBF00D9CEBF /* RExtension.framework */; };
 		664B535227C8CFBF00D9CEBF /* RExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B534627C8CFBF00D9CEBF /* RExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -23,12 +23,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0095E5B0E62AE1A272865055 /* Pods-Shared-RExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RExtension.release.xcconfig"; path = "Target Support Files/Pods-Shared-RExtension/Pods-Shared-RExtension.release.xcconfig"; sourceTree = "<group>"; };
+		0372498EDA09FAC85B5F263C /* Pods-Global-RExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RExtension.release.xcconfig"; path = "Target Support Files/Pods-Global-RExtension/Pods-Global-RExtension.release.xcconfig"; sourceTree = "<group>"; };
 		128A24357ABBF7FA589108C3 /* Pods-RExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RExtension.debug.xcconfig"; path = "Target Support Files/Pods-RExtension/Pods-RExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		5F4DA7050687B15C7D3AD2B7 /* Pods-RExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RExtension.release.xcconfig"; path = "Target Support Files/Pods-RExtension/Pods-RExtension.release.xcconfig"; sourceTree = "<group>"; };
 		664B534327C8CFBF00D9CEBF /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B534627C8CFBF00D9CEBF /* RExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RExtension.h; sourceTree = "<group>"; };
 		664B534B27C8CFBF00D9CEBF /* RExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3310FD68D31739B24624C9A /* Pods_RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852B23C837156A89FC54F2D4 /* Pods_Shared_RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94BA595C1310B57DCEAD65C0 /* Pods-Global-RExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RExtension.debug.xcconfig"; path = "Target Support Files/Pods-Global-RExtension/Pods-Global-RExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		F7CA36BE743F80CC7478595F /* Pods-Shared-RExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RExtension.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RExtension/Pods-Shared-RExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61EA519D90F146324BD23700 /* Pods_RExtension.framework in Frameworks */,
+				44427BD0FDD0533242649D59 /* Pods_Shared_RExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +58,7 @@
 		634F42E6B10466A3A1FC1D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3310FD68D31739B24624C9A /* Pods_RExtension.framework */,
+				852B23C837156A89FC54F2D4 /* Pods_Shared_RExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +95,10 @@
 			children = (
 				128A24357ABBF7FA589108C3 /* Pods-RExtension.debug.xcconfig */,
 				5F4DA7050687B15C7D3AD2B7 /* Pods-RExtension.release.xcconfig */,
+				94BA595C1310B57DCEAD65C0 /* Pods-Global-RExtension.debug.xcconfig */,
+				0372498EDA09FAC85B5F263C /* Pods-Global-RExtension.release.xcconfig */,
+				F7CA36BE743F80CC7478595F /* Pods-Shared-RExtension.debug.xcconfig */,
+				0095E5B0E62AE1A272865055 /* Pods-Shared-RExtension.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -217,7 +225,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RExtension-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Shared-RExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -376,7 +384,7 @@
 		};
 		664B535627C8CFBF00D9CEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 128A24357ABBF7FA589108C3 /* Pods-RExtension.debug.xcconfig */;
+			baseConfigurationReference = F7CA36BE743F80CC7478595F /* Pods-Shared-RExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -406,7 +414,7 @@
 		};
 		664B535727C8CFBF00D9CEBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F4DA7050687B15C7D3AD2B7 /* Pods-RExtension.release.xcconfig */;
+			baseConfigurationReference = 0095E5B0E62AE1A272865055 /* Pods-Shared-RExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

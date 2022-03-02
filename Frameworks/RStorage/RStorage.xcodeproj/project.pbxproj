@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54CF3E00E49570929E6F464A /* Pods_Shared_RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23CDD200C1D73B8AEC33293 /* Pods_Shared_RStorage.framework */; };
 		664B536927C8D0F100D9CEBF /* RStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B536827C8D0F100D9CEBF /* RStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		900FF87C2E1ABB9B6FDDBB6C /* Pods_RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E427E9310FCEC7F931EA69E /* Pods_RStorage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11AA04EC776BCFB898E50004 /* Pods-Shared-RStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RStorage.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RStorage/Pods-Shared-RStorage.debug.xcconfig"; sourceTree = "<group>"; };
 		2BE5BA63D8AF189831AB0E7A /* Pods-RStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RStorage.release.xcconfig"; path = "Target Support Files/Pods-RStorage/Pods-RStorage.release.xcconfig"; sourceTree = "<group>"; };
+		5B912B519B97618462BD34CC /* Pods-Global-RStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RStorage.debug.xcconfig"; path = "Target Support Files/Pods-Global-RStorage/Pods-Global-RStorage.debug.xcconfig"; sourceTree = "<group>"; };
 		664B536527C8D0F100D9CEBF /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B536827C8D0F100D9CEBF /* RStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RStorage.h; sourceTree = "<group>"; };
-		8E427E9310FCEC7F931EA69E /* Pods_RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6EA555E2395A89E59C3B86 /* Pods-RStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RStorage.debug.xcconfig"; path = "Target Support Files/Pods-RStorage/Pods-RStorage.debug.xcconfig"; sourceTree = "<group>"; };
+		B658CDD10E20FACECDC09C1D /* Pods-Shared-RStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RStorage.release.xcconfig"; path = "Target Support Files/Pods-Shared-RStorage/Pods-Shared-RStorage.release.xcconfig"; sourceTree = "<group>"; };
+		C23CDD200C1D73B8AEC33293 /* Pods_Shared_RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC864CA7D50265CEC2A93FA6 /* Pods-Global-RStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RStorage.release.xcconfig"; path = "Target Support Files/Pods-Global-RStorage/Pods-Global-RStorage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				900FF87C2E1ABB9B6FDDBB6C /* Pods_RStorage.framework in Frameworks */,
+				54CF3E00E49570929E6F464A /* Pods_Shared_RStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,7 +38,7 @@
 		15068E7D059E2104C2D96BB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8E427E9310FCEC7F931EA69E /* Pods_RStorage.framework */,
+				C23CDD200C1D73B8AEC33293 /* Pods_Shared_RStorage.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -70,6 +74,10 @@
 			children = (
 				AA6EA555E2395A89E59C3B86 /* Pods-RStorage.debug.xcconfig */,
 				2BE5BA63D8AF189831AB0E7A /* Pods-RStorage.release.xcconfig */,
+				5B912B519B97618462BD34CC /* Pods-Global-RStorage.debug.xcconfig */,
+				CC864CA7D50265CEC2A93FA6 /* Pods-Global-RStorage.release.xcconfig */,
+				11AA04EC776BCFB898E50004 /* Pods-Shared-RStorage.debug.xcconfig */,
+				B658CDD10E20FACECDC09C1D /* Pods-Shared-RStorage.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -166,7 +174,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RStorage-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Shared-RStorage-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,7 +318,7 @@
 		};
 		664B536D27C8D0F100D9CEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA6EA555E2395A89E59C3B86 /* Pods-RStorage.debug.xcconfig */;
+			baseConfigurationReference = 11AA04EC776BCFB898E50004 /* Pods-Shared-RStorage.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -339,7 +347,7 @@
 		};
 		664B536E27C8D0F100D9CEBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BE5BA63D8AF189831AB0E7A /* Pods-RStorage.release.xcconfig */;
+			baseConfigurationReference = B658CDD10E20FACECDC09C1D /* Pods-Shared-RStorage.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
