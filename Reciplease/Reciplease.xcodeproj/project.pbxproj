@@ -21,6 +21,8 @@
 		36D5825A95C33FD9E345E105 /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
 		4D7A145F80306173959A7919 /* Pods-Shared-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Shared-Reciplease/Pods-Shared-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
 		5C4394A44DA3C63C226413FE /* Pods-Reciplease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.debug.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.debug.xcconfig"; sourceTree = "<group>"; };
+		6610DDDC27CFAB66000E8942 /* RFavorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RFavorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6610DDDD27CFAB66000E8942 /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B52FE27C8CBBB00D9CEBF /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B530127C8CBBB00D9CEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		664B530327C8CBBB00D9CEBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		6DAB95028919428B9F0000CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6610DDDC27CFAB66000E8942 /* RFavorite.framework */,
+				6610DDDD27CFAB66000E8942 /* RSearch.framework */,
 				B3D1BA5F317C5D0B31047D9D /* Pods_Shared_Reciplease.framework */,
 			);
 			name = Frameworks;
@@ -112,6 +116,7 @@
 				664B52FB27C8CBBB00D9CEBF /* Frameworks */,
 				664B52FC27C8CBBB00D9CEBF /* Resources */,
 				BD6C5DAFC117899B8256FD01 /* [CP] Embed Pods Frameworks */,
+				662C5DA327CFA28A00B4B0AA /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -169,6 +174,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		662C5DA327CFA28A00B4B0AA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		7E9150ACD8FFB791AD535E8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

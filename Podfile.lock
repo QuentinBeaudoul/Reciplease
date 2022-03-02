@@ -3,7 +3,7 @@ PODS:
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
-  - SwiftLint (0.46.2)
+  - SwiftLint (0.46.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -21,8 +21,8 @@ SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
+  SwiftLint: ae76d82f056734f853c8cd0371503252c606c482
 
-PODFILE CHECKSUM: 11dd7d935374b23c217df5e428cb98ac2e5633a6
+PODFILE CHECKSUM: dc13e42138c09dcafbff1315adc24d3d5db1e441
 
 COCOAPODS: 1.11.2

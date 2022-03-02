@@ -12,7 +12,6 @@ use_frameworks!
 		project 'Frameworks/RSearch/RSearch.xcodeproj'
 
 		target 'RSearchTests' do
-                		inherit! :search_paths
         		end
 	end
 
@@ -20,7 +19,6 @@ use_frameworks!
 		project 'Frameworks/RFavorite/RFavorite.xcodeporj'		
 	
 		target 'RFavoriteTests' do
-			inherit! :search_paths
 		end
 	end
 

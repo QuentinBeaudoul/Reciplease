@@ -47,23 +47,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		662C5D9C27CF8BE300B4B0AA /* Ressource */ = {
+		662C5D9C27CF8BE300B4B0AA /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
 				662C5D9D27CF8BFA00B4B0AA /* R.generated.swift */,
 			);
-			name = Ressource;
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		662C5DA127CF8D9500B4B0AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		664B533927C8CFBF00D9CEBF = {
 			isa = PBXGroup;
 			children = (
 				662C5D9F27CF8C3600B4B0AA /* Assets.xcassets */,
-				662C5D9C27CF8BE300B4B0AA /* Ressource */,
-				664B534527C8CFBF00D9CEBF /* RExtension */,
-				664B534427C8CFBF00D9CEBF /* Products */,
-				6C563E721A00E73C9189A03E /* Pods */,
+				662C5DA127CF8D9500B4B0AA /* Classes */,
 				634F42E6B10466A3A1FC1D76 /* Frameworks */,
+				6C563E721A00E73C9189A03E /* Pods */,
+				664B534427C8CFBF00D9CEBF /* Products */,
+				662C5D9C27CF8BE300B4B0AA /* Ressources */,
+				664B534527C8CFBF00D9CEBF /* RExtension */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +125,7 @@
 			buildPhases = (
 				44C0255CFA325D31DA5CC946 /* [CP] Check Pods Manifest.lock */,
 				664B533E27C8CFBF00D9CEBF /* Headers */,
-				662C5D9B27CF8A5F00B4B0AA /* ShellScript */,
+				662C5D9B27CF8A5F00B4B0AA /* R.Swift */,
 				664B533F27C8CFBF00D9CEBF /* Sources */,
 				664B534027C8CFBF00D9CEBF /* Frameworks */,
 				664B534127C8CFBF00D9CEBF /* Resources */,
@@ -199,7 +207,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		662C5D9B27CF8A5F00B4B0AA /* ShellScript */ = {
+		662C5D9B27CF8A5F00B4B0AA /* R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -209,6 +217,7 @@
 			);
 			inputPaths = (
 			);
+			name = R.Swift;
 			outputFileListPaths = (
 			);
 			outputPaths = (

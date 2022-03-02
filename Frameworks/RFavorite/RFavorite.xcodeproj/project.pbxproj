@@ -11,7 +11,7 @@
 		664B53A427C8D20A00D9CEBF /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B539B27C8D20900D9CEBF /* RFavorite.framework */; };
 		664B53A927C8D20A00D9CEBF /* RFavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */; };
 		664B53AA27C8D20A00D9CEBF /* RFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B539E27C8D20900D9CEBF /* RFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E926202407872F32E47991D0 /* Pods_RFavoriteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AF976AD344D3B01FF33AB2 /* Pods_RFavoriteTests.framework */; };
+		9E074FEA112E7511E5631C69 /* Pods_Shared_RFavorite_RFavoriteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,8 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_RFavorite_RFavoriteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F7578E8C983AED1987D0D8 /* Pods-RFavorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFavorite.release.xcconfig"; path = "Target Support Files/Pods-RFavorite/Pods-RFavorite.release.xcconfig"; sourceTree = "<group>"; };
-		22AF976AD344D3B01FF33AB2 /* Pods_RFavoriteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RFavoriteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECB6EF0905882DADB33AE4D /* Pods-RFavorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFavorite.debug.xcconfig"; path = "Target Support Files/Pods-RFavorite/Pods-RFavorite.debug.xcconfig"; sourceTree = "<group>"; };
 		54ACFD1F447ED25D1B19FCD8 /* Pods-Shared-RFavorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite/Pods-Shared-RFavorite.debug.xcconfig"; sourceTree = "<group>"; };
 		663BA7E149EB9494FD1234FE /* Pods-Global-RFavorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RFavorite.release.xcconfig"; path = "Target Support Files/Pods-Global-RFavorite/Pods-Global-RFavorite.release.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +35,8 @@
 		664B53A327C8D20A00D9CEBF /* RFavoriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFavoriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFavoriteTests.swift; sourceTree = "<group>"; };
 		6CBB757D1FE8EE85B894174F /* Pods-Shared-RFavorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite.release.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite/Pods-Shared-RFavorite.release.xcconfig"; sourceTree = "<group>"; };
+		78BE5FA2DF2E2A07C5A390A6 /* Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81E42A8BF83B0534616FA4A7 /* Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig"; sourceTree = "<group>"; };
 		BDF7F7D45D09B30BD1B4367E /* Pods-RFavorite-RFavoriteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFavorite-RFavoriteTests.release.xcconfig"; path = "Target Support Files/Pods-RFavorite-RFavoriteTests/Pods-RFavorite-RFavoriteTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7ECCF994103AF6EA4A5B94F /* Pods-Global-RFavorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RFavorite.debug.xcconfig"; path = "Target Support Files/Pods-Global-RFavorite/Pods-Global-RFavorite.debug.xcconfig"; sourceTree = "<group>"; };
 		D9650E6B89600D98928E0C0C /* Pods-RFavorite-RFavoriteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFavorite-RFavoriteTests.debug.xcconfig"; path = "Target Support Files/Pods-RFavorite-RFavoriteTests/Pods-RFavorite-RFavoriteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				664B53A427C8D20A00D9CEBF /* RFavorite.framework in Frameworks */,
-				E926202407872F32E47991D0 /* Pods_RFavoriteTests.framework in Frameworks */,
+				9E074FEA112E7511E5631C69 /* Pods_Shared_RFavorite_RFavoriteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,8 @@
 				DE3002BAC776DA86A3124103 /* Pods-RFavoriteTests.release.xcconfig */,
 				54ACFD1F447ED25D1B19FCD8 /* Pods-Shared-RFavorite.debug.xcconfig */,
 				6CBB757D1FE8EE85B894174F /* Pods-Shared-RFavorite.release.xcconfig */,
+				78BE5FA2DF2E2A07C5A390A6 /* Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig */,
+				81E42A8BF83B0534616FA4A7 /* Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -121,8 +125,8 @@
 		BE2E03DC5666EB202044F2C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				22AF976AD344D3B01FF33AB2 /* Pods_RFavoriteTests.framework */,
 				E73D49C6ACA0E2C5DFB84022 /* Pods_Shared_RFavorite.framework */,
+				002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 				664B539F27C8D20A00D9CEBF /* Sources */,
 				664B53A027C8D20A00D9CEBF /* Frameworks */,
 				664B53A127C8D20A00D9CEBF /* Resources */,
+				1AA23778351CEC352A5CDD22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +239,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1AA23778351CEC352A5CDD22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BF1FFD5857394403B1B8CEBF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,7 +271,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RFavoriteTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Shared-RFavorite-RFavoriteTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -491,7 +513,7 @@
 		};
 		664B53B127C8D20A00D9CEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF1EDC4C1E8A00D70A6BB2ED /* Pods-RFavoriteTests.debug.xcconfig */;
+			baseConfigurationReference = 78BE5FA2DF2E2A07C5A390A6 /* Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -508,7 +530,7 @@
 		};
 		664B53B227C8D20A00D9CEBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE3002BAC776DA86A3124103 /* Pods-RFavoriteTests.release.xcconfig */;
+			baseConfigurationReference = 81E42A8BF83B0534616FA4A7 /* Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
