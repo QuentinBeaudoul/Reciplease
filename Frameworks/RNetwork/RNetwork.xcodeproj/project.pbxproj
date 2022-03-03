@@ -10,6 +10,8 @@
 		664B532427C8CE2000D9CEBF /* RNetwork.docc in Sources */ = {isa = PBXBuildFile; fileRef = 664B532327C8CE2000D9CEBF /* RNetwork.docc */; };
 		664B532A27C8CE2000D9CEBF /* RNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B531F27C8CE2000D9CEBF /* RNetwork.framework */; };
 		664B533027C8CE2000D9CEBF /* RNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B532227C8CE2000D9CEBF /* RNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66FD4A9827D10735002F9525 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4A9727D10735002F9525 /* NetworkManager.swift */; };
+		66FD4A9B27D107B3002F9525 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4A9A27D107B3002F9525 /* Service.swift */; };
 		8EE4981E78D19D9D12919734 /* Pods_Shared_RNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E85BBBE63E8EF0184B85D5B /* Pods_Shared_RNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		664B532227C8CE2000D9CEBF /* RNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNetwork.h; sourceTree = "<group>"; };
 		664B532327C8CE2000D9CEBF /* RNetwork.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RNetwork.docc; sourceTree = "<group>"; };
 		664B532927C8CE2000D9CEBF /* RNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FD4A9727D10735002F9525 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		66FD4A9A27D107B3002F9525 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7C8B0A9CA6581C62D8BED96F /* Pods-Shared-RNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RNetwork.release.xcconfig"; path = "Target Support Files/Pods-Shared-RNetwork/Pods-Shared-RNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		CE51B6F9A8C5601E07F2CEBB /* Pods-RNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNetwork.release.xcconfig"; path = "Target Support Files/Pods-RNetwork/Pods-RNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		D0C90E2FCFEFBA5D80376033 /* Pods-Shared-RNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RNetwork.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RNetwork/Pods-Shared-RNetwork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		664B531527C8CE2000D9CEBF = {
 			isa = PBXGroup;
 			children = (
+				66FD4A9527D106E0002F9525 /* Classes */,
 				664B532127C8CE2000D9CEBF /* RNetwork */,
 				664B532027C8CE2000D9CEBF /* Products */,
 				C101FEAAA7FA81327469C0EC /* Pods */,
@@ -91,6 +96,31 @@
 				664B532327C8CE2000D9CEBF /* RNetwork.docc */,
 			);
 			path = RNetwork;
+			sourceTree = "<group>";
+		};
+		66FD4A9527D106E0002F9525 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4A9927D1077A002F9525 /* Services */,
+				66FD4A9627D1071F002F9525 /* Managers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		66FD4A9627D1071F002F9525 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4A9727D10735002F9525 /* NetworkManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		66FD4A9927D1077A002F9525 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4A9A27D107B3002F9525 /* Service.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C101FEAAA7FA81327469C0EC /* Pods */ = {
@@ -242,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FD4A9827D10735002F9525 /* NetworkManager.swift in Sources */,
 				664B532427C8CE2000D9CEBF /* RNetwork.docc in Sources */,
+				66FD4A9B27D107B3002F9525 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +481,7 @@
 		664B533727C8CE2000D9CEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
@@ -465,6 +498,7 @@
 		664B533827C8CE2000D9CEBF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
