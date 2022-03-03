@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eAi-Bd-qxz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SMb-Pq-LXk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5f-2N-Zgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="eAi-Bd-qxz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TDd-oh-PVq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ziW-PP-sPc" kind="relationship" relationship="rootViewController" id="uIJ-at-s9L"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-207" y="86"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="82e-t9-OI5">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="ziW-PP-sPc" customClass="SearchViewController" customModule="RSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odw-aH-hmt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Search]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-Lv-FeW">
+                                <rect key="frame" x="174.5" y="437.5" width="65.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Phh-3B-fDT"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="hNi-Lv-FeW" firstAttribute="centerX" secondItem="odw-aH-hmt" secondAttribute="centerX" id="2l0-AV-XoF"/>
+                            <constraint firstItem="hNi-Lv-FeW" firstAttribute="centerY" secondItem="odw-aH-hmt" secondAttribute="centerY" id="dBF-nB-Oqa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rJz-NZ-5po"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDr-jR-Ehg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

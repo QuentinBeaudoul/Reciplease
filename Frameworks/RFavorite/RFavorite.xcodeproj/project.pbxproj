@@ -11,6 +11,10 @@
 		664B53A427C8D20A00D9CEBF /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B539B27C8D20900D9CEBF /* RFavorite.framework */; };
 		664B53A927C8D20A00D9CEBF /* RFavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */; };
 		664B53AA27C8D20A00D9CEBF /* RFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B539E27C8D20900D9CEBF /* RFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66FD4AA927D11719002F9525 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4AA827D11719002F9525 /* Favorite.storyboard */; };
+		66FD4AAB27D11729002F9525 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AAA27D11729002F9525 /* FavoriteViewController.swift */; };
+		66FD4AAD27D1173A002F9525 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AAC27D1173A002F9525 /* FavoriteViewModel.swift */; };
+		66FD4ABB27D11D71002F9525 /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4ABA27D11D71002F9525 /* FavoriteManager.swift */; };
 		9E074FEA112E7511E5631C69 /* Pods_Shared_RFavorite_RFavoriteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		664B539E27C8D20900D9CEBF /* RFavorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFavorite.h; sourceTree = "<group>"; };
 		664B53A327C8D20A00D9CEBF /* RFavoriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFavoriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFavoriteTests.swift; sourceTree = "<group>"; };
+		66FD4AA827D11719002F9525 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		66FD4AAA27D11729002F9525 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		66FD4AAC27D1173A002F9525 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		66FD4ABA27D11D71002F9525 /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		6CBB757D1FE8EE85B894174F /* Pods-Shared-RFavorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite.release.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite/Pods-Shared-RFavorite.release.xcconfig"; sourceTree = "<group>"; };
 		78BE5FA2DF2E2A07C5A390A6 /* Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81E42A8BF83B0534616FA4A7 /* Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig"; path = "Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 		664B539127C8D20900D9CEBF = {
 			isa = PBXGroup;
 			children = (
+				66FD4AA527D116F0002F9525 /* Classes */,
 				664B539D27C8D20900D9CEBF /* RFavorite */,
 				664B53A727C8D20A00D9CEBF /* RFavoriteTests */,
 				664B539C27C8D20900D9CEBF /* Products */,
@@ -120,6 +129,41 @@
 				664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */,
 			);
 			path = RFavoriteTests;
+			sourceTree = "<group>";
+		};
+		66FD4AA527D116F0002F9525 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4AB927D11D52002F9525 /* Managers */,
+				66FD4AA627D116F8002F9525 /* Interface */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		66FD4AA627D116F8002F9525 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4AA727D11707002F9525 /* Favorite */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		66FD4AA727D11707002F9525 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4AA827D11719002F9525 /* Favorite.storyboard */,
+				66FD4AAA27D11729002F9525 /* FavoriteViewController.swift */,
+				66FD4AAC27D1173A002F9525 /* FavoriteViewModel.swift */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		66FD4AB927D11D52002F9525 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				66FD4ABA27D11D71002F9525 /* FavoriteManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		BE2E03DC5666EB202044F2C6 /* Frameworks */ = {
@@ -196,6 +240,7 @@
 				TargetAttributes = {
 					664B539A27C8D20900D9CEBF = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					664B53A227C8D20A00D9CEBF = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -226,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FD4AA927D11719002F9525 /* Favorite.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FD4ABB27D11D71002F9525 /* FavoriteManager.swift in Sources */,
+				66FD4AAD27D1173A002F9525 /* FavoriteViewModel.swift in Sources */,
+				66FD4AAB27D11729002F9525 /* FavoriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54ACFD1F447ED25D1B19FCD8 /* Pods-Shared-RFavorite.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -476,6 +526,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -485,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CBB757D1FE8EE85B894174F /* Pods-Shared-RFavorite.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -515,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78BE5FA2DF2E2A07C5A390A6 /* Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
@@ -532,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81E42A8BF83B0534616FA4A7 /* Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
