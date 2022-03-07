@@ -11,6 +11,8 @@
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
 		664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* RSearchTests.swift */; };
 		664B538827C8D1D800D9CEBF /* RSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B537C27C8D1D700D9CEBF /* RSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0CE27D6085B0062302B /* Constantes.swift */; };
+		66A2F0D427D612030062302B /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D327D612030062302B /* RequestParams.swift */; };
 		66FD4AA027D1150B002F9525 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4A9F27D1150B002F9525 /* Search.storyboard */; };
 		66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA127D11520002F9525 /* SearchViewController.swift */; };
 		66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA327D11531002F9525 /* SearchViewModel.swift */; };
@@ -41,6 +43,8 @@
 		664B537C27C8D1D700D9CEBF /* RSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSearch.h; sourceTree = "<group>"; };
 		664B538127C8D1D800D9CEBF /* RSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B538627C8D1D800D9CEBF /* RSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTests.swift; sourceTree = "<group>"; };
+		66A2F0CE27D6085B0062302B /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
+		66A2F0D327D612030062302B /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		66FD4A9F27D1150B002F9525 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		66FD4AA127D11520002F9525 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		66FD4AA327D11531002F9525 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -111,9 +115,43 @@
 			path = RSearchTests;
 			sourceTree = "<group>";
 		};
+		66A2F0CD27D6084A0062302B /* Constantes */ = {
+			isa = PBXGroup;
+			children = (
+				66A2F0CE27D6085B0062302B /* Constantes.swift */,
+			);
+			name = Constantes;
+			sourceTree = "<group>";
+		};
+		66A2F0D027D60F690062302B /* Modèles */ = {
+			isa = PBXGroup;
+			children = (
+				66A2F0D227D60FF10062302B /* Responses */,
+				66A2F0D127D60FE80062302B /* Requests */,
+			);
+			name = "Modèles";
+			sourceTree = "<group>";
+		};
+		66A2F0D127D60FE80062302B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				66A2F0D327D612030062302B /* RequestParams.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		66A2F0D227D60FF10062302B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
 		66FD4A9C27D114CE002F9525 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				66A2F0D027D60F690062302B /* Modèles */,
+				66A2F0CD27D6084A0062302B /* Constantes */,
 				66FD4AAE27D118DD002F9525 /* Managers */,
 				66FD4A9D27D114E2002F9525 /* Interface */,
 			);
@@ -354,6 +392,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66FD4AB027D118F5002F9525 /* SearchManager.swift in Sources */,
+				66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */,
+				66A2F0D427D612030062302B /* RequestParams.swift in Sources */,
 				66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */,
 				66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */,
 			);
