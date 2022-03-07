@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import RExtension
 
 class SplashViewController: UIViewController {
+
+    @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        imageView.image = R.image.icone(compatibleWith: traitCollection)
+
         // TODO: Faire le chargement des favoris présent en mémoire ici
 
         // TODO: Supprimer ça
