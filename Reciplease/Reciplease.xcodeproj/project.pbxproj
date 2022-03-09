@@ -13,24 +13,24 @@
 		664B530927C8CBBB00D9CEBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664B530727C8CBBB00D9CEBF /* Main.storyboard */; };
 		664B530B27C8CBBD00D9CEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664B530A27C8CBBD00D9CEBF /* Assets.xcassets */; };
 		664B530E27C8CBBD00D9CEBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664B530C27C8CBBD00D9CEBF /* LaunchScreen.storyboard */; };
-		66FD4ABE27D11F23002F9525 /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD4ABC27D11F23002F9525 /* RFavorite.framework */; };
-		66FD4ABF27D11F23002F9525 /* RFavorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD4ABC27D11F23002F9525 /* RFavorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		66FD4AC027D11F23002F9525 /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD4ABD27D11F23002F9525 /* RSearch.framework */; };
-		66FD4AC127D11F23002F9525 /* RSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD4ABD27D11F23002F9525 /* RSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6691BD8B27D8C8B100BA527D /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8A27D8C8B100BA527D /* RSearch.framework */; };
+		6691BD8C27D8C8B100BA527D /* RSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8A27D8C8B100BA527D /* RSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6691BD9927D8C94800BA527D /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9827D8C94800BA527D /* RFavorite.framework */; };
+		6691BD9A27D8C94800BA527D /* RFavorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9827D8C94800BA527D /* RFavorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66FD4AC527D1226C002F9525 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4AC427D1226C002F9525 /* Splash.storyboard */; };
 		66FD4AC727D122BD002F9525 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AC627D122BD002F9525 /* SplashViewController.swift */; };
 		AADAFD66CCE5232ACBA31785 /* Pods_Shared_Reciplease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D1BA5F317C5D0B31047D9D /* Pods_Shared_Reciplease.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		66FD4AC227D11F23002F9525 /* Embed Frameworks */ = {
+		6691BD8D27D8C8B200BA527D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				66FD4ABF27D11F23002F9525 /* RFavorite.framework in Embed Frameworks */,
-				66FD4AC127D11F23002F9525 /* RSearch.framework in Embed Frameworks */,
+				6691BD8C27D8C8B100BA527D /* RSearch.framework in Embed Frameworks */,
+				6691BD9A27D8C94800BA527D /* RFavorite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +52,8 @@
 		664B530A27C8CBBD00D9CEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664B530D27C8CBBD00D9CEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		664B530F27C8CBBD00D9CEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6691BD8A27D8C8B100BA527D /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6691BD9827D8C94800BA527D /* RFavorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RFavorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD4ABC27D11F23002F9525 /* RFavorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RFavorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD4ABD27D11F23002F9525 /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD4AC427D1226C002F9525 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -66,9 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FD4AC027D11F23002F9525 /* RSearch.framework in Frameworks */,
 				AADAFD66CCE5232ACBA31785 /* Pods_Shared_Reciplease.framework in Frameworks */,
-				66FD4ABE27D11F23002F9525 /* RFavorite.framework in Frameworks */,
+				6691BD8B27D8C8B100BA527D /* RSearch.framework in Frameworks */,
+				6691BD9927D8C94800BA527D /* RFavorite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,8 @@
 		6DAB95028919428B9F0000CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6691BD9827D8C94800BA527D /* RFavorite.framework */,
+				6691BD8A27D8C8B100BA527D /* RSearch.framework */,
 				66FD4ABC27D11F23002F9525 /* RFavorite.framework */,
 				66FD4ABD27D11F23002F9525 /* RSearch.framework */,
 				6610DDDC27CFAB66000E8942 /* RFavorite.framework */,
@@ -173,7 +177,7 @@
 				664B52FC27C8CBBB00D9CEBF /* Resources */,
 				BD6C5DAFC117899B8256FD01 /* [CP] Embed Pods Frameworks */,
 				662C5DA327CFA28A00B4B0AA /* SwiftLint */,
-				66FD4AC227D11F23002F9525 /* Embed Frameworks */,
+				6691BD8D27D8C8B200BA527D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

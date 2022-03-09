@@ -38,6 +38,7 @@
 		664B539E27C8D20900D9CEBF /* RFavorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFavorite.h; sourceTree = "<group>"; };
 		664B53A327C8D20A00D9CEBF /* RFavoriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFavoriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFavoriteTests.swift; sourceTree = "<group>"; };
+		6691BD8627D8C37800BA527D /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD4AA827D11719002F9525 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		66FD4AAA27D11729002F9525 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		66FD4AAC27D1173A002F9525 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		BE2E03DC5666EB202044F2C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6691BD8627D8C37800BA527D /* RExtension.framework */,
 				E73D49C6ACA0E2C5DFB84022 /* Pods_Shared_RFavorite.framework */,
 				002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */,
 			);
@@ -586,7 +588,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78BE5FA2DF2E2A07C5A390A6 /* Pods-Shared-RFavorite-RFavoriteTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
@@ -604,7 +605,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81E42A8BF83B0534616FA4A7 /* Pods-Shared-RFavorite-RFavoriteTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;

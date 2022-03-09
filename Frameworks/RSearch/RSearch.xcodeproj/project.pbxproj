@@ -11,8 +11,12 @@
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
 		664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* RSearchTests.swift */; };
 		664B538827C8D1D800D9CEBF /* RSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B537C27C8D1D700D9CEBF /* RSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6691BD8027D8B8F200BA527D /* RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD7F27D8B8F200BA527D /* RStorage.framework */; };
-		6691BD8127D8B8F200BA527D /* RStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD7F27D8B8F200BA527D /* RStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6691BD8F27D8C8FF00BA527D /* RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8E27D8C8FF00BA527D /* RExtension.framework */; };
+		6691BD9027D8C8FF00BA527D /* RExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8E27D8C8FF00BA527D /* RExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6691BD9327D8C91400BA527D /* RNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9227D8C91400BA527D /* RNetwork.framework */; };
+		6691BD9427D8C91400BA527D /* RNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9227D8C91400BA527D /* RNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6691BD9627D8C92A00BA527D /* RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9527D8C92A00BA527D /* RStorage.framework */; };
+		6691BD9727D8C92A00BA527D /* RStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9527D8C92A00BA527D /* RStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0CE27D6085B0062302B /* Constantes.swift */; };
 		66A2F0D427D612030062302B /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D327D612030062302B /* RequestParams.swift */; };
 		66A2F0D627D6439B0062302B /* ResponseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D527D6439B0062302B /* ResponseContainer.swift */; };
@@ -35,13 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6691BD8227D8B8F200BA527D /* Embed Frameworks */ = {
+		6691BD9127D8C8FF00BA527D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6691BD8127D8B8F200BA527D /* RStorage.framework in Embed Frameworks */,
+				6691BD9727D8C92A00BA527D /* RStorage.framework in Embed Frameworks */,
+				6691BD9427D8C91400BA527D /* RNetwork.framework in Embed Frameworks */,
+				6691BD9027D8C8FF00BA527D /* RExtension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +68,9 @@
 		664B538127C8D1D800D9CEBF /* RSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B538627C8D1D800D9CEBF /* RSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTests.swift; sourceTree = "<group>"; };
 		6691BD7F27D8B8F200BA527D /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6691BD8E27D8C8FF00BA527D /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6691BD9227D8C91400BA527D /* RNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6691BD9527D8C92A00BA527D /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A2F0CE27D6085B0062302B /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		66A2F0D327D612030062302B /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		66A2F0D527D6439B0062302B /* ResponseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseContainer.swift; sourceTree = "<group>"; };
@@ -84,7 +93,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD65B710F4EA74F5B466652 /* Pods_Shared_RSearch.framework in Frameworks */,
-				6691BD8027D8B8F200BA527D /* RStorage.framework in Frameworks */,
+				6691BD9627D8C92A00BA527D /* RStorage.framework in Frameworks */,
+				6691BD8F27D8C8FF00BA527D /* RExtension.framework in Frameworks */,
+				6691BD9327D8C91400BA527D /* RNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +250,9 @@
 		F3E2B41DB9E9D94D00A81E77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6691BD9527D8C92A00BA527D /* RStorage.framework */,
+				6691BD9227D8C91400BA527D /* RNetwork.framework */,
+				6691BD8E27D8C8FF00BA527D /* RExtension.framework */,
 				6691BD7F27D8B8F200BA527D /* RStorage.framework */,
 				4C62F53773FC308FFE895EC2 /* Pods_Shared_RSearch.framework */,
 				B7216192C701981B5C8FB5BC /* Pods_Shared_RSearch_RSearchTests.framework */,
@@ -269,8 +283,8 @@
 				664B537527C8D1D700D9CEBF /* Sources */,
 				664B537627C8D1D700D9CEBF /* Frameworks */,
 				664B537727C8D1D700D9CEBF /* Resources */,
-				6691BD8227D8B8F200BA527D /* Embed Frameworks */,
 				6691BD8427D8B9CE00BA527D /* SwiftLint */,
+				6691BD9127D8C8FF00BA527D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -662,7 +676,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F42243C911A2B742F327652 /* Pods-Shared-RSearch-RSearchTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
@@ -680,7 +693,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 353E9A9340524FCA8E675DEA /* Pods-Shared-RSearch-RSearchTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3B6726E3X;
