@@ -7,15 +7,20 @@
 
 import Foundation
 
-class RecipeContainer: Decodable {
+public class RecipeContainer: Decodable {
     let recipe: Recipe?
+    private(set) var isVavorite: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case recipe
     }
 
-    required init(from decoder: Decoder) throws {
+    public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         recipe = try container.decodeIfPresent(Recipe.self, forKey: .recipe)
+    }
+
+    public func changeFavorite() {
+        isVavorite = !isVavorite
     }
 }

@@ -19,7 +19,8 @@ class ResponseLinks: Decodable {
     }
 
     required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self).nestedContainer(keyedBy: UrlsKeys.self, forKey: .next)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+            .nestedContainer(keyedBy: UrlsKeys.self, forKey: .next)
         nextPage = try container.decodeIfPresent(String.self, forKey: .href)
     }
 }

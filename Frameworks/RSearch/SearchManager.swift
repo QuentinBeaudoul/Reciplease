@@ -10,14 +10,13 @@ import UIKit
 import RExtension
 import RNetwork
 
-
 protocol SearchManagerProtocol {
     func fetchRecipes(search: RequestParams, completion: @escaping (Result<ResponseContainer?, Error>) -> Void)
     func fetchNextPage(withUrl url: String, completion: @escaping (Result<ResponseContainer?, Error>) -> Void)
 }
 
 public final class SearchManager: SearchManagerProtocol {
-    
+
     public static let shared = SearchManager()
 
     private let networkManager: NetworkManagerProtocol
@@ -25,10 +24,12 @@ public final class SearchManager: SearchManagerProtocol {
     private init(networkManager: NetworkManagerProtocol = NetworkManager.shared) {
         self.networkManager = networkManager
     }
-    
+
     public func getViewController() -> UIViewController {
         let viewController = SearchViewController.makeFromStoryboard(in: Bundle(for: Self.self))
-        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "magnifyingglass.circle"), selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
+        viewController.tabBarItem = UITabBarItem(title: "",
+                                                 image: UIImage(systemName: "magnifyingglass.circle"),
+                                                 selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
         return viewController
     }
 
@@ -44,7 +45,8 @@ public final class SearchManager: SearchManagerProtocol {
         handleResult(url: url, params: nil, completion: completion)
     }
 
-    private func handleResult(url: String, params: [String: Any]?, completion: @escaping (Result<ResponseContainer?, Error>) -> Void) {
+    private func handleResult(url: String, params: [String: Any]?,
+                              completion: @escaping (Result<ResponseContainer?, Error>) -> Void) {
 
         networkManager.fetchData(url: url, headers: nil, parameters: params, parser: ResponseContainer.self) { result in
             switch result {

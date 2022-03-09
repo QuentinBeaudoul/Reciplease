@@ -40,7 +40,7 @@ class SearchViewModel {
 
         manager.fetchNextPage(withUrl: getNextPage()) { result in
             switch result {
-                
+
             case .success(let container):
 
                 if let container = container {

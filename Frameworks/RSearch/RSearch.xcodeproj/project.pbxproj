@@ -11,15 +11,12 @@
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
 		664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* RSearchTests.swift */; };
 		664B538827C8D1D800D9CEBF /* RSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B537C27C8D1D700D9CEBF /* RSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6691BD8027D8B8F200BA527D /* RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD7F27D8B8F200BA527D /* RStorage.framework */; };
+		6691BD8127D8B8F200BA527D /* RStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD7F27D8B8F200BA527D /* RStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0CE27D6085B0062302B /* Constantes.swift */; };
 		66A2F0D427D612030062302B /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D327D612030062302B /* RequestParams.swift */; };
 		66A2F0D627D6439B0062302B /* ResponseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D527D6439B0062302B /* ResponseContainer.swift */; };
 		66A2F0D827D647420062302B /* ResponseLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D727D647420062302B /* ResponseLinks.swift */; };
-		66A2F0DB27D648FD0062302B /* RecipeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0DA27D648FD0062302B /* RecipeContainer.swift */; };
-		66A2F0DD27D64A260062302B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0DC27D64A260062302B /* Recipe.swift */; };
-		66A2F0E027D64BD70062302B /* RecipeImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0DF27D64BD70062302B /* RecipeImageContainer.swift */; };
-		66A2F0E227D64BFE0062302B /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0E127D64BFE0062302B /* RecipeImage.swift */; };
-		66A2F0E427D652900062302B /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0E327D652900062302B /* RecipeIngredient.swift */; };
 		66FD4AA027D1150B002F9525 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4A9F27D1150B002F9525 /* Search.storyboard */; };
 		66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA127D11520002F9525 /* SearchViewController.swift */; };
 		66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA327D11531002F9525 /* SearchViewModel.swift */; };
@@ -37,6 +34,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6691BD8227D8B8F200BA527D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6691BD8127D8B8F200BA527D /* RStorage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		16832CC7B388A294C88DD0E6 /* Pods-RSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearch.release.xcconfig"; path = "Target Support Files/Pods-RSearch/Pods-RSearch.release.xcconfig"; sourceTree = "<group>"; };
 		189D1983119624EA9E924E2B /* Pods-RSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSearch.debug.xcconfig"; path = "Target Support Files/Pods-RSearch/Pods-RSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,15 +61,11 @@
 		664B537C27C8D1D700D9CEBF /* RSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSearch.h; sourceTree = "<group>"; };
 		664B538127C8D1D800D9CEBF /* RSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B538627C8D1D800D9CEBF /* RSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTests.swift; sourceTree = "<group>"; };
+		6691BD7F27D8B8F200BA527D /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A2F0CE27D6085B0062302B /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		66A2F0D327D612030062302B /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		66A2F0D527D6439B0062302B /* ResponseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseContainer.swift; sourceTree = "<group>"; };
 		66A2F0D727D647420062302B /* ResponseLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLinks.swift; sourceTree = "<group>"; };
-		66A2F0DA27D648FD0062302B /* RecipeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeContainer.swift; sourceTree = "<group>"; };
-		66A2F0DC27D64A260062302B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		66A2F0DF27D64BD70062302B /* RecipeImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImageContainer.swift; sourceTree = "<group>"; };
-		66A2F0E127D64BFE0062302B /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
-		66A2F0E327D652900062302B /* RecipeIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
 		66FD4A9F27D1150B002F9525 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		66FD4AA127D11520002F9525 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		66FD4AA327D11531002F9525 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD65B710F4EA74F5B466652 /* Pods_Shared_RSearch.framework in Frameworks */,
+				6691BD8027D8B8F200BA527D /* RStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,21 +175,8 @@
 		66A2F0D927D648EB0062302B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				66A2F0DE27D64BC60062302B /* Images */,
-				66A2F0DA27D648FD0062302B /* RecipeContainer.swift */,
-				66A2F0DC27D64A260062302B /* Recipe.swift */,
-				66A2F0E327D652900062302B /* RecipeIngredient.swift */,
 			);
 			name = Recipes;
-			sourceTree = "<group>";
-		};
-		66A2F0DE27D64BC60062302B /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				66A2F0DF27D64BD70062302B /* RecipeImageContainer.swift */,
-				66A2F0E127D64BFE0062302B /* RecipeImage.swift */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		66FD4A9C27D114CE002F9525 /* Classes */ = {
@@ -244,6 +239,7 @@
 		F3E2B41DB9E9D94D00A81E77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6691BD7F27D8B8F200BA527D /* RStorage.framework */,
 				4C62F53773FC308FFE895EC2 /* Pods_Shared_RSearch.framework */,
 				B7216192C701981B5C8FB5BC /* Pods_Shared_RSearch_RSearchTests.framework */,
 			);
@@ -273,6 +269,8 @@
 				664B537527C8D1D700D9CEBF /* Sources */,
 				664B537627C8D1D700D9CEBF /* Frameworks */,
 				664B537727C8D1D700D9CEBF /* Resources */,
+				6691BD8227D8B8F200BA527D /* Embed Frameworks */,
+				6691BD8427D8B9CE00BA527D /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -382,6 +380,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6691BD8427D8B9CE00BA527D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		F3B47D722754E01F7A4084E5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,14 +446,9 @@
 			files = (
 				66FD4AB027D118F5002F9525 /* SearchManager.swift in Sources */,
 				66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */,
-				66A2F0E427D652900062302B /* RecipeIngredient.swift in Sources */,
-				66A2F0E227D64BFE0062302B /* RecipeImage.swift in Sources */,
 				66A2F0D827D647420062302B /* ResponseLinks.swift in Sources */,
-				66A2F0DB27D648FD0062302B /* RecipeContainer.swift in Sources */,
 				66A2F0D427D612030062302B /* RequestParams.swift in Sources */,
 				66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */,
-				66A2F0DD27D64A260062302B /* Recipe.swift in Sources */,
-				66A2F0E027D64BD70062302B /* RecipeImageContainer.swift in Sources */,
 				66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */,
 				66A2F0D627D6439B0062302B /* ResponseContainer.swift in Sources */,
 			);

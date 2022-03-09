@@ -12,10 +12,12 @@ import RExtension
 public final class FavoriteManager {
     public static let shared = FavoriteManager()
     private init() {}
-    
+
     public func getViewController() -> UIViewController {
         let viewController = FavoriteViewController.makeFromStoryboard(in: Bundle(for: Self.self))
-        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "star.circle"), selectedImage: UIImage(systemName: "star.circle.fill"))
+        viewController.tabBarItem = UITabBarItem(title: "",
+                                                 image: UIImage(systemName: "star.circle"),
+                                                 selectedImage: UIImage(systemName: "star.circle.fill"))
         return viewController
     }
 }

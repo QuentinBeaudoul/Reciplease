@@ -198,6 +198,7 @@
 				664B539727C8D20900D9CEBF /* Sources */,
 				664B539827C8D20900D9CEBF /* Frameworks */,
 				664B539927C8D20900D9CEBF /* Resources */,
+				6691BD8527D8B9F500BA527D /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -301,6 +302,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shared-RFavorite-RFavoriteTests/Pods-Shared-RFavorite-RFavoriteTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6691BD8527D8B9F500BA527D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		BF1FFD5857394403B1B8CEBF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
