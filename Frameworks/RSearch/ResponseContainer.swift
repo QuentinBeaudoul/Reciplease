@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RStorage
 
 class ResponseContainer: Decodable {
     let from: Int

@@ -6,12 +6,9 @@
 //
 
 import Foundation
+import CoreData
 
-class RecipeImageContainer: Decodable {
-    let thumbnail: RecipeImage?
-    let small: RecipeImage?
-    let regular: RecipeImage?
-    let large: RecipeImage?
+public class RecipeImageContainer: NSManagedObject, Decodable {
 
     enum CodingKeys: String, CodingKey {
         case thumbnail = "THUMBNAIL"
@@ -20,7 +17,13 @@ class RecipeImageContainer: Decodable {
         case large = "LARGE"
     }
 
-    required init(from decoder: Decoder) throws {
+    public required convenience init(from decoder: Decoder) throws {
+
+        guard let context = decoder.userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext else {
+            throw DecoderConfigurationError.missingManagedObjectContext
+        }
+        self.init(context: context)
+
         let container = try decoder.container(keyedBy: CodingKeys.self)
         thumbnail = try container.decodeIfPresent(RecipeImage.self, forKey: .thumbnail)
         small = try container.decodeIfPresent(RecipeImage.self, forKey: .small)

@@ -11,6 +11,8 @@
 		664B53A427C8D20A00D9CEBF /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B539B27C8D20900D9CEBF /* RFavorite.framework */; };
 		664B53A927C8D20A00D9CEBF /* RFavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */; };
 		664B53AA27C8D20A00D9CEBF /* RFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B539E27C8D20900D9CEBF /* RFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6691BDAE27D8E7DA00BA527D /* RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDAD27D8E7DA00BA527D /* RExtension.framework */; };
+		6691BDAF27D8E7DA00BA527D /* RExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDAD27D8E7DA00BA527D /* RExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66FD4AA927D11719002F9525 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4AA827D11719002F9525 /* Favorite.storyboard */; };
 		66FD4AAB27D11729002F9525 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AAA27D11729002F9525 /* FavoriteViewController.swift */; };
 		66FD4AAD27D1173A002F9525 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AAC27D1173A002F9525 /* FavoriteViewModel.swift */; };
@@ -28,6 +30,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6691BDB027D8E7DA00BA527D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6691BDAF27D8E7DA00BA527D /* RExtension.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_RFavorite_RFavoriteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F7578E8C983AED1987D0D8 /* Pods-RFavorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFavorite.release.xcconfig"; path = "Target Support Files/Pods-RFavorite/Pods-RFavorite.release.xcconfig"; sourceTree = "<group>"; };
@@ -39,6 +55,7 @@
 		664B53A327C8D20A00D9CEBF /* RFavoriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFavoriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B53A827C8D20A00D9CEBF /* RFavoriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFavoriteTests.swift; sourceTree = "<group>"; };
 		6691BD8627D8C37800BA527D /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6691BDAD27D8E7DA00BA527D /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD4AA827D11719002F9525 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		66FD4AAA27D11729002F9525 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		66FD4AAC27D1173A002F9525 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -60,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63961B1017376EF8D58F30EF /* Pods_Shared_RFavorite.framework in Frameworks */,
+				6691BDAE27D8E7DA00BA527D /* RExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +188,7 @@
 		BE2E03DC5666EB202044F2C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6691BDAD27D8E7DA00BA527D /* RExtension.framework */,
 				6691BD8627D8C37800BA527D /* RExtension.framework */,
 				E73D49C6ACA0E2C5DFB84022 /* Pods_Shared_RFavorite.framework */,
 				002EEB1C90DA3A666AA13B2C /* Pods_Shared_RFavorite_RFavoriteTests.framework */,
@@ -201,6 +220,7 @@
 				664B539827C8D20900D9CEBF /* Frameworks */,
 				664B539927C8D20900D9CEBF /* Resources */,
 				6691BD8527D8B9F500BA527D /* SwiftLint */,
+				6691BDB027D8E7DA00BA527D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

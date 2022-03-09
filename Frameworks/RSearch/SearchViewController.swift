@@ -15,14 +15,14 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        viewModel.fetchRecipes(keywords: "Salad") { result in
-//            switch result {
-//
-//            case .success():
-//                print("Success")
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        viewModel.fetchRecipes(keywords: "Salad") { result in
+            switch result {
+
+            case .success():
+                print("Success")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

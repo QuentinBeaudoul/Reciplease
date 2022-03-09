@@ -35,13 +35,9 @@ use_frameworks!
 
 	target 'RStorage' do
 		project 'Frameworks/RStorage/RStorage.xcodeproj'
-
-		pod 'CoreStore'
 	end		
 
 	target 'Reciplease' do
 		project 'Reciplease/Reciplease.xcodeproj'
-		
-		pod 'CoreStore'
 	end
 end

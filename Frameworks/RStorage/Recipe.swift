@@ -1,18 +1,14 @@
 //
 //  Recipe.swift
-//  RSearch
+//  RStorage
 //
 //  Created by Quentin on 07/03/2022.
 //
 
 import Foundation
+import CoreData
 
-class Recipe: Decodable {
-    let label: String
-    let imageUrl: String?
-    let images: RecipeImageContainer
-    let ingredients: [RecipeIngredient]
-    let totalTime: Double
+public class Recipe: NSManagedObject, Decodable {
 
     enum CodingKeys: String, CodingKey {
         case label
@@ -22,7 +18,14 @@ class Recipe: Decodable {
         case totalTime
     }
 
-    required init(from decoder: Decoder) throws {
+    public required convenience init(from decoder: Decoder) throws {
+
+        guard let context = decoder.userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext else {
+            throw DecoderConfigurationError.missingManagedObjectContext
+        }
+        
+        self.init(context: context)
+
         let container = try decoder.container(keyedBy: CodingKeys.self)
         label = try container.decode(String.self, forKey: .label)
         imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
