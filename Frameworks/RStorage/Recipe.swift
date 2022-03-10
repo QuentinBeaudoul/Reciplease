@@ -29,4 +29,13 @@ public class Recipe: NSManagedObject, Decodable {
         ingredients = try container.decode([RecipeIngredient].self, forKey: .ingredients)
         totalTime = try container.decode(Double.self, forKey: .totalTime)
     }
+
+    func copy(from recipe: Recipe) {
+        self.label = recipe.label
+        self.imageUrl = recipe.imageUrl
+        self.images = recipe.images
+        self.isFavorite = recipe.isFavorite
+        self.ingredients = recipe.ingredients
+        self.totalTime = recipe.totalTime
+    }
 }

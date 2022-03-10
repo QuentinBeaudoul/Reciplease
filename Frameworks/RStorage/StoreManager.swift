@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import Alamofire
 
 protocol StoreProtocol {
 
@@ -37,5 +38,33 @@ public final class StoreManager: StoreProtocol {
 
     var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
+    }
+
+    public func saveRecipe(_ recipe: Recipe) -> Bool {
+        let context = viewContext
+
+        let recipeToSave = Recipe(context: viewContext)
+        
+        recipeToSave.copy(from: recipe)
+
+        do {
+            try context.save()
+            return true
+        } catch {
+            return false
+        }
+    }
+
+    public func fetchRecipes(completion: (Result<[Recipe]?, Error>) -> Void) {
+
+        let request = Recipe.fetchRequest()
+
+        do {
+            let recipes = try viewContext.fetch(request)
+            
+            completion(.success(recipes))
+        } catch let error {
+            completion(.failure(error))
+        }
     }
 }
