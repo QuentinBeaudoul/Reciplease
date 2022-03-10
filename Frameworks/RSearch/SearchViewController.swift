@@ -18,10 +18,10 @@ class SearchViewController: UIViewController {
         viewModel.fetchRecipes(keywords: "Salad") { result in
             switch result {
 
-            case .success():
-                print("Success")
             case .failure(let error):
                 print(error)
+            default:
+                print("Success")
             }
         }
     }

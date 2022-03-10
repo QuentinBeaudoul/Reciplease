@@ -17,21 +17,25 @@ public final class StoreManager: StoreProtocol {
 
     private init() {}
 
+    private let modelName = "Reciplease"
+    private let modelBundle = Bundle(identifier: "Quentin.Beaudoul.RStorage")
+
     private lazy var persistentContainer: NSPersistentContainer = {
-      let container = NSPersistentContainer(name: "Reciplease")
-      container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-        if let error = error as NSError? {
-          fatalError("Unresolved error \(error), \(error.userInfo)")
-        }
-      })
-      return container
+
+        let model = modelBundle!.url(forResource: modelName, withExtension: "momd")!
+        let managedObject = NSManagedObjectModel(contentsOf: model)
+        let container = NSPersistentContainer(name: modelName, managedObjectModel: managedObject!)
+
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+
+        return container
     }()
 
     var viewContext: NSManagedObjectContext {
-        return StoreManager.shared.persistentContainer.viewContext
+        return persistentContainer.viewContext
     }
-}
-
-enum DecoderConfigurationError: Error {
-  case missingManagedObjectContext
 }
