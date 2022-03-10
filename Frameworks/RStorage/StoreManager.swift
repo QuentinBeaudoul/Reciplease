@@ -27,13 +27,9 @@ public final class StoreManager: StoreProtocol {
       return container
     }()
 
-    private var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
+    var viewContext: NSManagedObjectContext {
+        return StoreManager.shared.persistentContainer.viewContext
     }
-}
-
-extension CodingUserInfoKey {
-  static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")!
 }
 
 enum DecoderConfigurationError: Error {

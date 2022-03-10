@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class RecipeImage: NSManagedObject, Decodable {
+public class RecipeImage: NSManagedObject, Decodable {
 
     enum CodingKeys: String, CodingKey {
         case url
@@ -16,12 +16,9 @@ class RecipeImage: NSManagedObject, Decodable {
         case height
     }
 
-    required convenience init(from decoder: Decoder) throws {
+    public required convenience init(from decoder: Decoder) throws {
 
-        guard let context = decoder.userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext else {
-            throw DecoderConfigurationError.missingManagedObjectContext
-        }
-        self.init(context: context)
+        self.init(context: StoreManager.shared.viewContext)
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
         url = try container.decode(String.self, forKey: .url)

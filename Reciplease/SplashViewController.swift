@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
         // TODO: Faire le chargement des favoris présent en mémoire ici
 
         // TODO: Supprimer ça
-        let seconds = 4.0
+        let seconds = 2.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             // Put your code which should be executed with a delay here
             let mainVC = MainTabbarController.makeFromStoryboard("Main")
