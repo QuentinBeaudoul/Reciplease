@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
+  - LoadableViews (3.6.1)
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -7,22 +8,25 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - LoadableViews
   - R.swift
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - LoadableViews
     - R.swift
     - R.swift.Library
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  LoadableViews: 9af367c30a6fd96cf62275db64b7b1568e3bd0ac
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SwiftLint: 2c16e8fa99dac2e440dc0c70ea74d2532048f6cf
 
-PODFILE CHECKSUM: d35c1fd71199732e68921f5dc9d4360d3b001b65
+PODFILE CHECKSUM: 3e462fd6f30080f825c1584827d8634560091f05
 
 COCOAPODS: 1.11.2

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eAi-Bd-qxz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,51 +12,181 @@
         <!--Navigation Controller-->
         <scene sceneID="SMb-Pq-LXk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s5f-2N-Zgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="eAi-Bd-qxz" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SearchNavViewController" id="eAi-Bd-qxz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TDd-oh-PVq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="20"/>
+                            <color key="textColor" name="onBackground"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ziW-PP-sPc" kind="relationship" relationship="rootViewController" id="uIJ-at-s9L"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5f-2N-Zgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207" y="86"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="82e-t9-OI5">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="ziW-PP-sPc" customClass="SearchViewController" customModule="RSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="odw-aH-hmt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Search]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-Lv-FeW">
-                                <rect key="frame" x="174.5" y="437.5" width="65.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySY-8h-jhs" userLabel="Search View">
+                                <rect key="frame" x="0.0" y="44" width="320" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's in your fridge ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpi-9F-wgb">
+                                        <rect key="frame" x="16" y="16" width="288" height="24"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                        <color key="textColor" name="onPrimaryContainer"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lemon, Cheese, Sausages..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jpY-8n-iEQ">
+                                        <rect key="frame" x="16" y="56" width="232" height="48"/>
+                                        <color key="backgroundColor" name="primaryContainer"/>
+                                        <color key="tintColor" name="onPrimaryContainer"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="LBe-ql-19n"/>
+                                        </constraints>
+                                        <color key="textColor" name="onPrimaryContainer"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="search"/>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZy-XE-GPC">
+                                        <rect key="frame" x="256" y="56" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FZy-XE-GPC" secondAttribute="height" multiplier="1:1" id="adX-M7-qZo"/>
+                                            <constraint firstAttribute="height" constant="48" id="xuk-U3-yMQ"/>
+                                        </constraints>
+                                        <color key="tintColor" name="primary"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addCriteriaTapped" destination="ziW-PP-sPc" eventType="touchUpInside" id="Bzt-ai-8Vt"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-4e-vX5" userLabel="Separator View">
+                                        <rect key="frame" x="16" y="106" width="288" height="1"/>
+                                        <color key="backgroundColor" name="onPrimaryContainer"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="euU-28-qME"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryContainer"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cpi-9F-wgb" secondAttribute="trailing" constant="16" id="0HO-RQ-TZv"/>
+                                    <constraint firstAttribute="bottom" secondItem="FZy-XE-GPC" secondAttribute="bottom" constant="24" id="3dP-AC-TRT"/>
+                                    <constraint firstItem="FZy-XE-GPC" firstAttribute="leading" secondItem="jpY-8n-iEQ" secondAttribute="trailing" constant="8" id="4Fm-5A-0SJ"/>
+                                    <constraint firstItem="cpi-9F-wgb" firstAttribute="top" secondItem="ySY-8h-jhs" secondAttribute="top" constant="16" id="BuG-fn-PQ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="FZy-XE-GPC" secondAttribute="trailing" constant="16" id="MEG-PZ-DEJ"/>
+                                    <constraint firstItem="FZy-XE-GPC" firstAttribute="trailing" secondItem="5tq-4e-vX5" secondAttribute="trailing" id="Ml1-le-tfD"/>
+                                    <constraint firstAttribute="bottom" secondItem="jpY-8n-iEQ" secondAttribute="bottom" constant="24" id="WWH-DM-RCY"/>
+                                    <constraint firstItem="cpi-9F-wgb" firstAttribute="leading" secondItem="ySY-8h-jhs" secondAttribute="leading" constant="16" id="aRC-Mh-0M8"/>
+                                    <constraint firstItem="5tq-4e-vX5" firstAttribute="top" secondItem="jpY-8n-iEQ" secondAttribute="bottom" constant="2" id="bWj-Pp-XIh"/>
+                                    <constraint firstAttribute="height" constant="128" id="eej-Dg-MTo"/>
+                                    <constraint firstItem="jpY-8n-iEQ" firstAttribute="leading" secondItem="ySY-8h-jhs" secondAttribute="leading" constant="16" id="gLq-ga-GV9"/>
+                                    <constraint firstItem="jpY-8n-iEQ" firstAttribute="leading" secondItem="5tq-4e-vX5" secondAttribute="leading" id="pzM-u1-375"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="N0S-Gr-b9Z">
+                                <rect key="frame" x="0.0" y="172" width="320" height="316"/>
+                                <color key="backgroundColor" name="background"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="AP6-Xw-je8" customClass="HeaderView" customModule="RSearch" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ins-xr-NKo">
+                                <rect key="frame" x="16" y="504" width="288" height="48"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Tjv-ZM-dRH"/>
+                                </constraints>
+                                <color key="tintColor" name="onPrimary"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" imagePlacement="leading" title="Search for recipes" imagePadding="12">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchForRecipeTapped" destination="ziW-PP-sPc" eventType="touchUpInside" id="Zqv-zR-aYG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Phh-3B-fDT"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
-                            <constraint firstItem="hNi-Lv-FeW" firstAttribute="centerX" secondItem="odw-aH-hmt" secondAttribute="centerX" id="2l0-AV-XoF"/>
-                            <constraint firstItem="hNi-Lv-FeW" firstAttribute="centerY" secondItem="odw-aH-hmt" secondAttribute="centerY" id="dBF-nB-Oqa"/>
+                            <constraint firstItem="Phh-3B-fDT" firstAttribute="trailing" secondItem="ySY-8h-jhs" secondAttribute="trailing" id="1gk-Qn-tsI"/>
+                            <constraint firstItem="Phh-3B-fDT" firstAttribute="bottom" secondItem="Ins-xr-NKo" secondAttribute="bottom" constant="16" id="FmY-b7-WCE"/>
+                            <constraint firstItem="N0S-Gr-b9Z" firstAttribute="leading" secondItem="Phh-3B-fDT" secondAttribute="leading" id="GOG-Sd-HH7"/>
+                            <constraint firstItem="ySY-8h-jhs" firstAttribute="top" secondItem="Phh-3B-fDT" secondAttribute="top" id="T7d-h4-duk"/>
+                            <constraint firstItem="Ins-xr-NKo" firstAttribute="leading" secondItem="Phh-3B-fDT" secondAttribute="leading" constant="16" id="aip-D8-e5Y"/>
+                            <constraint firstItem="ySY-8h-jhs" firstAttribute="leading" secondItem="Phh-3B-fDT" secondAttribute="leading" id="fF2-eH-UvF"/>
+                            <constraint firstItem="Ins-xr-NKo" firstAttribute="top" secondItem="N0S-Gr-b9Z" secondAttribute="bottom" constant="16" id="fH1-sJ-GfK"/>
+                            <constraint firstItem="N0S-Gr-b9Z" firstAttribute="top" secondItem="ySY-8h-jhs" secondAttribute="bottom" id="hw4-Q8-N8M"/>
+                            <constraint firstItem="Phh-3B-fDT" firstAttribute="trailing" secondItem="N0S-Gr-b9Z" secondAttribute="trailing" id="jX7-Im-wg5"/>
+                            <constraint firstItem="Phh-3B-fDT" firstAttribute="trailing" secondItem="Ins-xr-NKo" secondAttribute="trailing" constant="16" id="rPu-0m-m8F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rJz-NZ-5po"/>
+                    <navigationItem key="navigationItem" title="Search" id="rJz-NZ-5po"/>
+                    <connections>
+                        <outlet property="addCriteriaButton" destination="FZy-XE-GPC" id="H98-Z1-vYD"/>
+                        <outlet property="editText" destination="jpY-8n-iEQ" id="suz-I2-wv1"/>
+                        <outlet property="headerView" destination="AP6-Xw-je8" id="Jli-rF-Xae"/>
+                        <outlet property="searchButton" destination="Ins-xr-NKo" id="gG8-k9-9zs"/>
+                        <outlet property="tableView" destination="N0S-Gr-b9Z" id="bSd-FA-Prh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDr-jR-Ehg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="86"/>
+            <point key="canvasLocation" x="693.75" y="85.563380281690144"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="background">
+            <color red="0.97399997711181641" green="0.90200001001358032" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onBackground">
+            <color red="0.11999999731779099" green="0.1080000028014183" blue="0.086999997496604919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onPrimaryContainer">
+            <color red="0.16899999976158142" green="0.090999998152256012" blue="0.008999999612569809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.52999997138977051" green="0.32499998807907104" blue="0.0010000000474974513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryContainer">
+            <color red="1" green="0.86599999666213989" blue="0.71200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

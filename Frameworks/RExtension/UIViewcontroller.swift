@@ -9,9 +9,9 @@ import UIKit
 
 public extension UIViewController {
     
-    class func makeFromStoryboard(_ storyboardName: String? = nil, withTitle title: String? = nil, in bundle: Bundle? = nil) -> UIViewController {
+    class func makeFromStoryboard(_ storyboardName: String? = nil, withTitle title: String? = nil, withIdentifier identifier: String? = nil, in bundle: Bundle? = nil) -> UIViewController {
         let vc = UIStoryboard(name: storyboardName ?? String(describing: self).replacingOccurrences(of: "ViewController", with: ""),
-                              bundle: bundle).instantiateViewController(withIdentifier: String(describing: self))
+                              bundle: bundle).instantiateViewController(withIdentifier: identifier ?? String(describing: self))
         vc.title = title
         return vc
     }

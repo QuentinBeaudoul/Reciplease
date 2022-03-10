@@ -12,6 +12,8 @@ use_frameworks!
 	target 'RSearch' do
 		project 'Frameworks/RSearch/RSearch.xcodeproj'
 
+		pod 'LoadableViews'
+
 		target 'RSearchTests' do
 			inherit! :complete
         		end
@@ -20,6 +22,8 @@ use_frameworks!
 	target 'RFavorite' do 
 		project 'Frameworks/RFavorite/RFavorite.xcodeporj'		
 	
+		pod 'LoadableViews'
+
 		target 'RFavoriteTests' do
 			inherit! :complete
 		end
@@ -38,6 +42,7 @@ use_frameworks!
 	end		
 
 	target 'Reciplease' do
+		pod 'LoadableViews'
 		project 'Reciplease/Reciplease.xcodeproj'
 	end
 end

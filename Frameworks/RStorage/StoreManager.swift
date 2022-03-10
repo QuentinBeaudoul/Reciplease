@@ -61,7 +61,7 @@ public final class StoreManager: StoreProtocol {
 
         do {
             let recipes = try viewContext.fetch(request)
-            
+
             completion(.success(recipes))
         } catch let error {
             completion(.failure(error))

@@ -6,55 +6,29 @@
 //
 
 import Foundation
+import RStorage
 
 class SearchViewModel {
 
-    private let manager: SearchManagerProtocol
+    private(set) var keywords = [String]()
 
-    init(manager: SearchManagerProtocol = SearchManager.shared) {
-        self.manager = manager
+    func removeAll() {
+        keywords.removeAll()
     }
 
-    private(set) var container: ResponseContainer?
-
-    func fetchRecipes(keywords: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        let request = RequestParams(search: keywords)
-
-        manager.fetchRecipes(search: request) { result in
-            switch result {
-
-            case .success(let container):
-
-                if let container = container {
-                    self.container = container
-                    completion(.success())
-                }
-            case .failure(let error):
-
-                completion(.failure(error))
-            }
-        }
+    func remove(at indexPath: IndexPath) {
+        keywords.remove(at: indexPath.row)
     }
 
-    func fetchNextPage(completion: @escaping (Result<Void, Error>) -> Void) {
-
-        manager.fetchNextPage(withUrl: getNextPage()) { result in
-            switch result {
-
-            case .success(let container):
-
-                if let container = container {
-                    self.container = container
-                    completion(.success())
-                }
-            case .failure(let error):
-
-                completion(.failure(error))
-            }
-        }
+    func add(newElement element: String) {
+        keywords.append(element)
     }
 
-    func getNextPage() -> String {
-        return container?.links?.nextPage ?? ""
+    func getKeyword(at indexPath: IndexPath) -> String {
+        return keywords[indexPath.row]
+    }
+
+    func getNumberOfItems() -> Int {
+        return keywords.count
     }
 }

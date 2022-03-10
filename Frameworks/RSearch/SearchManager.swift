@@ -26,11 +26,16 @@ public final class SearchManager: SearchManagerProtocol {
     }
 
     public func getViewController() -> UIViewController {
-        let viewController = SearchViewController.makeFromStoryboard(in: Bundle(for: Self.self))
-        viewController.tabBarItem = UITabBarItem(title: "",
+
+        let navController = UINavigationController.makeFromStoryboard("Search",
+                                                                      withIdentifier: "SearchNavViewController",
+                                                                      in: Bundle(for: Self.self))
+
+        navController.tabBarItem = UITabBarItem(title: "",
                                                  image: UIImage(systemName: "magnifyingglass.circle"),
                                                  selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
-        return viewController
+
+        return navController
     }
 
     func fetchRecipes(search: RequestParams, completion: @escaping (Result<ResponseContainer?, Error>) -> Void) {

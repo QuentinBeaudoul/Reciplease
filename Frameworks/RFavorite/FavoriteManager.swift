@@ -14,10 +14,14 @@ public final class FavoriteManager {
     private init() {}
 
     public func getViewController() -> UIViewController {
-        let viewController = FavoriteViewController.makeFromStoryboard(in: Bundle(for: Self.self))
-        viewController.tabBarItem = UITabBarItem(title: "",
+
+        let navController = UINavigationController.makeFromStoryboard("Favorite",
+                                                                      withIdentifier: "FavNavViewController",
+                                                                      in: Bundle(for: Self.self))
+
+        navController.tabBarItem = UITabBarItem(title: "",
                                                  image: UIImage(systemName: "star.circle"),
                                                  selectedImage: UIImage(systemName: "star.circle.fill"))
-        return viewController
+        return navController
     }
 }
