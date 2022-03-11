@@ -22,6 +22,7 @@
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
+                            <color key="textColor" name="onBackground"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -209,7 +210,9 @@
                             <constraint firstItem="DjQ-cX-8Gg" firstAttribute="top" secondItem="Phh-3B-fDT" secondAttribute="top" id="ucE-iA-Vwl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="rJz-NZ-5po"/>
+                    <navigationItem key="navigationItem" title="Search" id="rJz-NZ-5po">
+                        <barButtonItem key="backBarButtonItem" title="My Criterias" id="vju-38-L8Q"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="addCriteriaButton" destination="FZy-XE-GPC" id="H98-Z1-vYD"/>
                         <outlet property="editText" destination="jpY-8n-iEQ" id="suz-I2-wv1"/>
@@ -225,6 +228,7 @@
             <point key="canvasLocation" x="693.75" y="85.563380281690144"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="primary"/>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>

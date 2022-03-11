@@ -108,11 +108,20 @@ class SearchViewController: UIViewController {
 
     @IBAction func searchForRecipeTapped() {
         loadingScreen?.show()
+        viewModel.fetchRecipes(keywords: viewModel.getKeywordsFormatted()) { [self] result in
+            loadingScreen?.hide()
+            switch result {
+            case .success(let container):
+                guard let resultVC = SearchResultViewController.makeFromStoryboard(in: Bundle(for: Self.self))
+                        as? SearchResultViewController else { return }
 
-        guard let resultVC = SearchResultViewController.makeFromStoryboard() as? SearchResultViewController else {
-            return
+                resultVC.viewModel.loadData(container: container)
+
+                navigationController?.pushViewController(resultVC, animated: true)
+            case .failure(let error):
+                print(error)
+            }
         }
-        
     }
 
     @IBAction func errorViewTapped() {

@@ -12,6 +12,7 @@
 		662C5DA027CF8C3600B4B0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662C5D9F27CF8C3600B4B0AA /* Assets.xcassets */; };
 		664B535227C8CFBF00D9CEBF /* RExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B534627C8CFBF00D9CEBF /* RExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6660CD8427DB67A800010717 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660CD8327DB67A800010717 /* UIApplication.swift */; };
+		6660CD8E27DBA42800010717 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660CD8D27DBA42800010717 /* Gradient.swift */; };
 		66A6F71827DA59A90030717F /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6F71727DA59A90030717F /* UITableViewCell+Identifier.swift */; };
 		66FD4AB227D11996002F9525 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AB127D11996002F9525 /* UIView.swift */; };
 		66FD4AB427D119CE002F9525 /* UIViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AB327D119CE002F9525 /* UIViewcontroller.swift */; };
@@ -28,6 +29,7 @@
 		664B534327C8CFBF00D9CEBF /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B534627C8CFBF00D9CEBF /* RExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RExtension.h; sourceTree = "<group>"; };
 		6660CD8327DB67A800010717 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		6660CD8D27DBA42800010717 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		66A6F71727DA59A90030717F /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		66FD4AB127D11996002F9525 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		66FD4AB327D119CE002F9525 /* UIViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontroller.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		662C5DA127CF8D9500B4B0AA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6660CD8A27DB972C00010717 /* Interface */,
 				66FD4AB127D11996002F9525 /* UIView.swift */,
 				66FD4AB327D119CE002F9525 /* UIViewcontroller.swift */,
 				66FD4AB727D11B3B002F9525 /* Result.swift */,
@@ -104,6 +107,14 @@
 				664B534627C8CFBF00D9CEBF /* RExtension.h */,
 			);
 			path = RExtension;
+			sourceTree = "<group>";
+		};
+		6660CD8A27DB972C00010717 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				6660CD8D27DBA42800010717 /* Gradient.swift */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 		6C563E721A00E73C9189A03E /* Pods */ = {
@@ -252,6 +263,7 @@
 				6660CD8427DB67A800010717 /* UIApplication.swift in Sources */,
 				66A6F71827DA59A90030717F /* UITableViewCell+Identifier.swift in Sources */,
 				66FD4AB227D11996002F9525 /* UIView.swift in Sources */,
+				6660CD8E27DBA42800010717 /* Gradient.swift in Sources */,
 				662C5D9E27CF8BFA00B4B0AA /* R.generated.swift in Sources */,
 				66FD4AB827D11B3B002F9525 /* Result.swift in Sources */,
 				66FD4AB427D119CE002F9525 /* UIViewcontroller.swift in Sources */,

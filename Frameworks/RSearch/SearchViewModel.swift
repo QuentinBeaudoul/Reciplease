@@ -7,10 +7,16 @@
 
 import Foundation
 import RStorage
+import RNetwork
 
 class SearchViewModel {
 
     private(set) var keywords = [String]()
+    private let manager: SearchManagerProtocol
+
+    init(manager: SearchManagerProtocol = SearchManager.shared) {
+        self.manager = manager
+    }
 
     func removeAll() {
         keywords.removeAll()
@@ -28,11 +34,33 @@ class SearchViewModel {
         return keywords[indexPath.row]
     }
 
+    func getKeywordsFormatted() -> String {
+        return keywords.formatted()
+    }
+
     func getNumberOfItems() -> Int {
         return keywords.count
     }
 
     func isKeywordValid(_ keyword: String) -> Bool {
         return keyword.range(of: ".*[^A-Za-z0-9\\s].*", options: .regularExpression) == nil
+    }
+
+    func fetchRecipes(keywords: String, completion: @escaping (Result<ResponseContainer, Error>) -> Void) {
+        let request = RequestParams(search: keywords)
+
+        manager.fetchRecipes(search: request) { result in
+            switch result {
+
+            case .success(let container):
+
+                if let container = container {
+                    completion(.success(container))
+                }
+            case .failure(let error):
+
+                completion(.failure(error))
+            }
+        }
     }
 }

@@ -6,33 +6,33 @@
 //
 
 import Foundation
+import RStorage
 
 class SearchResultViewModel {
 
     private let manager: SearchManagerProtocol
 
+    private(set) var container: ResponseContainer?
+    private(set) var recipes = [Recipe]()
+
+    private var isFavorite: Bool = false
+
     init(manager: SearchManagerProtocol = SearchManager.shared) {
         self.manager = manager
     }
 
-    private(set) var container: ResponseContainer?
+    func loadData(isFavorite: Bool = false, container: ResponseContainer? = nil, recipes: [Recipe]? = nil) {
 
-    func fetchRecipes(keywords: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        let request = RequestParams(search: keywords)
+        self.isFavorite = isFavorite
 
-        manager.fetchRecipes(search: request) { result in
-            switch result {
+        if let container = container, let recipes = container.recipes, !isFavorite {
+            self.container = container
+            self.recipes = recipes
+        }
 
-            case .success(let container):
-
-                if let container = container {
-                    self.container = container
-                    completion(.success())
-                }
-            case .failure(let error):
-
-                completion(.failure(error))
-            }
+        // Favorite stuff
+        if let recipes = recipes, isFavorite {
+            self.recipes = recipes
         }
     }
 
@@ -56,5 +56,13 @@ class SearchResultViewModel {
 
     func getNextPage() -> String {
         return container?.links?.nextPage ?? ""
+    }
+
+    func getNumberOfItems() -> Int {
+        return recipes.count
+    }
+
+    func getRecipe(at indexPath: IndexPath) -> Recipe {
+        return recipes[indexPath.row]
     }
 }

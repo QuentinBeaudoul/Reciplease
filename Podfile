@@ -8,6 +8,7 @@ use_frameworks!
 	pod 'SwiftLint'
 	pod 'R.swift'
 	pod 'Alamofire'
+	pod 'Kingfisher'
 
 	target 'RSearch' do
 		project 'Frameworks/RSearch/RSearch.xcodeproj'

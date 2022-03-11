@@ -11,9 +11,41 @@ class SearchResultViewController: UIViewController {
 
     let viewModel = SearchResultViewModel()
 
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem.title = "Recipes"
+
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: SearchResultCell.getCellIdentifier(),
+                                 bundle: Bundle(for: Self.self)),
+                           forCellReuseIdentifier: SearchResultCell.getCellIdentifier())
+    }
+}
+
+extension SearchResultViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNumberOfItems()
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: SearchResultCell.getCellIdentifier(),
+            for: indexPath) as? SearchResultCell else { return UITableViewCell() }
+
+        cell.fillView(recipe: viewModel.getRecipe(at: indexPath))
+
+        return cell
+    }
+
+}
+
+extension SearchResultViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Clicked")
     }
 }
