@@ -13,8 +13,8 @@
         <scene sceneID="SMb-Pq-LXk">
             <objects>
                 <navigationController storyboardIdentifier="SearchNavViewController" id="eAi-Bd-qxz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TDd-oh-PVq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TDd-oh-PVq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="20"/>
@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjQ-cX-8Gg" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="97" width="320" height="128"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-kI-wjw">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
@@ -166,7 +166,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="N0S-Gr-b9Z">
-                                <rect key="frame" x="0.0" y="225" width="320" height="263"/>
+                                <rect key="frame" x="0.0" y="172" width="320" height="316"/>
                                 <color key="backgroundColor" name="background"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="AP6-Xw-je8" customClass="HeaderView" customModule="RSearch" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>

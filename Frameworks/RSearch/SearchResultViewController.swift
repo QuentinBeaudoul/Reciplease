@@ -46,6 +46,12 @@ extension SearchResultViewController: UITableViewDataSource {
 
 extension SearchResultViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Clicked")
+        let recipe = viewModel.getRecipe(at: indexPath)
+
+        guard let detailVC = SearchResultDetailViewController.makeFromStoryboard(in: Bundle(for: Self.self)) as? SearchResultDetailViewController else { return }
+
+        detailVC.viewModel.loadData(recipe: recipe)
+
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
