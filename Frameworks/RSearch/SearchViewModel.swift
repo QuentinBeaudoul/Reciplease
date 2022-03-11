@@ -31,4 +31,8 @@ class SearchViewModel {
     func getNumberOfItems() -> Int {
         return keywords.count
     }
+
+    func isKeywordValid(_ keyword: String) -> Bool {
+        return keyword.range(of: ".*[^A-Za-z0-9].*", options: .regularExpression) == nil
+    }
 }

@@ -17,12 +17,16 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         headerView.delegate = self
+
+        editText.delegate = self
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -37,6 +41,7 @@ class SearchViewController: UIViewController {
         let numberOfItems = viewModel.getNumberOfItems()
         numberOfItems > 0 ? headerView.enableButton() : headerView.disableButton()
         searchButton.isEnabled = numberOfItems > 0 ? true : false
+        hideErrorView()
     }
 
     private func insertRow() {
@@ -47,12 +52,39 @@ class SearchViewController: UIViewController {
         }
     }
 
+    private func showErrorView(error: String) {
+        errorLabel.text = error
+
+        UIView.animate(withDuration: 0.3) { [self] in
+            errorView.isHidden = false
+        }
+    }
+
+    private func hideErrorView() {
+        UIView.animate(withDuration: 0.3) { [self] in
+            errorView.isHidden = true
+        }
+    }
+
     @IBAction func addCriteriaTapped() {
 
-        guard let newElement = editText.text, newElement.count > 0 else {
+        guard let newElement = editText.text else {
+            showErrorView(error: "Something went wrong...")
+            return
+        }
+
+        if newElement.count <= 0 {
+            showErrorView(error: "You cannot add a empty keyword 😬")
             addCriteriaButton.shake()
             return
         }
+
+        if !viewModel.isKeywordValid(newElement) {
+            showErrorView(error: "You cannot use special characters in your keyword 😶‍🌫️")
+            addCriteriaButton.shake()
+            return
+        }
+
         viewModel.add(newElement: newElement)
         editText.text = ""
         insertRow()
@@ -60,6 +92,10 @@ class SearchViewController: UIViewController {
 
     @IBAction func searchForRecipeTapped() {
 
+    }
+
+    @IBAction func errorViewTapped() {
+        hideErrorView()
     }
 }
 
@@ -113,5 +149,13 @@ extension SearchViewController: HeaderDelegate {
         })
 
         updateUI()
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        addCriteriaTapped()
+        return true
     }
 }
