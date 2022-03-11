@@ -25,6 +25,12 @@ class SearchResultViewController: UIViewController {
                                  bundle: Bundle(for: Self.self)),
                            forCellReuseIdentifier: SearchResultCell.getCellIdentifier())
     }
+
+    private func insertRow() {
+        tableView.performBatchUpdates {
+            tableView.insertRows(at: [IndexPath(row: viewModel.getNumberOfItems() - 1, section: 0)], with: .automatic)
+        }
+    }
 }
 
 extension SearchResultViewController: UITableViewDataSource {
@@ -48,10 +54,29 @@ extension SearchResultViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipe = viewModel.getRecipe(at: indexPath)
 
-        guard let detailVC = SearchResultDetailViewController.makeFromStoryboard(in: Bundle(for: Self.self)) as? SearchResultDetailViewController else { return }
+        guard let detailVC = SearchResultDetailViewController
+                .makeFromStoryboard(in: Bundle(for: Self.self)) as? SearchResultDetailViewController else { return }
 
         detailVC.viewModel.loadData(recipe: recipe)
 
         navigationController?.pushViewController(detailVC, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard !viewModel.isFavorite else { return }
+
+        if indexPath.row == viewModel.getNumberOfItems() - 5 && viewModel.hasNextPage() {
+            tableView.tableFooterView?.isHidden = false
+            viewModel.fetchNextPage { [self] result in
+                switch result {
+
+                case .success():
+                    insertRow()
+                case .failure(let error):
+                    print(error)
+                    // TODO: Display Alert
+                }
+            }
+        }
     }
 }

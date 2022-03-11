@@ -14,8 +14,7 @@ class SearchResultViewModel {
 
     private(set) var container: ResponseContainer?
     private(set) var recipes = [Recipe]()
-
-    private var isFavorite: Bool = false
+    private(set) var isFavorite: Bool = false
 
     init(manager: SearchManagerProtocol = SearchManager.shared) {
         self.manager = manager
@@ -43,8 +42,9 @@ class SearchResultViewModel {
 
             case .success(let container):
 
-                if let container = container {
+                if let container = container, let recipes = container.recipes {
                     self.container = container
+                    self.recipes.append(contentsOf: recipes)
                     completion(.success())
                 }
             case .failure(let error):
@@ -52,6 +52,10 @@ class SearchResultViewModel {
                 completion(.failure(error))
             }
         }
+    }
+
+    func hasNextPage() -> Bool {
+        return container?.links?.nextPage != nil
     }
 
     func getNextPage() -> String {
