@@ -52,4 +52,8 @@ public class Recipe: NSManagedObject, Decodable {
             ingre.nameTitle ?? ""
         }.formatted()
     }
+
+    public func getTimeToDo() -> String {
+        return "\(Int(totalTime))m"
+    }
 }

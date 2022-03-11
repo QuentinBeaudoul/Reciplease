@@ -15,6 +15,8 @@ class SearchResultCell: UITableViewCell {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var timeToDoView: UIView!
+    @IBOutlet weak var timeToDoLabel: UILabel!
 
     func fillView(recipe: Recipe) {
 
@@ -23,5 +25,13 @@ class SearchResultCell: UITableViewCell {
 
         titleLabel.text = recipe.label
         ingredientsLabel.text = recipe.getIngredientsFormatted()
+
+        if recipe.totalTime > 0 {
+            timeToDoLabel.text = recipe.getTimeToDo()
+            timeToDoView.isHidden = false
+        } else {
+            timeToDoView.isHidden = true
+        }
+
     }
 }

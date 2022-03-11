@@ -9,18 +9,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="80" id="sgV-f8-xlq" customClass="SearchResultCell" customModule="RSearch" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="164" id="sgV-f8-xlq" customClass="SearchResultCell" customModule="RSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sgV-f8-xlq" id="B5k-oi-xzb">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-0c-emz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                     </imageView>
                     <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZp-s6-djM" userLabel="Gradient View" customClass="Gradient" customModule="RExtension">
-                        <rect key="frame" x="0.0" y="20" width="414" height="60"/>
+                        <rect key="frame" x="0.0" y="104" width="414" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="Uq7-k3-1k4"/>
                         </constraints>
@@ -33,14 +33,54 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyT-cI-I3A">
+                        <rect key="frame" x="342" y="8" width="64" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[10m]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auo-3L-WJU">
+                                <rect key="frame" x="8" y="39" width="48" height="17"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="14"/>
+                                <color key="textColor" name="primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CbB-TP-zUI">
+                                <rect key="frame" x="32" y="8.5" width="24" height="23"/>
+                                <color key="tintColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CbB-TP-zUI" secondAttribute="height" multiplier="1:1" id="22O-ua-aiw"/>
+                                    <constraint firstAttribute="width" constant="24" id="xU8-Yc-jyB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="primaryContainer"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UyT-cI-I3A" secondAttribute="height" multiplier="1:1" id="5g9-80-FGF"/>
+                            <constraint firstAttribute="bottom" secondItem="auo-3L-WJU" secondAttribute="bottom" constant="8" id="NE9-0P-weE"/>
+                            <constraint firstAttribute="width" constant="64" id="Tk8-Iy-H0O"/>
+                            <constraint firstAttribute="trailing" secondItem="auo-3L-WJU" secondAttribute="trailing" constant="8" id="Y3o-A5-jYr"/>
+                            <constraint firstAttribute="trailing" secondItem="CbB-TP-zUI" secondAttribute="trailing" constant="8" id="aes-wC-YLJ"/>
+                            <constraint firstItem="auo-3L-WJU" firstAttribute="leading" secondItem="UyT-cI-I3A" secondAttribute="leading" constant="8" id="bEI-nO-trd"/>
+                            <constraint firstItem="CbB-TP-zUI" firstAttribute="top" secondItem="UyT-cI-I3A" secondAttribute="top" constant="8" id="bMP-eh-Tk0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="primary"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Title]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TL-oA-k0n">
-                        <rect key="frame" x="16" y="33" width="270" height="22"/>
+                        <rect key="frame" x="16" y="117" width="270" height="22"/>
                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="18"/>
                         <color key="textColor" name="onPrimary"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Ingredients]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-yC-dFT">
-                        <rect key="frame" x="16" y="59" width="334" height="17"/>
+                        <rect key="frame" x="16" y="143" width="334" height="17"/>
                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="14"/>
                         <color key="textColor" name="onPrimary"/>
                         <nil key="highlightedColor"/>
@@ -58,20 +98,25 @@
                     <constraint firstItem="6TL-oA-k0n" firstAttribute="leading" secondItem="B5k-oi-xzb" secondAttribute="leading" constant="16" id="Wc2-8M-eJe"/>
                     <constraint firstAttribute="trailing" secondItem="Sgq-yC-dFT" secondAttribute="trailing" constant="64" id="X3P-5K-GJ9"/>
                     <constraint firstItem="RwE-0c-emz" firstAttribute="top" secondItem="B5k-oi-xzb" secondAttribute="top" id="afZ-N7-phK"/>
+                    <constraint firstAttribute="trailing" secondItem="UyT-cI-I3A" secondAttribute="trailing" constant="8" id="gRn-xp-Had"/>
                     <constraint firstItem="zZp-s6-djM" firstAttribute="leading" secondItem="B5k-oi-xzb" secondAttribute="leading" id="mID-TV-RFx"/>
                     <constraint firstAttribute="bottom" secondItem="zZp-s6-djM" secondAttribute="bottom" id="qXF-TY-Vim"/>
+                    <constraint firstItem="UyT-cI-I3A" firstAttribute="top" secondItem="B5k-oi-xzb" secondAttribute="top" constant="8" id="uvW-MM-uqG"/>
                     <constraint firstAttribute="trailing" secondItem="zZp-s6-djM" secondAttribute="trailing" id="yRA-Bw-9cF"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="ingredientsLabel" destination="Sgq-yC-dFT" id="rH1-aw-cir"/>
                 <outlet property="recipeImageView" destination="RwE-0c-emz" id="XA1-iI-du4"/>
+                <outlet property="timeToDoLabel" destination="auo-3L-WJU" id="KOT-05-ffx"/>
+                <outlet property="timeToDoView" destination="UyT-cI-I3A" id="dTS-4Y-Xv2"/>
                 <outlet property="titleLabel" destination="6TL-oA-k0n" id="Jay-aR-PUr"/>
             </connections>
             <point key="canvasLocation" x="247.82608695652175" y="81.696428571428569"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
         <namedColor name="background">
             <color red="0.97399997711181641" green="0.90200001001358032" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -83,6 +128,12 @@
         </namedColor>
         <namedColor name="onPrimary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.52999997138977051" green="0.32499998807907104" blue="0.0010000000474974513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryContainer">
+            <color red="1" green="0.86599999666213989" blue="0.71200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
