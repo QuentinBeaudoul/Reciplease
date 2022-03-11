@@ -37,7 +37,14 @@ class SearchViewController: UIViewController {
         let numberOfItems = viewModel.getNumberOfItems()
         numberOfItems > 0 ? headerView.enableButton() : headerView.disableButton()
         searchButton.isEnabled = numberOfItems > 0 ? true : false
-        tableView.reloadData()
+    }
+
+    private func insertRow() {
+        tableView.performBatchUpdates {
+            tableView.insertRows(at: [IndexPath(row: viewModel.getNumberOfItems() - 1, section: 0)], with: .automatic)
+        } completion: { [self] _ in
+            updateUI()
+        }
     }
 
     @IBAction func addCriteriaTapped() {
@@ -46,10 +53,9 @@ class SearchViewController: UIViewController {
             addCriteriaButton.shake()
             return
         }
-
         viewModel.add(newElement: newElement)
         editText.text = ""
-        updateUI()
+        insertRow()
     }
 
     @IBAction func searchForRecipeTapped() {
@@ -75,11 +81,37 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { [self] _, _, completion in
+            viewModel.remove(at: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .right)
+            updateUI()
+            completion(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash.fill")?
+            .withTintColor(R.color.onSecondary(compatibleWith: traitCollection) ?? .white)
+        deleteAction.backgroundColor = R.color.secondary(compatibleWith: traitCollection)
+
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
 }
 
 extension SearchViewController: HeaderDelegate {
     func onClearButtonTapped() {
-        viewModel.removeAll()
+
+        viewModel.keywords.forEach({ _ in
+            let indexPath = IndexPath(row: 0, section: 0)
+            viewModel.remove(at: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .right)
+        })
+
         updateUI()
     }
 }

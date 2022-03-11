@@ -9,7 +9,6 @@ import UIKit
 
 class SearchResultViewController: UIViewController {
 
-    
     let viewModel = SearchResultViewModel()
 
     override func viewDidLoad() {
