@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Ingredient]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-jl-68u">
-                        <rect key="frame" x="48" y="19" width="82.5" height="22"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Ingredient]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-jl-68u">
+                        <rect key="frame" x="48" y="19" width="334" height="22"/>
                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -25,7 +25,10 @@
                 </subviews>
                 <color key="backgroundColor" name="background"/>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="BRX-jl-68u" secondAttribute="trailing" constant="16" id="CdN-I0-3cM"/>
+                    <constraint firstItem="BRX-jl-68u" firstAttribute="top" secondItem="q2Y-Ha-W7k" secondAttribute="topMargin" constant="8" id="FeR-4v-5rg"/>
                     <constraint firstItem="BRX-jl-68u" firstAttribute="centerY" secondItem="q2Y-Ha-W7k" secondAttribute="centerY" id="bbt-Mh-3N9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="BRX-jl-68u" secondAttribute="bottom" constant="8" id="l01-2s-akz"/>
                     <constraint firstItem="BRX-jl-68u" firstAttribute="leading" secondItem="q2Y-Ha-W7k" secondAttribute="leadingMargin" constant="32" id="wNT-Vv-uir"/>
                 </constraints>
             </tableViewCellContentView>

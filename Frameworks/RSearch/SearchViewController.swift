@@ -20,13 +20,17 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var errorLabel: UILabel!
 
+    private var loadingScreen: LoadingView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupLoadingScreen()
         headerView.delegate = self
 
         editText.delegate = self
+        hideKeyboardWhenTappedAround()
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,6 +39,16 @@ class SearchViewController: UIViewController {
                            forCellReuseIdentifier: SearchCell.getCellIdentifier())
 
         updateUI()
+    }
+
+    private func setupLoadingScreen() {
+        loadingScreen = LoadingView()
+        loadingScreen?.isHidden = true
+
+        if let window = UIApplication.keyWindow, let loadingScreen = loadingScreen {
+            loadingScreen.frame = window.frame
+            window.addSubview(loadingScreen)
+        }
     }
 
     private func updateUI() {
@@ -68,7 +82,7 @@ class SearchViewController: UIViewController {
 
     @IBAction func addCriteriaTapped() {
 
-        guard let newElement = editText.text else {
+        guard var newElement = editText.text else {
             showErrorView(error: "Something went wrong...")
             return
         }
@@ -78,6 +92,8 @@ class SearchViewController: UIViewController {
             addCriteriaButton.shake()
             return
         }
+
+        newElement = newElement.trimmingCharacters(in: .whitespaces)
 
         if !viewModel.isKeywordValid(newElement) {
             showErrorView(error: "You cannot use special characters in your keyword 😶‍🌫️")
@@ -91,7 +107,12 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func searchForRecipeTapped() {
+        loadingScreen?.show()
 
+        guard let resultVC = SearchResultViewController.makeFromStoryboard() as? SearchResultViewController else {
+            return
+        }
+        
     }
 
     @IBAction func errorViewTapped() {
@@ -157,5 +178,9 @@ extension SearchViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         addCriteriaTapped()
         return true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        hideErrorView()
     }
 }

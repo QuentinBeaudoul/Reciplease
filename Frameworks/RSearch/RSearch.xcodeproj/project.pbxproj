@@ -13,6 +13,8 @@
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
 		664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* RSearchTests.swift */; };
 		664B538827C8D1D800D9CEBF /* RSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B537C27C8D1D700D9CEBF /* RSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6660CD8027DB61F300010717 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6660CD7F27DB61F300010717 /* LoadingView.xib */; };
+		6660CD8227DB620600010717 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660CD8127DB620600010717 /* LoadingView.swift */; };
 		6691BDA227D8DF3A00BA527D /* RecipeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6691BD9D27D8DF3A00BA527D /* RecipeContainer.swift */; };
 		6691BDB227D8E7DE00BA527D /* RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDB127D8E7DE00BA527D /* RExtension.framework */; };
 		6691BDB327D8E7DE00BA527D /* RExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDB127D8E7DE00BA527D /* RExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,6 +84,8 @@
 		664B537C27C8D1D700D9CEBF /* RSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSearch.h; sourceTree = "<group>"; };
 		664B538127C8D1D800D9CEBF /* RSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B538627C8D1D800D9CEBF /* RSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTests.swift; sourceTree = "<group>"; };
+		6660CD7F27DB61F300010717 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		6660CD8127DB620600010717 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6691BD7F27D8B8F200BA527D /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6691BD8E27D8C8FF00BA527D /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6691BD9227D8C91400BA527D /* RNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +199,15 @@
 			path = RSearchTests;
 			sourceTree = "<group>";
 		};
+		6660CD7E27DB61D700010717 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				6660CD7F27DB61F300010717 /* LoadingView.xib */,
+				6660CD8127DB620600010717 /* LoadingView.swift */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
 		66A2F0CD27D6084A0062302B /* Constantes */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +295,7 @@
 		66FD4A9D27D114E2002F9525 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				6660CD7E27DB61D700010717 /* Loading */,
 				66FD4A9E27D114EC002F9525 /* Search */,
 			);
 			name = Interface;
@@ -447,6 +461,7 @@
 				66A6F70127DA43600030717F /* FooterView.xib in Resources */,
 				66A6F70D27DA53110030717F /* SearchResultDetail.storyboard in Resources */,
 				66A6F71427DA564B0030717F /* SearchCell.xib in Resources */,
+				6660CD8027DB61F300010717 /* LoadingView.xib in Resources */,
 				66FD4AA027D1150B002F9525 /* Search.storyboard in Resources */,
 				66A6F70627DA51960030717F /* SearchResult.storyboard in Resources */,
 			);
@@ -553,6 +568,7 @@
 				66FD4AB027D118F5002F9525 /* SearchManager.swift in Sources */,
 				6638AABA27DA41310084DCE1 /* HeaderView.swift in Sources */,
 				66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */,
+				6660CD8227DB620600010717 /* LoadingView.swift in Sources */,
 				66A6F70327DA436F0030717F /* FooterView.swift in Sources */,
 				66A2F0D827D647420062302B /* ResponseLinks.swift in Sources */,
 				66A2F0D427D612030062302B /* RequestParams.swift in Sources */,

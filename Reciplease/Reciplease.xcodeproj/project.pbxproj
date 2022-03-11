@@ -13,6 +13,12 @@
 		664B530927C8CBBB00D9CEBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664B530727C8CBBB00D9CEBF /* Main.storyboard */; };
 		664B530B27C8CBBD00D9CEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664B530A27C8CBBD00D9CEBF /* Assets.xcassets */; };
 		664B530E27C8CBBD00D9CEBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664B530C27C8CBBD00D9CEBF /* LaunchScreen.storyboard */; };
+		6660CD7627DB5B1300010717 /* RExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7527DB5B1300010717 /* RExtension.framework */; };
+		6660CD7727DB5B1300010717 /* RExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7527DB5B1300010717 /* RExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6660CD7927DB5B3800010717 /* RNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7827DB5B3800010717 /* RNetwork.framework */; };
+		6660CD7A27DB5B3800010717 /* RNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7827DB5B3800010717 /* RNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6660CD7C27DB5B3E00010717 /* RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7B27DB5B3E00010717 /* RStorage.framework */; };
+		6660CD7D27DB5B3E00010717 /* RStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7B27DB5B3E00010717 /* RStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6691BD8B27D8C8B100BA527D /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8A27D8C8B100BA527D /* RSearch.framework */; };
 		6691BD8C27D8C8B100BA527D /* RSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8A27D8C8B100BA527D /* RSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6691BD9927D8C94800BA527D /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9827D8C94800BA527D /* RFavorite.framework */; };
@@ -29,7 +35,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				6660CD7727DB5B1300010717 /* RExtension.framework in Embed Frameworks */,
+				6660CD7D27DB5B3E00010717 /* RStorage.framework in Embed Frameworks */,
 				6691BD8C27D8C8B100BA527D /* RSearch.framework in Embed Frameworks */,
+				6660CD7A27DB5B3800010717 /* RNetwork.framework in Embed Frameworks */,
 				6691BD9A27D8C94800BA527D /* RFavorite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +61,9 @@
 		664B530A27C8CBBD00D9CEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664B530D27C8CBBD00D9CEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		664B530F27C8CBBD00D9CEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6660CD7527DB5B1300010717 /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6660CD7827DB5B3800010717 /* RNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6660CD7B27DB5B3E00010717 /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6691BD8A27D8C8B100BA527D /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6691BD9827D8C94800BA527D /* RFavorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RFavorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD4ABC27D11F23002F9525 /* RFavorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RFavorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,9 +80,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6660CD7927DB5B3800010717 /* RNetwork.framework in Frameworks */,
 				AADAFD66CCE5232ACBA31785 /* Pods_Shared_Reciplease.framework in Frameworks */,
 				6691BD8B27D8C8B100BA527D /* RSearch.framework in Frameworks */,
+				6660CD7C27DB5B3E00010717 /* RStorage.framework in Frameworks */,
 				6691BD9927D8C94800BA527D /* RFavorite.framework in Frameworks */,
+				6660CD7627DB5B1300010717 /* RExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +168,9 @@
 		6DAB95028919428B9F0000CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6660CD7B27DB5B3E00010717 /* RStorage.framework */,
+				6660CD7827DB5B3800010717 /* RNetwork.framework */,
+				6660CD7527DB5B1300010717 /* RExtension.framework */,
 				6691BD9827D8C94800BA527D /* RFavorite.framework */,
 				6691BD8A27D8C8B100BA527D /* RSearch.framework */,
 				66FD4ABC27D11F23002F9525 /* RFavorite.framework */,

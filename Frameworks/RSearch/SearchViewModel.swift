@@ -33,6 +33,6 @@ class SearchViewModel {
     }
 
     func isKeywordValid(_ keyword: String) -> Bool {
-        return keyword.range(of: ".*[^A-Za-z0-9].*", options: .regularExpression) == nil
+        return keyword.range(of: ".*[^A-Za-z0-9\\s].*", options: .regularExpression) == nil
     }
 }
