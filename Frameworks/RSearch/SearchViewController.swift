@@ -119,6 +119,9 @@ class SearchViewController: UIViewController {
                 navigationController?.pushViewController(resultVC, animated: true)
             case .failure(let error):
                 print(error)
+                UIAlertController.showAlert(title: "No result found",
+                                            message: "Are you sure you have this in your fridge ? 🤨",
+                                            on: self)
             }
         }
     }

@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 public class Gradient: UIView {
     @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}
     @IBInspectable var endColor:     UIColor = .white { didSet { updateColors() }}
