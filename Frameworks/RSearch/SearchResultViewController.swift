@@ -26,9 +26,14 @@ class SearchResultViewController: UIViewController {
                            forCellReuseIdentifier: SearchResultCell.getCellIdentifier())
     }
 
-    private func insertRow() {
+    private func insertRow(oldNumberOfItems: Int) {
         tableView.performBatchUpdates {
-            tableView.insertRows(at: [IndexPath(row: viewModel.getNumberOfItems() - 1, section: 0)], with: .automatic)
+            var indexPaths = [IndexPath]()
+            for index in oldNumberOfItems...viewModel.recipes.count - 1 {
+                indexPaths.append(IndexPath(row: index, section: 0))
+            }
+
+            tableView.insertRows(at: indexPaths, with: .automatic)
         }
     }
 }
@@ -65,16 +70,18 @@ extension SearchResultViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard !viewModel.isFavorite else { return }
 
-        if indexPath.row == viewModel.getNumberOfItems() - 5 && viewModel.hasNextPage() {
+        let oldNumberOfItems = viewModel.getNumberOfItems()
+        if indexPath.row == oldNumberOfItems - 5 && viewModel.hasNextPage() {
             tableView.tableFooterView?.isHidden = false
+
             viewModel.fetchNextPage { [self] result in
                 switch result {
 
-                case .success():
-                    insertRow()
                 case .failure(let error):
                     print(error)
                     // TODO: Display Alert
+                default:
+                    insertRow(oldNumberOfItems: oldNumberOfItems)
                 }
             }
         }

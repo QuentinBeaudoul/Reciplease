@@ -28,11 +28,11 @@ public class Recipe: NSManagedObject, Decodable {
 
         let container = try decoder.container(keyedBy: ContainerCodingKeys.self)
         let recipeContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .recipe)
-        label = try recipeContainer.decode(String.self, forKey: .label)
+        label = try recipeContainer.decodeIfPresent(String.self, forKey: .label)
         imageUrl = try recipeContainer.decodeIfPresent(String.self, forKey: .imageUrl)
-        images = try recipeContainer.decode(RecipeImageContainer.self, forKey: .images)
-        ingredients = try recipeContainer.decode([RecipeIngredient].self, forKey: .ingredients)
-        totalTime = try recipeContainer.decode(Double.self, forKey: .totalTime)
+        images = try recipeContainer.decodeIfPresent(RecipeImageContainer.self, forKey: .images)
+        ingredients = try recipeContainer.decodeIfPresent([RecipeIngredient].self, forKey: .ingredients)
+        totalTime = try recipeContainer.decodeIfPresent(Double.self, forKey: .totalTime) ?? 0
     }
 
     func copy(from recipe: Recipe) {

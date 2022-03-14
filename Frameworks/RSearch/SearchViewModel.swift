@@ -35,7 +35,7 @@ class SearchViewModel {
     }
 
     func getKeywordsFormatted() -> String {
-        return keywords.formatted()
+        return keywords.joined(separator: ", ")
     }
 
     func getNumberOfItems() -> Int {

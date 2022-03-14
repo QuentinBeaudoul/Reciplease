@@ -21,8 +21,8 @@ public class RecipeImage: NSManagedObject, Decodable {
         self.init(context: StoreManager.shared.viewContext)
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        url = try container.decode(String.self, forKey: .url)
-        width = try container.decode(Int16.self, forKey: .width)
-        height = try container.decode(Int16.self, forKey: .height)
+        url = try container.decodeIfPresent(String.self, forKey: .url)
+        width = try container.decodeIfPresent(Int16.self, forKey: .width) ?? 0
+        height = try container.decodeIfPresent(Int16.self, forKey: .height) ?? 0
     }
 }

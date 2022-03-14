@@ -9,9 +9,9 @@ import Foundation
 import RStorage
 
 class ResponseContainer: Decodable {
-    let from: Int
-    let toRecipe: Int
-    let count: Int
+    let from: Int?
+    let toRecipe: Int?
+    let count: Int?
     let links: ResponseLinks?
     let recipes: [Recipe]?
 
@@ -25,9 +25,9 @@ class ResponseContainer: Decodable {
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        from = try container.decode(Int.self, forKey: .from)
-        toRecipe = try container.decode(Int.self, forKey: .toRecipe)
-        count = try container.decode(Int.self, forKey: .count)
+        from = try container.decodeIfPresent(Int.self, forKey: .from)
+        toRecipe = try container.decodeIfPresent(Int.self, forKey: .toRecipe)
+        count = try container.decodeIfPresent(Int.self, forKey: .count)
         links = try container.decodeIfPresent(ResponseLinks.self, forKey: .links)
         recipes = try container.decodeIfPresent([Recipe].self, forKey: .recipes)
     }

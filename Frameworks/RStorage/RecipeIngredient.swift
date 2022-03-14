@@ -21,8 +21,8 @@ public class RecipeIngredient: NSManagedObject, Decodable {
         self.init(context: StoreManager.shared.viewContext)
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        nameTitle = try container.decode(String.self, forKey: .nameTitle)
-        quantity = try container.decode(Double.self, forKey: .quantity)
+        nameTitle = try container.decodeIfPresent(String.self, forKey: .nameTitle)
+        quantity = try container.decodeIfPresent(Double.self, forKey: .quantity) ?? 0
         measure = try container.decodeIfPresent(String.self, forKey: .measure)
     }
 }

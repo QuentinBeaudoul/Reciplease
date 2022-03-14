@@ -59,11 +59,10 @@ class SearchViewController: UIViewController {
     }
 
     private func insertRow() {
-        tableView.performBatchUpdates {
-            tableView.insertRows(at: [IndexPath(row: viewModel.getNumberOfItems() - 1, section: 0)], with: .automatic)
-        } completion: { [self] _ in
-            updateUI()
-        }
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: viewModel.getNumberOfItems() - 1, section: 0)], with: .automatic)
+        tableView.endUpdates()
+        updateUI()
     }
 
     private func showErrorView(error: String) {
