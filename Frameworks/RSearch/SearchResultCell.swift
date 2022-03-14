@@ -26,7 +26,7 @@ class SearchResultCell: UITableViewCell {
         titleLabel.text = recipe.label
         ingredientsLabel.text = recipe.getIngredientsFormatted()
 
-        if recipe.totalTime > 0 {
+        if recipe.hasTimeToDo() {
             timeToDoLabel.text = recipe.getTimeToDo()
             timeToDoView.isHidden = false
         } else {

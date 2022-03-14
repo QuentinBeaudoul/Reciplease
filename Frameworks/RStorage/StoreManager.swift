@@ -55,6 +55,19 @@ public final class StoreManager: StoreProtocol {
         }
     }
 
+    public func dropRecipe(_ recipe: Recipe) -> Bool {
+        let context = viewContext
+
+        context.delete(recipe)
+
+        do {
+            try context.save()
+            return true
+        } catch {
+            return false
+        }
+    }
+
     public func fetchRecipes(completion: (Result<[Recipe]?, Error>) -> Void) {
 
         let request = Recipe.fetchRequest()

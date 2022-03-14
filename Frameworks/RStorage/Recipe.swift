@@ -45,15 +45,22 @@ public class Recipe: NSManagedObject, Decodable {
     }
 
     public func getIngredientsFormatted() -> String {
-        guard let ingredients = ingredients else {
-            return ""
+        return ingredients?.map { ingre in
+            ingre.food?.capitalized ?? ""
+        }.joined(separator: ", ") ?? ""
+    }
+
+    public func getDetailIngredientsFormatted() -> [String]? {
+        return ingredients?.map { ingredient in
+            ingredient.nameTitle ?? ""
         }
-        return ingredients.map { ingre in
-            ingre.nameTitle ?? ""
-        }.formatted()
     }
 
     public func getTimeToDo() -> String {
         return "\(Int(totalTime))m"
+    }
+
+    public func hasTimeToDo() -> Bool {
+        return totalTime > 0
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0448EC24DAEF57B6F31EDC44 /* Pods_Shared_RSearch_RSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7216192C701981B5C8FB5BC /* Pods_Shared_RSearch_RSearchTests.framework */; };
+		662FC51427DF8EBC00567B37 /* SearchResultDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662FC51327DF8EBC00567B37 /* SearchResultDetailCell.xib */; };
+		662FC51627DF8ED500567B37 /* SearchResultDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FC51527DF8ED500567B37 /* SearchResultDetailCell.swift */; };
 		6638AAB827DA411D0084DCE1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6638AAB727DA411D0084DCE1 /* HeaderView.xib */; };
 		6638AABA27DA41310084DCE1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638AAB927DA41310084DCE1 /* HeaderView.swift */; };
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
@@ -79,6 +81,8 @@
 		447211399B56C86EB40010A6 /* Pods-Global-RSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RSearch.debug.xcconfig"; path = "Target Support Files/Pods-Global-RSearch/Pods-Global-RSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		44C717C5B9C7AC080A7CB9E7 /* Pods-Global-RSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Global-RSearch.release.xcconfig"; path = "Target Support Files/Pods-Global-RSearch/Pods-Global-RSearch.release.xcconfig"; sourceTree = "<group>"; };
 		4C62F53773FC308FFE895EC2 /* Pods_Shared_RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		662FC51327DF8EBC00567B37 /* SearchResultDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultDetailCell.xib; sourceTree = "<group>"; };
+		662FC51527DF8ED500567B37 /* SearchResultDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDetailCell.swift; sourceTree = "<group>"; };
 		6638AAB727DA411D0084DCE1 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		6638AAB927DA41310084DCE1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		664B537927C8D1D700D9CEBF /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		662FC51227DF8E9700567B37 /* SearchResultDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				662FC51327DF8EBC00567B37 /* SearchResultDetailCell.xib */,
+				662FC51527DF8ED500567B37 /* SearchResultDetailCell.swift */,
+			);
+			name = SearchResultDetailCell;
+			sourceTree = "<group>";
+		};
 		6638AAB527DA40030084DCE1 /* Footer */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +289,7 @@
 		66A6F70B27DA52F00030717F /* SearchResultDetail */ = {
 			isa = PBXGroup;
 			children = (
+				662FC51227DF8E9700567B37 /* SearchResultDetailCell */,
 				66A6F70C27DA53110030717F /* SearchResultDetail.storyboard */,
 				66A6F70E27DA53280030717F /* SearchResultDetailViewController.swift */,
 				66A6F71027DA53A70030717F /* SearchResultDetailViewModel.swift */,
@@ -469,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6638AAB827DA411D0084DCE1 /* HeaderView.xib in Resources */,
+				662FC51427DF8EBC00567B37 /* SearchResultDetailCell.xib in Resources */,
 				66A6F70127DA43600030717F /* FooterView.xib in Resources */,
 				6660CD8727DB91D000010717 /* SearchResultCell.xib in Resources */,
 				66A6F70D27DA53110030717F /* SearchResultDetail.storyboard in Resources */,
@@ -588,6 +603,7 @@
 				66A6F70F27DA53280030717F /* SearchResultDetailViewController.swift in Sources */,
 				66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */,
 				66A6F70A27DA51F30030717F /* SearchResultViewModel.swift in Sources */,
+				662FC51627DF8ED500567B37 /* SearchResultDetailCell.swift in Sources */,
 				66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */,
 				66A6F70827DA51CC0030717F /* SearchResultViewController.swift in Sources */,
 				66A2F0D627D6439B0062302B /* ResponseContainer.swift in Sources */,

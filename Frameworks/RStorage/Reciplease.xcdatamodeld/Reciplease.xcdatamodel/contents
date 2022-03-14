@@ -20,6 +20,7 @@
         <attribute name="thumbnail" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="RecipeImage"/>
     </entity>
     <entity name="RecipeIngredient" representedClassName=".RecipeIngredient" syncable="YES" codeGenerationType="category">
+        <attribute name="food" optional="YES" attributeType="String"/>
         <attribute name="measure" optional="YES" attributeType="String"/>
         <attribute name="nameTitle" optional="YES" attributeType="String"/>
         <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -28,6 +29,6 @@
         <element name="Recipe" positionX="-54" positionY="-9" width="128" height="133"/>
         <element name="RecipeImage" positionX="0" positionY="63" width="128" height="74"/>
         <element name="RecipeImageContainer" positionX="-36" positionY="45" width="128" height="89"/>
-        <element name="RecipeIngredient" positionX="-18" positionY="54" width="128" height="74"/>
+        <element name="RecipeIngredient" positionX="-18" positionY="54" width="128" height="89"/>
     </elements>
 </model>
