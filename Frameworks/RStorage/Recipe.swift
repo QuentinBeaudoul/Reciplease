@@ -23,7 +23,7 @@ public class Recipe: NSManagedObject, Decodable {
     }
 
     public required convenience init(from decoder: Decoder) throws {
-        
+
         self.init(context: StoreManager.shared.viewContext)
 
         let container = try decoder.container(keyedBy: ContainerCodingKeys.self)

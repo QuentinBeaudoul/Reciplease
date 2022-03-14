@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="category">
-        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="RecipeImageContainer"/>
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
-        <attribute name="ingredients" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[RecipeIngredient]"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="label" optional="YES" attributeType="String"/>
         <attribute name="totalTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImageContainer"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="RecipeIngredient"/>
     </entity>
     <entity name="RecipeImage" representedClassName=".RecipeImage" syncable="YES" codeGenerationType="category">
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -14,10 +14,10 @@
         <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="RecipeImageContainer" representedClassName=".RecipeImageContainer" syncable="YES" codeGenerationType="category">
-        <attribute name="large" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="RecipeImage"/>
-        <attribute name="regular" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="RecipeImage"/>
-        <attribute name="small" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="RecipeImage"/>
-        <attribute name="thumbnail" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="RecipeImage"/>
+        <relationship name="large" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
+        <relationship name="regular" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
+        <relationship name="small" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
+        <relationship name="thumbnail" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
     </entity>
     <entity name="RecipeIngredient" representedClassName=".RecipeIngredient" syncable="YES" codeGenerationType="category">
         <attribute name="food" optional="YES" attributeType="String"/>
@@ -26,7 +26,7 @@
         <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Recipe" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="Recipe" positionX="-54" positionY="-9" width="128" height="14"/>
         <element name="RecipeImage" positionX="0" positionY="63" width="128" height="74"/>
         <element name="RecipeImageContainer" positionX="-36" positionY="45" width="128" height="89"/>
         <element name="RecipeIngredient" positionX="-18" positionY="54" width="128" height="89"/>
