@@ -79,7 +79,9 @@ extension SearchResultViewController: UITableViewDelegate {
 
                 case .failure(let error):
                     print(error)
-                    // TODO: Display Alert
+                    UIAlertController.showAlert(title: "It's a free plan",
+                                                message: "Api is a bit sensitive. Don't hit her too much 🥺",
+                                                on: self)
                 default:
                     insertRow(oldNumberOfItems: oldNumberOfItems)
                 }
