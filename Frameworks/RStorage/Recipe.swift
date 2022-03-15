@@ -31,7 +31,11 @@ public class Recipe: NSManagedObject, Decodable {
         label = try recipeContainer.decodeIfPresent(String.self, forKey: .label)
         imageUrl = try recipeContainer.decodeIfPresent(String.self, forKey: .imageUrl)
         images = try recipeContainer.decodeIfPresent(RecipeImageContainer.self, forKey: .images)
-        ingredients = try recipeContainer.decodeIfPresent([RecipeIngredient].self, forKey: .ingredients)
+
+        if let ingredients = try recipeContainer.decodeIfPresent([RecipeIngredient].self, forKey: .ingredients) {
+            self.ingredients = NSOrderedSet(array: ingredients)
+        }
+
         totalTime = try recipeContainer.decodeIfPresent(Double.self, forKey: .totalTime) ?? 0
     }
 
@@ -51,7 +55,7 @@ public class Recipe: NSManagedObject, Decodable {
     }
 
     public func getDetailIngredientsFormatted() -> [String]? {
-        return ingredients?.map { ingredient in
+        return ingredients?.array.map { ingredient in
             ingredient.nameTitle ?? ""
         }
     }
