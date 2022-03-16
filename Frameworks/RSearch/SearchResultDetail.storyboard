@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,14 +31,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAc-l5-djQ" userLabel="Time To Do View">
                                                 <rect key="frame" x="240" y="16" width="64" height="64"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[10m]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUf-06-GRR">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[10m]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUf-06-GRR">
                                                         <rect key="frame" x="8" y="39" width="48" height="17"/>
                                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="14"/>
                                                         <color key="textColor" name="primary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wh8-Ix-4iB">
-                                                        <rect key="frame" x="32" y="8.5" width="24" height="23"/>
+                                                        <rect key="frame" x="20" y="8.5" width="24" height="23"/>
                                                         <color key="tintColor" name="primary"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="24" id="XTM-kb-vJh"/>
@@ -53,8 +53,8 @@
                                                     <constraint firstAttribute="bottom" secondItem="IUf-06-GRR" secondAttribute="bottom" constant="8" id="Tm4-1E-fkH"/>
                                                     <constraint firstAttribute="trailing" secondItem="IUf-06-GRR" secondAttribute="trailing" constant="8" id="U9t-hE-vNq"/>
                                                     <constraint firstItem="IUf-06-GRR" firstAttribute="leading" secondItem="BAc-l5-djQ" secondAttribute="leading" constant="8" id="fFW-Vr-CVq"/>
-                                                    <constraint firstAttribute="trailing" secondItem="wh8-Ix-4iB" secondAttribute="trailing" constant="8" id="fFf-pr-dYz"/>
                                                     <constraint firstAttribute="width" constant="64" id="lxl-jy-e6W"/>
+                                                    <constraint firstItem="wh8-Ix-4iB" firstAttribute="centerX" secondItem="BAc-l5-djQ" secondAttribute="centerX" id="q9H-Ds-aUo"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

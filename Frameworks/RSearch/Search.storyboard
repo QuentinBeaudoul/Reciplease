@@ -156,11 +156,8 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="ySY-8h-jhs" firstAttribute="top" secondItem="PF9-Er-Y2z" secondAttribute="bottom" id="3cC-6I-8cL"/>
                                             <constraint firstItem="PF9-Er-Y2z" firstAttribute="leading" secondItem="heJ-kI-wjw" secondAttribute="leading" id="XPd-BU-j60"/>
-                                            <constraint firstItem="ySY-8h-jhs" firstAttribute="top" secondItem="PF9-Er-Y2z" secondAttribute="bottom" id="fkm-5m-cL7"/>
                                             <constraint firstAttribute="trailing" secondItem="PF9-Er-Y2z" secondAttribute="trailing" id="mqB-Qv-1ap"/>
-                                            <constraint firstItem="PF9-Er-Y2z" firstAttribute="top" secondItem="heJ-kI-wjw" secondAttribute="top" id="vD5-BJ-HYA"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -218,7 +215,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="rJz-NZ-5po">
-                        <barButtonItem key="backBarButtonItem" title="My Criterias" id="vju-38-L8Q"/>
+                        <barButtonItem key="backBarButtonItem" image="magnifyingglass" catalog="system" id="vju-38-L8Q"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addCriteriaButton" destination="FZy-XE-GPC" id="H98-Z1-vYD"/>
