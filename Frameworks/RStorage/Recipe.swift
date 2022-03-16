@@ -48,15 +48,21 @@ public class Recipe: NSManagedObject, Decodable {
         self.totalTime = recipe.totalTime
     }
 
+    private func ingredientArray() -> [RecipeIngredient]? {
+        return ingredients?.array as? [RecipeIngredient]
+    }
+
     public func getIngredientsFormatted() -> String {
-        return ingredients?.map { ingre in
-            ingre.food?.capitalized ?? ""
-        }.joined(separator: ", ") ?? ""
+        return ingredientArray()?.compactMap { ingre in
+            ingre.food
+        }.compactMap({
+            $0.capitalized
+        }).joined(separator: ", ") ?? ""
     }
 
     public func getDetailIngredientsFormatted() -> [String]? {
-        return ingredients?.array.map { ingredient in
-            ingredient.nameTitle ?? ""
+        return ingredientArray()?.compactMap { ingredient in
+            ingredient.nameTitle
         }
     }
 
