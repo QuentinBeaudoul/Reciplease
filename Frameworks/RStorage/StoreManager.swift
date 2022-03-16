@@ -45,10 +45,6 @@ public final class StoreManager: StoreProtocol {
     public func saveRecipe(_ recipe: Recipe) -> Bool {
         let context = viewContext
 
-        let recipeToSave = Recipe(context: viewContext)
-        
-        recipeToSave.copy(from: recipe)
-
         do {
             try context.save()
             return true
@@ -77,9 +73,8 @@ public final class StoreManager: StoreProtocol {
         request.predicate = NSPredicate(format: "label LIKE %@", recipe.label ?? "")
 
         do {
-            let count = try context.count(for: request)
-            print(count)
-            return  count > 0 ? true : false
+            let fetchedRecipe = try context.fetch(request)
+            return  fetchedRecipe.first?.isFavorite ?? false
         } catch {
             return false
         }
@@ -88,6 +83,7 @@ public final class StoreManager: StoreProtocol {
     public func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void) {
 
         let request = Recipe.fetchRequest()
+        request.predicate = NSPredicate(format: "isFavorite == YES")
 
         do {
             let recipes = try viewContext.fetch(request)

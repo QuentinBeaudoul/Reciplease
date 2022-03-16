@@ -50,16 +50,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "664B53A227C8D20A00D9CEBF"
-               BuildableName = "RFavoriteTests.xctest"
-               BlueprintName = "RFavoriteTests"
-               ReferencedContainer = "container:../Frameworks/RFavorite/RFavorite.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "664B538027C8D1D800D9CEBF"
                BuildableName = "RSearchTests.xctest"
                BlueprintName = "RSearchTests"

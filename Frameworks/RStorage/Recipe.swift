@@ -45,6 +45,7 @@ public class Recipe: NSManagedObject, Decodable {
         self.images = recipe.images
         self.ingredients = recipe.ingredients
         self.totalTime = recipe.totalTime
+        self.isFavorite = recipe.isFavorite
     }
 
     private func ingredientArray() -> [RecipeIngredient]? {
