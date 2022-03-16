@@ -10,9 +10,6 @@
          <FileRef
             location = "group:Frameworks/RSearch/RSearch.xcodeproj">
          </FileRef>
-         <FileRef
-            location = "group:Frameworks/RFavorite/RFavorite.xcodeproj">
-         </FileRef>
       </Group>
       <FileRef
          location = "group:Frameworks/RStorage/RStorage.xcodeproj">

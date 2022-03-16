@@ -14,24 +14,44 @@ class SearchResultViewModel {
 
     private(set) var container: ResponseContainer?
     private(set) var recipes = [Recipe]()
-    private(set) var isFavorite: Bool = false
+    private(set) var displayFavorites: Bool = true
 
     init(manager: SearchManagerProtocol = SearchManager.shared) {
         self.manager = manager
     }
 
-    func loadData(isFavorite: Bool = false, container: ResponseContainer? = nil, recipes: [Recipe]? = nil) {
+    /// Container = nil to display Favorites
+    func loadData(container: ResponseContainer? = nil) {
 
-        self.isFavorite = isFavorite
-
-        if let container = container, let recipes = container.recipes, !isFavorite {
+        if let container = container, let recipes = container.recipes {
             self.container = container
             self.recipes = recipes
+            self.displayFavorites = false
+        } else {
+            // Favorite stuff
+            if let recipes = FavoriteManager.shared.favorites, displayFavorites {
+                self.recipes = recipes
+            }
         }
+    }
 
-        // Favorite stuff
-        if let recipes = recipes, isFavorite {
-            self.recipes = recipes
+    func reloadFavorite(completion: @escaping (Result<Bool, Error>) -> Void) {
+        if displayFavorites {
+            FavoriteManager.shared.loadFavorites { [self] result in
+
+                switch result {
+
+                case .success(let favoriteRecipes):
+                    guard let favoriteRecipes = favoriteRecipes else {
+                        return completion(.success(false))
+                    }
+                    recipes = favoriteRecipes
+                    completion(.success(true))
+
+                 case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
         }
     }
 

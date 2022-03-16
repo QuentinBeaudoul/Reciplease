@@ -7,7 +7,6 @@
 
 import UIKit
 import RSearch
-import RFavorite
 
 class MainTabbarController: UITabBarController, UITabBarControllerDelegate {
 
@@ -15,8 +14,8 @@ class MainTabbarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         delegate = self
-        let searchVC = SearchManager.shared.getViewController()
-        let favoriteVC = FavoriteManager.shared.getViewController()
+        let searchVC = SearchManager.shared.getSearchViewController()
+        let favoriteVC = FavoriteManager.shared.getFavoriteViewController()
 
         setViewControllers([searchVC, favoriteVC], animated: false)
     }

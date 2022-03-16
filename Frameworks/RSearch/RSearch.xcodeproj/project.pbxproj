@@ -25,6 +25,7 @@
 		6691BDB727D8E7FA00BA527D /* RNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDB527D8E7FA00BA527D /* RNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6691BDCA27D8F55D00BA527D /* RStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDC927D8F55D00BA527D /* RStorage.framework */; };
 		6691BDCB27D8F55D00BA527D /* RStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BDC927D8F55D00BA527D /* RStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66A1D44527E1E8E500FCF58B /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A1D44427E1E8E500FCF58B /* FavoriteManager.swift */; };
 		66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0CE27D6085B0062302B /* Constantes.swift */; };
 		66A2F0D427D612030062302B /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D327D612030062302B /* RequestParams.swift */; };
 		66A2F0D627D6439B0062302B /* ResponseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2F0D527D6439B0062302B /* ResponseContainer.swift */; };
@@ -100,6 +101,7 @@
 		6691BDB127D8E7DE00BA527D /* RExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6691BDB527D8E7FA00BA527D /* RNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6691BDC927D8F55D00BA527D /* RStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A1D44427E1E8E500FCF58B /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		66A2F0CE27D6085B0062302B /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		66A2F0D327D612030062302B /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		66A2F0D527D6439B0062302B /* ResponseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseContainer.swift; sourceTree = "<group>"; };
@@ -232,6 +234,22 @@
 			name = SearchResultCell;
 			sourceTree = "<group>";
 		};
+		66A1D44227E1D7C500FCF58B /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				66A6F70427DA51840030717F /* SearchResult */,
+			);
+			name = RecipeList;
+			sourceTree = "<group>";
+		};
+		66A1D44327E1D7D900FCF58B /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				66A6F70B27DA52F00030717F /* SearchResultDetail */,
+			);
+			name = RecipeDetail;
+			sourceTree = "<group>";
+		};
 		66A2F0CD27D6084A0062302B /* Constantes */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				6660CD8527DB91B600010717 /* SearchResultCell */,
-				66A6F70B27DA52F00030717F /* SearchResultDetail */,
 				66A6F70527DA51960030717F /* SearchResult.storyboard */,
 				66A6F70727DA51CC0030717F /* SearchResultViewController.swift */,
 				66A6F70927DA51F30030717F /* SearchResultViewModel.swift */,
@@ -320,6 +337,8 @@
 		66FD4A9D27D114E2002F9525 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				66A1D44327E1D7D900FCF58B /* RecipeDetail */,
+				66A1D44227E1D7C500FCF58B /* RecipeList */,
 				6660CD7E27DB61D700010717 /* Loading */,
 				66FD4A9E27D114EC002F9525 /* Search */,
 			);
@@ -332,7 +351,6 @@
 				6638AAB627DA40100084DCE1 /* Header */,
 				66A6F71227DA56200030717F /* SearchCell */,
 				6638AAB527DA40030084DCE1 /* Footer */,
-				66A6F70427DA51840030717F /* SearchResult */,
 				66FD4A9F27D1150B002F9525 /* Search.storyboard */,
 				66FD4AA127D11520002F9525 /* SearchViewController.swift */,
 				66FD4AA327D11531002F9525 /* SearchViewModel.swift */,
@@ -344,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				66FD4AAF27D118F5002F9525 /* SearchManager.swift */,
+				66A1D44427E1E8E500FCF58B /* FavoriteManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -593,6 +612,7 @@
 				66A6F71127DA53A70030717F /* SearchResultDetailViewModel.swift in Sources */,
 				66A6F71627DA56700030717F /* SearchCell.swift in Sources */,
 				66FD4AB027D118F5002F9525 /* SearchManager.swift in Sources */,
+				66A1D44527E1E8E500FCF58B /* FavoriteManager.swift in Sources */,
 				6638AABA27DA41310084DCE1 /* HeaderView.swift in Sources */,
 				66A2F0CF27D6085B0062302B /* Constantes.swift in Sources */,
 				6660CD8227DB620600010717 /* LoadingView.swift in Sources */,

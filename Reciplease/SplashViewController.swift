@@ -7,6 +7,7 @@
 
 import UIKit
 import RExtension
+import RSearch
 
 class SplashViewController: UIViewController {
 
@@ -16,19 +17,23 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
         imageView.image = R.image.icone(compatibleWith: traitCollection)
-
-        // TODO: Faire le chargement des favoris présent en mémoire ici
-
-        // TODO: Supprimer ça
-        let seconds = 2.0
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            // Put your code which should be executed with a delay here
-            let mainVC = MainTabbarController.makeFromStoryboard("Main")
-            mainVC.modalPresentationStyle = .overFullScreen
-            self.present(mainVC, animated: true)
-        }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        FavoriteManager.shared.loadFavorites { result in
+            switch result {
+            case .success(_):
+                let mainVC = MainTabbarController.makeFromStoryboard("Main")
+                mainVC.modalPresentationStyle = .overFullScreen
+                self.present(mainVC, animated: true)
+            case .failure(_):
+                UIAlertController.showAlert(title: "Failed to load favorites",
+                                            message: "Something went wrong while loading favorites...",
+                                            on: self)
+            }
+        }
+    }
 }

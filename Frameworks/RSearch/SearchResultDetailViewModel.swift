@@ -17,6 +17,10 @@ class SearchResultDetailViewModel {
         self.recipe = recipe
     }
 
+    func isFavorite() -> Bool {
+        return FavoriteManager.shared.isFavorite(recipe: recipe)
+    }
+
     func getTitle() -> String {
         return recipe?.label ?? ""
     }
@@ -41,15 +45,10 @@ class SearchResultDetailViewModel {
         return URL(string: recipe?.images?.regular?.url ?? recipe?.imageUrl ?? "")
     }
 
-    func isFavorite() -> Bool {
-        return recipe?.isFavorite ?? false
-    }
-
     func dropRecipe() -> Bool {
         guard let recipe = recipe else {
             return false
         }
-        recipe.isFavorite = false
         return StoreManager.shared.dropRecipe(recipe)
     }
 
@@ -57,7 +56,6 @@ class SearchResultDetailViewModel {
         guard let recipe = recipe else {
             return false
         }
-        recipe.isFavorite = true
-        return StoreManager.shared.saveRecipe(recipe)
+        return FavoriteManager.shared.saveRecipe(recipe)
     }
 }

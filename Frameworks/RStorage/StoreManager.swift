@@ -7,10 +7,12 @@
 
 import Foundation
 import CoreData
-import Alamofire
 
-protocol StoreProtocol {
-
+public protocol StoreProtocol {
+    func saveRecipe(_ recipe: Recipe) -> Bool
+    func dropRecipe(_ recipe: Recipe) -> Bool
+    func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void)
+    func isFavorite(recipe: Recipe?) -> Bool
 }
 
 public final class StoreManager: StoreProtocol {
@@ -68,7 +70,22 @@ public final class StoreManager: StoreProtocol {
         }
     }
 
-    public func fetchRecipes(completion: (Result<[Recipe]?, Error>) -> Void) {
+    public func isFavorite(recipe: Recipe?) -> Bool {
+        guard let recipe = recipe else { return false }
+        let context = viewContext
+        let request = Recipe.fetchRequest()
+        request.predicate = NSPredicate(format: "label LIKE %@", recipe.label ?? "")
+
+        do {
+            let count = try context.count(for: request)
+            print(count)
+            return  count > 0 ? true : false
+        } catch {
+            return false
+        }
+    }
+
+    public func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void) {
 
         let request = Recipe.fetchRequest()
 

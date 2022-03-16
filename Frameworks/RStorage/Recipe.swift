@@ -43,7 +43,6 @@ public class Recipe: NSManagedObject, Decodable {
         self.label = recipe.label
         self.imageUrl = recipe.imageUrl
         self.images = recipe.images
-        self.isFavorite = recipe.isFavorite
         self.ingredients = recipe.ingredients
         self.totalTime = recipe.totalTime
     }

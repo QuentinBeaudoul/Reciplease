@@ -26,6 +26,23 @@ class SearchResultViewController: UIViewController {
                            forCellReuseIdentifier: SearchResultCell.getCellIdentifier())
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if viewModel.displayFavorites {
+            viewModel.reloadFavorite { [self] result in
+                switch result {
+
+                case .success(let isGood):
+                    if isGood {
+                        tableView.reloadData()
+                    }
+                case .failure(let error):
+                    UIAlertController.showAlert(title: "Error", message: error.localizedDescription, on: self)
+                }
+            }
+        }
+    }
+
     private func insertRow(oldNumberOfItems: Int) {
         tableView.performBatchUpdates {
             var indexPaths = [IndexPath]()
@@ -68,7 +85,7 @@ extension SearchResultViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard !viewModel.isFavorite else { return }
+        guard !viewModel.displayFavorites else { return }
 
         let oldNumberOfItems = viewModel.getNumberOfItems()
         if indexPath.row == oldNumberOfItems - 5 && viewModel.hasNextPage() {

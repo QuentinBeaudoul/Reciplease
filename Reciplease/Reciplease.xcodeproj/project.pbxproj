@@ -21,8 +21,6 @@
 		6660CD7D27DB5B3E00010717 /* RStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6660CD7B27DB5B3E00010717 /* RStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6691BD8B27D8C8B100BA527D /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8A27D8C8B100BA527D /* RSearch.framework */; };
 		6691BD8C27D8C8B100BA527D /* RSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD8A27D8C8B100BA527D /* RSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6691BD9927D8C94800BA527D /* RFavorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9827D8C94800BA527D /* RFavorite.framework */; };
-		6691BD9A27D8C94800BA527D /* RFavorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6691BD9827D8C94800BA527D /* RFavorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66FD4AC527D1226C002F9525 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4AC427D1226C002F9525 /* Splash.storyboard */; };
 		66FD4AC727D122BD002F9525 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AC627D122BD002F9525 /* SplashViewController.swift */; };
 		AADAFD66CCE5232ACBA31785 /* Pods_Shared_Reciplease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D1BA5F317C5D0B31047D9D /* Pods_Shared_Reciplease.framework */; };
@@ -39,7 +37,6 @@
 				6660CD7D27DB5B3E00010717 /* RStorage.framework in Embed Frameworks */,
 				6691BD8C27D8C8B100BA527D /* RSearch.framework in Embed Frameworks */,
 				6660CD7A27DB5B3800010717 /* RNetwork.framework in Embed Frameworks */,
-				6691BD9A27D8C94800BA527D /* RFavorite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +81,6 @@
 				AADAFD66CCE5232ACBA31785 /* Pods_Shared_Reciplease.framework in Frameworks */,
 				6691BD8B27D8C8B100BA527D /* RSearch.framework in Frameworks */,
 				6660CD7C27DB5B3E00010717 /* RStorage.framework in Frameworks */,
-				6691BD9927D8C94800BA527D /* RFavorite.framework in Frameworks */,
 				6660CD7627DB5B1300010717 /* RExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

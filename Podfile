@@ -20,16 +20,6 @@ use_frameworks!
         		end
 	end
 
-	target 'RFavorite' do 
-		project 'Frameworks/RFavorite/RFavorite.xcodeporj'		
-	
-		pod 'LoadableViews'
-
-		target 'RFavoriteTests' do
-			inherit! :complete
-		end
-	end
-
 	target 'RExtension' do
 		project 'Frameworks/RExtension/RExtension.xcodeproj'
 	end

@@ -25,7 +25,7 @@ public final class SearchManager: SearchManagerProtocol {
         self.networkManager = networkManager
     }
 
-    public func getViewController() -> UIViewController {
+    public func getSearchViewController() -> UIViewController {
 
         let navController = UINavigationController.makeFromStoryboard("Search",
                                                                       withIdentifier: "SearchNavViewController",
