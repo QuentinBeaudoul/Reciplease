@@ -32,7 +32,8 @@ public final class FavoriteManager: StoreProtocol {
                                                 selectedImage: UIImage(systemName: "star.cicle.fill"))
 
         // preload data for favorites
-        if let favoriteViewController = (navController as? UINavigationController)?.viewControllers.first as? SearchResultViewController {
+        if let favoriteViewController =
+            (navController as? UINavigationController)?.viewControllers.first as? SearchResultViewController {
             favoriteViewController.viewModel.loadData()
         }
 
