@@ -17,8 +17,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var errorView: UIView!
-    @IBOutlet weak var errorLabel: UILabel!
 
     private var loadingScreen: LoadingView?
 
@@ -55,7 +53,6 @@ class SearchViewController: UIViewController {
         let numberOfItems = viewModel.getNumberOfItems()
         numberOfItems > 0 ? headerView.enableButton() : headerView.disableButton()
         searchButton.isEnabled = numberOfItems > 0 ? true : false
-        hideErrorView()
     }
 
     private func insertRow() {
@@ -65,29 +62,19 @@ class SearchViewController: UIViewController {
         updateUI()
     }
 
-    private func showErrorView(error: String) {
-        errorLabel.text = error
-
-        UIView.animate(withDuration: 0.3) { [self] in
-            errorView.isHidden = false
-        }
-    }
-
-    private func hideErrorView() {
-        UIView.animate(withDuration: 0.3) { [self] in
-            errorView.isHidden = true
-        }
-    }
-
     @IBAction func addCriteriaTapped() {
 
         guard var newElement = editText.text else {
-            showErrorView(error: "Something went wrong...")
+            UIAlertController.showAlert(title: "Oops",
+                                        message: "Something went wrong...",
+                                        on: self)
             return
         }
 
         if newElement.count <= 0 {
-            showErrorView(error: "You cannot add a empty keyword 😬")
+            UIAlertController.showAlert(title: "Oops",
+                                        message: "You cannot add a empty keyword. 😬",
+                                        on: self)
             addCriteriaButton.shake()
             return
         }
@@ -95,7 +82,9 @@ class SearchViewController: UIViewController {
         newElement = newElement.trimmingCharacters(in: .whitespaces)
 
         if !viewModel.isKeywordValid(newElement) {
-            showErrorView(error: "You cannot use special characters in your keyword 😶‍🌫️")
+            UIAlertController.showAlert(title: "Oops" ,
+                                        message: "You cannot use special characters in your keyword. 😶‍🌫️",
+                                        on: self)
             addCriteriaButton.shake()
             return
         }
@@ -124,10 +113,6 @@ class SearchViewController: UIViewController {
                                             on: self)
             }
         }
-    }
-
-    @IBAction func errorViewTapped() {
-        hideErrorView()
     }
 }
 
@@ -189,9 +174,5 @@ extension SearchViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         addCriteriaTapped()
         return true
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        hideErrorView()
     }
 }
