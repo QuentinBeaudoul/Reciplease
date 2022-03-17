@@ -10,9 +10,9 @@ import CoreData
 
 public protocol StoreProtocol {
     func saveRecipe() -> Bool
-    func dropRecipe(_ recipe: Recipe) -> Bool
-    func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void)
-    func isFavorite(recipe: Recipe?) -> Bool
+    func dropRecipe(_ recipeLabel: String?) -> Bool
+    func loadFavorites(completion: (Result<[CDRecipe]?, Error>) -> Void)
+    func isFavorite(recipeLabel: String?) -> Bool
 }
 
 public final class StoreManager: StoreProtocol {
@@ -38,7 +38,7 @@ public final class StoreManager: StoreProtocol {
         return container
     }()
 
-    var viewContext: NSManagedObjectContext {
+    public var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
 
@@ -54,41 +54,35 @@ public final class StoreManager: StoreProtocol {
         }
     }
 
-    public func dropRecipe(_ recipe: Recipe) -> Bool {
+    public func dropRecipe(_ recipeLabel: String?) -> Bool {
+        guard let recipeLabel = recipeLabel else { return false }
+
         let context = viewContext
 
-        context.delete(recipe)
+        let request = CDRecipe.fetchRequest()
+        request.predicate = NSPredicate(format: "label LIKE %@", recipeLabel)
 
         do {
-            try context.save()
-            return true
+
+            if let recipeToDelete = try context.fetch(request).first {
+                context.delete(recipeToDelete)
+                try context.save()
+                return true
+            }
+
         } catch let error {
             print(error)
             return false
         }
+
+        return false
     }
 
-    public func clearCache() {
+    public func isFavorite(recipeLabel: String?) -> Bool {
+        guard let label = recipeLabel else { return false }
         let context = viewContext
-        let request = Recipe.fetchRequest()
-
-        request.predicate = NSPredicate(format: "isFavorite == NO")
-        do {
-            try context.fetch(request).forEach({ recipe in
-                context.delete(recipe)
-            })
-
-            try context.save()
-        } catch let error{
-            print(error)
-        }
-    }
-
-    public func isFavorite(recipe: Recipe?) -> Bool {
-        guard let recipe = recipe else { return false }
-        let context = viewContext
-        let request = Recipe.fetchRequest()
-        request.predicate = NSPredicate(format: "label LIKE %@", recipe.label ?? "")
+        let request = CDRecipe.fetchRequest()
+        request.predicate = NSPredicate(format: "label LIKE %@", label)
 
         do {
             let fetchedRecipe = try context.fetch(request)
@@ -98,9 +92,9 @@ public final class StoreManager: StoreProtocol {
         }
     }
 
-    public func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void) {
+    public func loadFavorites(completion: (Result<[CDRecipe]?, Error>) -> Void) {
 
-        let request = Recipe.fetchRequest()
+        let request = CDRecipe.fetchRequest()
         request.predicate = NSPredicate(format: "isFavorite == YES")
 
         do {

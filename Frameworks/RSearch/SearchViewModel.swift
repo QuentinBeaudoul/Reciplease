@@ -49,8 +49,6 @@ class SearchViewModel {
     func fetchRecipes(keywords: String, completion: @escaping (Result<ResponseContainer, Error>) -> Void) {
         let request = RequestParams(search: keywords)
 
-        manager.clearCache()
-
         manager.fetchRecipes(search: request) { result in
             switch result {
 
@@ -64,9 +62,5 @@ class SearchViewModel {
                 completion(.failure(error))
             }
         }
-    }
-
-    private func clearCache() {
-        manager.clearCache()
     }
 }
