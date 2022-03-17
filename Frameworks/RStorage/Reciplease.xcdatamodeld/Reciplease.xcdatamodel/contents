@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="category">
+    <entity name="CDRecipe" representedClassName=".CDRecipe" syncable="YES" codeGenerationType="class">
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="label" optional="YES" attributeType="String"/>
         <attribute name="totalTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="images" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImageContainer"/>
-        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="RecipeIngredient"/>
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDRecipeImageContainer"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDRecipeIngredient"/>
     </entity>
-    <entity name="RecipeImage" representedClassName=".RecipeImage" syncable="YES" codeGenerationType="category">
+    <entity name="CDRecipeImage" representedClassName=".CDRecipeImage" syncable="YES" codeGenerationType="class">
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="url" optional="YES" attributeType="String"/>
         <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="RecipeImageContainer" representedClassName=".RecipeImageContainer" syncable="YES" codeGenerationType="category">
-        <relationship name="large" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
-        <relationship name="regular" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
-        <relationship name="small" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
-        <relationship name="thumbnail" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RecipeImage"/>
+    <entity name="CDRecipeImageContainer" representedClassName=".CDRecipeImageContainer" syncable="YES" codeGenerationType="class">
+        <relationship name="large" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDRecipeImage"/>
+        <relationship name="regular" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDRecipeImage"/>
+        <relationship name="small" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDRecipeImage"/>
+        <relationship name="thumbnail" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDRecipeImage"/>
     </entity>
-    <entity name="RecipeIngredient" representedClassName=".RecipeIngredient" syncable="YES" codeGenerationType="category">
+    <entity name="CDRecipeIngredient" representedClassName=".CDRecipeIngredient" syncable="YES" codeGenerationType="class">
         <attribute name="food" optional="YES" attributeType="String"/>
         <attribute name="measure" optional="YES" attributeType="String"/>
         <attribute name="nameTitle" optional="YES" attributeType="String"/>
         <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Recipe" positionX="-54" positionY="-9" width="128" height="119"/>
-        <element name="RecipeImage" positionX="0" positionY="63" width="128" height="74"/>
-        <element name="RecipeImageContainer" positionX="-36" positionY="45" width="128" height="89"/>
-        <element name="RecipeIngredient" positionX="-18" positionY="54" width="128" height="89"/>
+        <element name="CDRecipe" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="CDRecipeImage" positionX="0" positionY="63" width="128" height="88"/>
+        <element name="CDRecipeImageContainer" positionX="-36" positionY="45" width="128" height="103"/>
+        <element name="CDRecipeIngredient" positionX="-18" positionY="54" width="128" height="103"/>
     </elements>
 </model>

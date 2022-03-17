@@ -14,7 +14,6 @@ import RStorage
 protocol SearchManagerProtocol {
     func fetchRecipes(search: RequestParams, completion: @escaping (Result<ResponseContainer?, Error>) -> Void)
     func fetchNextPage(withUrl url: String, completion: @escaping (Result<ResponseContainer?, Error>) -> Void)
-    func clearCache()
 }
 
 public final class SearchManager: SearchManagerProtocol {
@@ -67,9 +66,5 @@ public final class SearchManager: SearchManagerProtocol {
                 completion(.failure(error))
             }
         }
-    }
-
-    func clearCache() {
-        StoreManager.shared.clearCache()
     }
 }

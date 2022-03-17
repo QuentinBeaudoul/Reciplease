@@ -18,7 +18,7 @@ class SearchResultDetailViewModel {
     }
 
     func isFavorite() -> Bool {
-        return FavoriteManager.shared.isFavorite(recipe: recipe)
+        return FavoriteManager.shared.isFavorite(recipeLabel: recipe?.label)
     }
 
     func getTitle() -> String {
@@ -46,11 +46,11 @@ class SearchResultDetailViewModel {
     }
 
     func dropRecipe() -> Bool {
-        guard let recipe = recipe else {
+        guard let recipe = recipe, let label = recipe.label else {
             return false
         }
-        recipe.isFavorite = false
-        return StoreManager.shared.dropRecipe(recipe)
+
+        return StoreManager.shared.dropRecipe(label)
     }
 
     func addRecipe() -> Bool {
@@ -58,6 +58,9 @@ class SearchResultDetailViewModel {
             return false
         }
         recipe.isFavorite = true
+
+        recipe.createCDRecipe()
+
         return FavoriteManager.shared.saveRecipe()
     }
 }
