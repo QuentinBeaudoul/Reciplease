@@ -13,12 +13,18 @@ class SearchResultDetailViewModel {
 
     private(set) var recipe: Recipe?
 
+    let favoriteManager: FavoriteManagerProtocol
+
+    init(favManager: FavoriteManagerProtocol = FavoriteManager.shared) {
+        favoriteManager = favManager
+    }
+
     func loadData(recipe: Recipe) {
         self.recipe = recipe
     }
 
     func isFavorite() -> Bool {
-        return FavoriteManager.shared.isFavorite(recipeLabel: recipe?.label)
+        return favoriteManager.isFavorite(recipeLabel: recipe?.label)
     }
 
     func getTitle() -> String {
@@ -50,7 +56,7 @@ class SearchResultDetailViewModel {
             return false
         }
 
-        return StoreManager.shared.dropRecipe(label)
+        return favoriteManager.dropRecipe(recipeLabel: label)
     }
 
     func addRecipe() -> Bool {
@@ -61,6 +67,6 @@ class SearchResultDetailViewModel {
 
         recipe.createCDRecipe()
 
-        return FavoriteManager.shared.saveRecipe()
+        return favoriteManager.saveRecipe()
     }
 }

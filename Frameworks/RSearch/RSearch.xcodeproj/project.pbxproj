@@ -13,7 +13,7 @@
 		6638AAB827DA411D0084DCE1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6638AAB727DA411D0084DCE1 /* HeaderView.xib */; };
 		6638AABA27DA41310084DCE1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638AAB927DA41310084DCE1 /* HeaderView.swift */; };
 		664B538227C8D1D800D9CEBF /* RSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B537927C8D1D700D9CEBF /* RSearch.framework */; };
-		664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* RSearchTests.swift */; };
+		664B538727C8D1D800D9CEBF /* SearchViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B538627C8D1D800D9CEBF /* SearchViewTests.swift */; };
 		664B538827C8D1D800D9CEBF /* RSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 664B537C27C8D1D700D9CEBF /* RSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6660CD8027DB61F300010717 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6660CD7F27DB61F300010717 /* LoadingView.xib */; };
 		6660CD8227DB620600010717 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660CD8127DB620600010717 /* LoadingView.swift */; };
@@ -44,6 +44,11 @@
 		66D4FDCE27E33E2500EA361F /* RecipeImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDCA27E33E2400EA361F /* RecipeImageContainer.swift */; };
 		66D4FDCF27E33E2500EA361F /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDCB27E33E2500EA361F /* RecipeIngredient.swift */; };
 		66D4FDD027E33E2500EA361F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDCC27E33E2500EA361F /* Recipe.swift */; };
+		66D4FDD327E38A4A00EA361F /* ResponseContainer.json in Resources */ = {isa = PBXBuildFile; fileRef = 66D4FDD227E38A4A00EA361F /* ResponseContainer.json */; };
+		66D4FDD727E38D3600EA361F /* StubNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDD627E38D3600EA361F /* StubNetworkManager.swift */; };
+		66D4FDD927E3947A00EA361F /* SearchResultDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDD827E3947A00EA361F /* SearchResultDetailTests.swift */; };
+		66D4FDDB27E3949300EA361F /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDDA27E3949300EA361F /* SearchResultTests.swift */; };
+		66D4FDDD27E3961300EA361F /* StubStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDDC27E3961300EA361F /* StubStoreManager.swift */; };
 		66FD4AA027D1150B002F9525 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4A9F27D1150B002F9525 /* Search.storyboard */; };
 		66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA127D11520002F9525 /* SearchViewController.swift */; };
 		66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA327D11531002F9525 /* SearchViewModel.swift */; };
@@ -93,7 +98,7 @@
 		664B537927C8D1D700D9CEBF /* RSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B537C27C8D1D700D9CEBF /* RSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSearch.h; sourceTree = "<group>"; };
 		664B538127C8D1D800D9CEBF /* RSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		664B538627C8D1D800D9CEBF /* RSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTests.swift; sourceTree = "<group>"; };
+		664B538627C8D1D800D9CEBF /* SearchViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTests.swift; sourceTree = "<group>"; };
 		6660CD7F27DB61F300010717 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		6660CD8127DB620600010717 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6660CD8627DB91D000010717 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
@@ -124,6 +129,11 @@
 		66D4FDCA27E33E2400EA361F /* RecipeImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeImageContainer.swift; sourceTree = "<group>"; };
 		66D4FDCB27E33E2500EA361F /* RecipeIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
 		66D4FDCC27E33E2500EA361F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		66D4FDD227E38A4A00EA361F /* ResponseContainer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ResponseContainer.json; sourceTree = "<group>"; };
+		66D4FDD627E38D3600EA361F /* StubNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkManager.swift; sourceTree = "<group>"; };
+		66D4FDD827E3947A00EA361F /* SearchResultDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDetailTests.swift; sourceTree = "<group>"; };
+		66D4FDDA27E3949300EA361F /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
+		66D4FDDC27E3961300EA361F /* StubStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubStoreManager.swift; sourceTree = "<group>"; };
 		66FD4A9F27D1150B002F9525 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		66FD4AA127D11520002F9525 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		66FD4AA327D11531002F9525 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -219,7 +229,12 @@
 		664B538527C8D1D800D9CEBF /* RSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				664B538627C8D1D800D9CEBF /* RSearchTests.swift */,
+				66D4FDD827E3947A00EA361F /* SearchResultDetailTests.swift */,
+				66D4FDDA27E3949300EA361F /* SearchResultTests.swift */,
+				664B538627C8D1D800D9CEBF /* SearchViewTests.swift */,
+				66D4FDD627E38D3600EA361F /* StubNetworkManager.swift */,
+				66D4FDDC27E3961300EA361F /* StubStoreManager.swift */,
+				66D4FDD127E38A1E00EA361F /* Ressources */,
 			);
 			path = RSearchTests;
 			sourceTree = "<group>";
@@ -333,6 +348,14 @@
 				66A6F71527DA56700030717F /* SearchCell.swift */,
 			);
 			name = SearchCell;
+			sourceTree = "<group>";
+		};
+		66D4FDD127E38A1E00EA361F /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				66D4FDD227E38A4A00EA361F /* ResponseContainer.json */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 		66FD4A9C27D114CE002F9525 /* Classes */ = {
@@ -529,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D4FDD327E38A4A00EA361F /* ResponseContainer.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +674,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664B538727C8D1D800D9CEBF /* RSearchTests.swift in Sources */,
+				66D4FDD927E3947A00EA361F /* SearchResultDetailTests.swift in Sources */,
+				66D4FDDD27E3961300EA361F /* StubStoreManager.swift in Sources */,
+				66D4FDD727E38D3600EA361F /* StubNetworkManager.swift in Sources */,
+				66D4FDDB27E3949300EA361F /* SearchResultTests.swift in Sources */,
+				664B538727C8D1D800D9CEBF /* SearchViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

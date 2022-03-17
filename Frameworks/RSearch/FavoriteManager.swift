@@ -10,7 +10,15 @@ import UIKit
 import RExtension
 import RStorage
 
-public final class FavoriteManager {
+protocol FavoriteManagerProtocol {
+    func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void)
+    func saveRecipe() -> Bool
+    func dropRecipe(recipeLabel: String?) -> Bool
+    func isFavorite(recipeLabel: String?) -> Bool
+    var favorites: [Recipe]? { get }
+}
+
+public final class FavoriteManager: FavoriteManagerProtocol {
 
     public static let shared = FavoriteManager()
 
@@ -58,8 +66,8 @@ public final class FavoriteManager {
         return manager.saveRecipe()
     }
 
-    public func dropRecipe(_ recipe: Recipe) -> Bool {
-        return manager.dropRecipe(recipe.label)
+    public func dropRecipe(recipeLabel: String?) -> Bool {
+        return manager.dropRecipe(recipeLabel)
     }
 
     public func isFavorite(recipeLabel: String?) -> Bool {

@@ -22,7 +22,7 @@ public final class SearchManager: SearchManagerProtocol {
 
     private let networkManager: NetworkManagerProtocol
 
-    private init(networkManager: NetworkManagerProtocol = NetworkManager.shared) {
+    init(networkManager: NetworkManagerProtocol = NetworkManager.shared) {
         self.networkManager = networkManager
     }
 

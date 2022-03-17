@@ -10,14 +10,17 @@ import RStorage
 
 class SearchResultViewModel {
 
-    private let manager: SearchManagerProtocol
+    private let searchManager: SearchManagerProtocol
+    private let favoriteManager: FavoriteManagerProtocol
 
     private(set) var container: ResponseContainer?
     private(set) var recipes = [Recipe]()
     private(set) var displayFavorites: Bool = true
 
-    init(manager: SearchManagerProtocol = SearchManager.shared) {
-        self.manager = manager
+    init(searchManager: SearchManagerProtocol = SearchManager.shared,
+         favoriteManager: FavoriteManagerProtocol = FavoriteManager.shared) {
+        self.searchManager = searchManager
+        self.favoriteManager = favoriteManager
     }
 
     /// Container = nil to display Favorites
@@ -29,7 +32,7 @@ class SearchResultViewModel {
             self.displayFavorites = false
         } else {
             // Favorite stuff
-            if let recipes = FavoriteManager.shared.favorites, displayFavorites {
+            if let recipes = favoriteManager.favorites, displayFavorites {
                 self.recipes = recipes
             }
         }
@@ -37,7 +40,7 @@ class SearchResultViewModel {
 
     func reloadFavorite(completion: @escaping (Result<Bool, Error>) -> Void) {
         if displayFavorites {
-            FavoriteManager.shared.loadFavorites { [self] result in
+            favoriteManager.loadFavorites { [self] result in
 
                 switch result {
 
@@ -57,7 +60,7 @@ class SearchResultViewModel {
 
     func fetchNextPage(completion: @escaping (Result<Void, Error>) -> Void) {
 
-        manager.fetchNextPage(withUrl: getNextPage()) { result in
+        searchManager.fetchNextPage(withUrl: getNextPage()) { result in
             switch result {
 
             case .success(let container):
