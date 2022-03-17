@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 public protocol StoreProtocol {
-    func saveRecipe(_ recipe: Recipe) -> Bool
+    func saveRecipe() -> Bool
     func dropRecipe(_ recipe: Recipe) -> Bool
     func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void)
     func isFavorite(recipe: Recipe?) -> Bool
@@ -42,13 +42,14 @@ public final class StoreManager: StoreProtocol {
         return persistentContainer.viewContext
     }
 
-    public func saveRecipe(_ recipe: Recipe) -> Bool {
+    public func saveRecipe() -> Bool {
         let context = viewContext
 
         do {
             try context.save()
             return true
-        } catch {
+        } catch let error {
+            print(error)
             return false
         }
     }
@@ -61,8 +62,25 @@ public final class StoreManager: StoreProtocol {
         do {
             try context.save()
             return true
-        } catch {
+        } catch let error {
+            print(error)
             return false
+        }
+    }
+
+    public func clearCache() {
+        let context = viewContext
+        let request = Recipe.fetchRequest()
+
+        request.predicate = NSPredicate(format: "isFavorite == NO")
+        do {
+            try context.fetch(request).forEach({ recipe in
+                context.delete(recipe)
+            })
+
+            try context.save()
+        } catch let error{
+            print(error)
         }
     }
 

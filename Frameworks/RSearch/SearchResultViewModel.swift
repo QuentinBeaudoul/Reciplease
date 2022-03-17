@@ -48,7 +48,7 @@ class SearchResultViewModel {
                     recipes = favoriteRecipes
                     completion(.success(true))
 
-                 case .failure(let error):
+                case .failure(let error):
                     completion(.failure(error))
                 }
             }

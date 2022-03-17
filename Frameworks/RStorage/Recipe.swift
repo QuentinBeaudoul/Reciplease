@@ -39,15 +39,6 @@ public class Recipe: NSManagedObject, Decodable {
         totalTime = try recipeContainer.decodeIfPresent(Double.self, forKey: .totalTime) ?? 0
     }
 
-    func copy(from recipe: Recipe) {
-        self.label = recipe.label
-        self.imageUrl = recipe.imageUrl
-        self.images = recipe.images
-        self.ingredients = recipe.ingredients
-        self.totalTime = recipe.totalTime
-        self.isFavorite = recipe.isFavorite
-    }
-
     private func ingredientArray() -> [RecipeIngredient]? {
         return ingredients?.array as? [RecipeIngredient]
     }

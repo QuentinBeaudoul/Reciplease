@@ -58,6 +58,6 @@ class SearchResultDetailViewModel {
             return false
         }
         recipe.isFavorite = true
-        return FavoriteManager.shared.saveRecipe(recipe)
+        return FavoriteManager.shared.saveRecipe()
     }
 }

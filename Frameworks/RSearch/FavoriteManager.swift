@@ -52,8 +52,8 @@ public final class FavoriteManager: StoreProtocol {
         }
     }
 
-    public func saveRecipe(_ recipe: Recipe) -> Bool {
-        return manager.saveRecipe(recipe)
+    public func saveRecipe() -> Bool {
+        return manager.saveRecipe()
     }
 
     public func dropRecipe(_ recipe: Recipe) -> Bool {
