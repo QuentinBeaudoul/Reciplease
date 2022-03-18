@@ -11,9 +11,9 @@ public protocol CoreDataServiceProtocol {
     var context: NSManagedObjectContext { get }
 }
 
-final class CoreDataService: CoreDataServiceProtocol {
+public final class CoreDataService: CoreDataServiceProtocol {
 
-    static let shared = CoreDataService()
+    public static let shared = CoreDataService()
 
     private let modelName = "Reciplease"
     private let modelBundle = Bundle(identifier: "Quentin.Beaudoul.RStorage")
@@ -33,7 +33,7 @@ final class CoreDataService: CoreDataServiceProtocol {
         return container
     }()
 
-    var context: NSManagedObjectContext {
+    public var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
 

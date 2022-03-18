@@ -6,12 +6,13 @@
 //
 
 import XCTest
+import RStorage
 
 @testable import RSearch
 
 class SearchResultDetailTests: XCTestCase {
 
-    let viewModel = SearchResultDetailViewModel(favManager: FavoriteManager(manager: StubCoreDataService()))
+    let viewModel = SearchResultDetailViewModel(favManager: FavoriteManager(manager: StoreManager(coreDataService: StubCoreDataService())))
 
     var recipe: Recipe?
 

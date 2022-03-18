@@ -13,7 +13,7 @@ public final class StoreManager {
 
     public let context: NSManagedObjectContext
 
-    init(coreDataService: CoreDataServiceProtocol = CoreDataService.shared) {
+    public init(coreDataService: CoreDataServiceProtocol = CoreDataService.shared) {
         self.context = coreDataService.context
     }
 

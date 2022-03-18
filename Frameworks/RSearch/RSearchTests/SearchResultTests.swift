@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import RStorage
 
 @testable import RSearch
 
@@ -18,7 +19,7 @@ class SearchResultTests: XCTestCase {
     override func setUp() {
         super.setUp()
         viewModel = SearchResultViewModel(searchManager: SearchManager(networkManager: StubNetworkManager()),
-                                          favoriteManager: FavoriteManager(manager: StubCoreDataService()))
+                                          favoriteManager: FavoriteManager(manager: StoreManager(coreDataService: StubCoreDataService())))
 
         container = Bundle.decode(ResponseContainer.self,
                                   from: "ResponseContainer.json",
