@@ -7,22 +7,46 @@
 
 import Foundation
 import RStorage
+import CoreData
 
 class StubStoreManager: StoreProtocol {
 
+    let modelName = StoreManager.modelName
+    let bundleName = StoreManager.modelBundle
+
+    lazy var persistentContainer: NSPersistentContainer = {
+
+        let model = bundleName!.url(forResource: modelName, withExtension: "momd")!
+        let managedObject = NSManagedObjectModel(contentsOf: model)
+        let container = NSPersistentContainer(name: modelName, managedObjectModel: managedObject!)
+
+        let description = NSPersistentStoreDescription()
+        description.url = URL(fileURLWithPath: "/dev/null")
+
+        container.persistentStoreDescriptions = [description]
+
+        container.loadPersistentStores(completionHandler: { (_, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+
+        return container
+    }()
+
     func saveRecipe() -> Bool {
-        <#code#>
+        return true
     }
 
     func dropRecipe(_ recipeLabel: String?) -> Bool {
-        <#code#>
+        return false
     }
 
     func loadFavorites(completion: (Result<[CDRecipe]?, Error>) -> Void) {
-        <#code#>
+        completion(.success(nil))
     }
 
     func isFavorite(recipeLabel: String?) -> Bool {
-        <#code#>
+        return false
     }
 }

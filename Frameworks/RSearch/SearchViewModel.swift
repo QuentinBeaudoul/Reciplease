@@ -18,6 +18,11 @@ class SearchViewModel {
         self.manager = manager
     }
 
+    /// For tests use only
+    func setKeywords(_ keywords: [String]) {
+        self.keywords = keywords
+    }
+
     func removeAll() {
         keywords.removeAll()
     }

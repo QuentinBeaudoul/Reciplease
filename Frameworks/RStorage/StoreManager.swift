@@ -20,14 +20,14 @@ public final class StoreManager: StoreProtocol {
 
     private init() {}
 
-    private let modelName = "Reciplease"
-    private let modelBundle = Bundle(identifier: "Quentin.Beaudoul.RStorage")
+    public static let modelName = "Reciplease"
+    public static let modelBundle = Bundle(identifier: "Quentin.Beaudoul.RStorage")
 
     private lazy var persistentContainer: NSPersistentContainer = {
 
-        let model = modelBundle!.url(forResource: modelName, withExtension: "momd")!
+        let model = StoreManager.modelBundle!.url(forResource: StoreManager.modelName, withExtension: "momd")!
         let managedObject = NSManagedObjectModel(contentsOf: model)
-        let container = NSPersistentContainer(name: modelName, managedObjectModel: managedObject!)
+        let container = NSPersistentContainer(name: StoreManager.modelName, managedObjectModel: managedObject!)
 
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
