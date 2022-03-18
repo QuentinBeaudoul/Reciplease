@@ -11,7 +11,7 @@ import XCTest
 
 class SearchResultDetailTests: XCTestCase {
 
-    let viewModel = SearchResultDetailViewModel(favManager: FavoriteManager(manager: StubStoreManager()))
+    let viewModel = SearchResultDetailViewModel(favManager: FavoriteManager(manager: StubCoreDataService()))
 
     var recipe: Recipe?
 

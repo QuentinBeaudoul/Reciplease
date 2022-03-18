@@ -18,7 +18,7 @@ class SearchResultTests: XCTestCase {
     override func setUp() {
         super.setUp()
         viewModel = SearchResultViewModel(searchManager: SearchManager(networkManager: StubNetworkManager()),
-                                          favoriteManager: FavoriteManager(manager: StubStoreManager()))
+                                          favoriteManager: FavoriteManager(manager: StubCoreDataService()))
 
         container = Bundle.decode(ResponseContainer.self,
                                   from: "ResponseContainer.json",

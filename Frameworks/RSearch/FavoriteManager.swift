@@ -24,9 +24,9 @@ public final class FavoriteManager: FavoriteManagerProtocol {
 
     private(set) var favorites: [Recipe]?
 
-    private let manager: StoreProtocol
+    private let manager: StoreManager
 
-    init(manager: StoreProtocol = StoreManager.shared) {
+    init(manager: StoreManager = StoreManager.shared) {
         self.manager = manager
     }
 

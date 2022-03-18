@@ -9,14 +9,14 @@ import Foundation
 import RStorage
 import CoreData
 
-class StubStoreManager: StoreProtocol {
+class StubCoreDataService: CoreDataServiceProtocol {
 
-    let modelName = StoreManager.modelName
-    let bundleName = StoreManager.modelBundle
+    private let modelName = "Reciplease"
+    private let modelBundle = Bundle(identifier: "Quentin.Beaudoul.RStorage")
 
     lazy var persistentContainer: NSPersistentContainer = {
 
-        let model = bundleName!.url(forResource: modelName, withExtension: "momd")!
+        let model = modelBundle!.url(forResource: modelName, withExtension: "momd")!
         let managedObject = NSManagedObjectModel(contentsOf: model)
         let container = NSPersistentContainer(name: modelName, managedObjectModel: managedObject!)
 
@@ -34,19 +34,8 @@ class StubStoreManager: StoreProtocol {
         return container
     }()
 
-    func saveRecipe() -> Bool {
-        return true
+    var context: NSManagedObjectContext {
+        return persistentContainer.newBackgroundContext()
     }
 
-    func dropRecipe(_ recipeLabel: String?) -> Bool {
-        return false
-    }
-
-    func loadFavorites(completion: (Result<[CDRecipe]?, Error>) -> Void) {
-        completion(.success(nil))
-    }
-
-    func isFavorite(recipeLabel: String?) -> Bool {
-        return false
-    }
 }

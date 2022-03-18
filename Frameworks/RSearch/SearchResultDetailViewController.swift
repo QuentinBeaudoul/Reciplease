@@ -31,15 +31,19 @@ class SearchResultDetailViewController: UIViewController {
         timeToDoView.isHidden = !viewModel.hasTimeToDo()
         timeToDoLabel.text = viewModel.getTimeToDo()
 
-        favButton.setImage(viewModel.isFavorite() ?
-                           UIImage(systemName: "star.fill") :
-                            UIImage(systemName: "star"), for: .normal)
-
         tableView.dataSource = self
         tableView.register(UINib(nibName: SearchResultDetailCell.getCellIdentifier(),
                                  bundle: Bundle(for: Self.self)),
                            forCellReuseIdentifier: SearchResultDetailCell.getCellIdentifier())
         tableViewHeightConstraint.constant = CGFloat(viewModel.getNumberOfItems() * 40)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        favButton.setImage(viewModel.isFavorite() ?
+                           UIImage(systemName: "star.fill") :
+                            UIImage(systemName: "star"), for: .normal)
     }
 
     @IBAction func favButtonTapped() {

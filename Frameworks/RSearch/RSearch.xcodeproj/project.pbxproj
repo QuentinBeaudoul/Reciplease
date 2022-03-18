@@ -48,7 +48,7 @@
 		66D4FDD727E38D3600EA361F /* StubNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDD627E38D3600EA361F /* StubNetworkManager.swift */; };
 		66D4FDD927E3947A00EA361F /* SearchResultDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDD827E3947A00EA361F /* SearchResultDetailTests.swift */; };
 		66D4FDDB27E3949300EA361F /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDDA27E3949300EA361F /* SearchResultTests.swift */; };
-		66D4FDDD27E3961300EA361F /* StubStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDDC27E3961300EA361F /* StubStoreManager.swift */; };
+		66D4FDDD27E3961300EA361F /* StubCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDDC27E3961300EA361F /* StubCoreDataService.swift */; };
 		66FD4AA027D1150B002F9525 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FD4A9F27D1150B002F9525 /* Search.storyboard */; };
 		66FD4AA227D11521002F9525 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA127D11520002F9525 /* SearchViewController.swift */; };
 		66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD4AA327D11531002F9525 /* SearchViewModel.swift */; };
@@ -133,7 +133,7 @@
 		66D4FDD627E38D3600EA361F /* StubNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkManager.swift; sourceTree = "<group>"; };
 		66D4FDD827E3947A00EA361F /* SearchResultDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDetailTests.swift; sourceTree = "<group>"; };
 		66D4FDDA27E3949300EA361F /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
-		66D4FDDC27E3961300EA361F /* StubStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubStoreManager.swift; sourceTree = "<group>"; };
+		66D4FDDC27E3961300EA361F /* StubCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCoreDataService.swift; sourceTree = "<group>"; };
 		66FD4A9F27D1150B002F9525 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		66FD4AA127D11520002F9525 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		66FD4AA327D11531002F9525 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				66D4FDDA27E3949300EA361F /* SearchResultTests.swift */,
 				664B538627C8D1D800D9CEBF /* SearchViewTests.swift */,
 				66D4FDD627E38D3600EA361F /* StubNetworkManager.swift */,
-				66D4FDDC27E3961300EA361F /* StubStoreManager.swift */,
+				66D4FDDC27E3961300EA361F /* StubCoreDataService.swift */,
 				66D4FDD127E38A1E00EA361F /* Ressources */,
 			);
 			path = RSearchTests;
@@ -675,7 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D4FDD927E3947A00EA361F /* SearchResultDetailTests.swift in Sources */,
-				66D4FDDD27E3961300EA361F /* StubStoreManager.swift in Sources */,
+				66D4FDDD27E3961300EA361F /* StubCoreDataService.swift in Sources */,
 				66D4FDD727E38D3600EA361F /* StubNetworkManager.swift in Sources */,
 				66D4FDDB27E3949300EA361F /* SearchResultTests.swift in Sources */,
 				664B538727C8D1D800D9CEBF /* SearchViewTests.swift in Sources */,

@@ -38,7 +38,7 @@ public class RecipeIngredient: Decodable {
     }
 
     func toCDRecipeIngredient() -> CDRecipeIngredient {
-        let cdRecipeIngredient = CDRecipeIngredient(context: StoreManager.shared.viewContext)
+        let cdRecipeIngredient = CDRecipeIngredient(context: StoreManager.shared.context)
 
         cdRecipeIngredient.nameTitle = nameTitle
         cdRecipeIngredient.quantity = quantity

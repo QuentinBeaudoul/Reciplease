@@ -80,7 +80,7 @@ public class Recipe: Decodable {
     }
 
     public func createCDRecipe() {
-        let cdRecipe = CDRecipe(context: StoreManager.shared.viewContext)
+        let cdRecipe = CDRecipe(context: StoreManager.shared.context)
 
         cdRecipe.label = label
         cdRecipe.imageUrl = imageUrl

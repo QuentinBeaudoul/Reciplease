@@ -8,42 +8,16 @@
 import Foundation
 import CoreData
 
-public protocol StoreProtocol {
-    func saveRecipe() -> Bool
-    func dropRecipe(_ recipeLabel: String?) -> Bool
-    func loadFavorites(completion: (Result<[CDRecipe]?, Error>) -> Void)
-    func isFavorite(recipeLabel: String?) -> Bool
-}
-
-public final class StoreManager: StoreProtocol {
+public final class StoreManager {
     public static let shared = StoreManager()
 
-    private init() {}
+    public let context: NSManagedObjectContext
 
-    public static let modelName = "Reciplease"
-    public static let modelBundle = Bundle(identifier: "Quentin.Beaudoul.RStorage")
-
-    private lazy var persistentContainer: NSPersistentContainer = {
-
-        let model = StoreManager.modelBundle!.url(forResource: StoreManager.modelName, withExtension: "momd")!
-        let managedObject = NSManagedObjectModel(contentsOf: model)
-        let container = NSPersistentContainer(name: StoreManager.modelName, managedObjectModel: managedObject!)
-
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-
-        return container
-    }()
-
-    public var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
+    init(coreDataService: CoreDataServiceProtocol = CoreDataService.shared) {
+        self.context = coreDataService.context
     }
 
     public func saveRecipe() -> Bool {
-        let context = viewContext
 
         do {
             try context.save()
@@ -56,8 +30,6 @@ public final class StoreManager: StoreProtocol {
 
     public func dropRecipe(_ recipeLabel: String?) -> Bool {
         guard let recipeLabel = recipeLabel else { return false }
-
-        let context = viewContext
 
         let request = CDRecipe.fetchRequest()
         request.predicate = NSPredicate(format: "label LIKE %@", recipeLabel)
@@ -80,7 +52,7 @@ public final class StoreManager: StoreProtocol {
 
     public func isFavorite(recipeLabel: String?) -> Bool {
         guard let label = recipeLabel else { return false }
-        let context = viewContext
+
         let request = CDRecipe.fetchRequest()
         request.predicate = NSPredicate(format: "label LIKE %@", label)
 
@@ -98,7 +70,7 @@ public final class StoreManager: StoreProtocol {
         request.predicate = NSPredicate(format: "isFavorite == YES")
 
         do {
-            let recipes = try viewContext.fetch(request)
+            let recipes = try context.fetch(request)
 
             completion(.success(recipes))
         } catch let error {

@@ -34,7 +34,7 @@ public class RecipeImage: Decodable {
     }
 
     func toCDRecipeImage() -> CDRecipeImage {
-        let cdRecipeImage = CDRecipeImage(context: StoreManager.shared.viewContext)
+        let cdRecipeImage = CDRecipeImage(context: StoreManager.shared.context)
         cdRecipeImage.url = url
         cdRecipeImage.width = width ?? 0
         cdRecipeImage.height = height ?? 0
