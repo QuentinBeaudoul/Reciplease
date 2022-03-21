@@ -55,6 +55,7 @@ public final class StoreManager {
 
         let request = CDRecipe.fetchRequest()
         request.predicate = NSPredicate(format: "label LIKE %@", label)
+        request.fetchLimit = 1
 
         do {
             let fetchedRecipe = try context.fetch(request)

@@ -64,7 +64,7 @@ class SearchResultTests: XCTestCase {
                 XCTAssertEqual(countBeforeFetchNewPage, 20)
                 XCTAssertEqual(countAfterFetchNewPage, 40)
             case .failure(_):
-                break
+                XCTFail("failure")
             }
         })
     }
@@ -105,5 +105,20 @@ class SearchResultTests: XCTestCase {
         // Then
         XCTAssertNotNil(recipe)
         XCTAssertEqual(recipe?.label ?? "", "Smoked Trout and Egg Scramble Recipe")
+    }
+
+    func testGivenOutDatedFavorites_WhenReloadingFavorites_ThenFavoritesAreUpdated() {
+        // Given setUp
+
+        // When
+        viewModel?.reloadFavorite { result in
+            switch result {
+            // Then
+            case .success(let success):
+                XCTAssertTrue(success)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+        }
     }
 }

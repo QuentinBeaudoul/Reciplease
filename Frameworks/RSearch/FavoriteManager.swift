@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RExtension
 import RStorage
+import CoreData
 
 protocol FavoriteManagerProtocol {
     func loadFavorites(completion: (Result<[Recipe]?, Error>) -> Void)
@@ -16,6 +17,7 @@ protocol FavoriteManagerProtocol {
     func dropRecipe(recipeLabel: String?) -> Bool
     func isFavorite(recipeLabel: String?) -> Bool
     var favorites: [Recipe]? { get }
+    var storeContext: NSManagedObjectContext { get }
 }
 
 public final class FavoriteManager: FavoriteManagerProtocol {
@@ -23,11 +25,13 @@ public final class FavoriteManager: FavoriteManagerProtocol {
     public static let shared = FavoriteManager()
 
     private(set) var favorites: [Recipe]?
+    private(set) var storeContext: NSManagedObjectContext
 
     private let manager: StoreManager
 
     init(manager: StoreManager = StoreManager.shared) {
         self.manager = manager
+        storeContext = manager.context
     }
 
     public func getFavoriteViewController() -> UIViewController {

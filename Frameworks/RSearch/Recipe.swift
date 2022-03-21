@@ -7,6 +7,7 @@
 
 import Foundation
 import RStorage
+import CoreData
 
 public class Recipe: Decodable {
 
@@ -79,17 +80,17 @@ public class Recipe: Decodable {
         return totalTime > 0
     }
 
-    public func createCDRecipe() {
-        let cdRecipe = CDRecipe(context: StoreManager.shared.context)
+    public func createCDRecipe(context: NSManagedObjectContext) {
+        let cdRecipe = CDRecipe(context: context)
 
         cdRecipe.label = label
         cdRecipe.imageUrl = imageUrl
-        cdRecipe.images = images?.toCDRecipeImageContainer()
+        cdRecipe.images = images?.toCDRecipeImageContainer(context: context)
         cdRecipe.isFavorite = isFavorite
 
         if let ingredients = ingredients {
             cdRecipe.ingredients = NSOrderedSet(array: ingredients.map({ recipeIngredient in
-                recipeIngredient.toCDRecipeIngredient()
+                recipeIngredient.toCDRecipeIngredient(context: context)
             }))
         }
         cdRecipe.totalTime = totalTime

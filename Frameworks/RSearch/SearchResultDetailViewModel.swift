@@ -65,7 +65,7 @@ class SearchResultDetailViewModel {
         }
         recipe.isFavorite = true
 
-        recipe.createCDRecipe()
+        recipe.createCDRecipe(context: favoriteManager.storeContext)
 
         return favoriteManager.saveRecipe()
     }

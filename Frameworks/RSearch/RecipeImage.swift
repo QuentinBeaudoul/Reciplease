@@ -7,6 +7,7 @@
 
 import Foundation
 import RStorage
+import CoreData
 
 public class RecipeImage: Decodable {
 
@@ -33,8 +34,8 @@ public class RecipeImage: Decodable {
         height = try container.decodeIfPresent(Int16.self, forKey: .height)
     }
 
-    func toCDRecipeImage() -> CDRecipeImage {
-        let cdRecipeImage = CDRecipeImage(context: StoreManager.shared.context)
+    func toCDRecipeImage(context: NSManagedObjectContext) -> CDRecipeImage {
+        let cdRecipeImage = CDRecipeImage(context: context)
         cdRecipeImage.url = url
         cdRecipeImage.width = width ?? 0
         cdRecipeImage.height = height ?? 0

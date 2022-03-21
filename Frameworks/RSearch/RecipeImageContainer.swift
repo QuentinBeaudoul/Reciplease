@@ -7,6 +7,7 @@
 
 import Foundation
 import RStorage
+import CoreData
 
 public class RecipeImageContainer: Decodable {
 
@@ -37,13 +38,13 @@ public class RecipeImageContainer: Decodable {
         large = try container.decodeIfPresent(RecipeImage.self, forKey: .large)
     }
 
-    func toCDRecipeImageContainer() -> CDRecipeImageContainer {
-        let cdRecipeImageContainer = CDRecipeImageContainer(context: StoreManager.shared.context)
+    func toCDRecipeImageContainer(context: NSManagedObjectContext) -> CDRecipeImageContainer {
+        let cdRecipeImageContainer = CDRecipeImageContainer(context: context)
 
-        cdRecipeImageContainer.thumbnail = thumbnail?.toCDRecipeImage()
-        cdRecipeImageContainer.small = small?.toCDRecipeImage()
-        cdRecipeImageContainer.regular = regular?.toCDRecipeImage()
-        cdRecipeImageContainer.large = large?.toCDRecipeImage()
+        cdRecipeImageContainer.thumbnail = thumbnail?.toCDRecipeImage(context: context)
+        cdRecipeImageContainer.small = small?.toCDRecipeImage(context: context)
+        cdRecipeImageContainer.regular = regular?.toCDRecipeImage(context: context)
+        cdRecipeImageContainer.large = large?.toCDRecipeImage(context: context)
 
         return cdRecipeImageContainer
     }

@@ -96,8 +96,8 @@ class SearchViewTests: XCTestCase {
             case .success(let container):
                 // Then
                 XCTAssertNotNil(container)
-            default:
-                break
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
         }
     }

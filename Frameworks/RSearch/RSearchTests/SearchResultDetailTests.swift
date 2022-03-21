@@ -27,6 +27,10 @@ class SearchResultDetailTests: XCTestCase {
         }
     }
 
+    override func tearDown() {
+        super.tearDown()
+    }
+
     func testGivenNilRecipe_WhenLoadingData_ThenRecipeMustBeSet() {
         // Given nothing
 
@@ -93,5 +97,43 @@ class SearchResultDetailTests: XCTestCase {
         let imageUrl = viewModel.getImageUrl()!
 
         XCTAssertNotEqual(imageUrl.absoluteString, "")
+    }
+
+    func testGivenRecipe_WhenAddingItToDatabase_ThenRecipeIsFavorite() {
+
+        // Given setUp()
+
+        DispatchQueue(label: "Test insertion").async { [self] in
+            // When
+            let result = viewModel.addRecipe()
+            sleep(1)
+
+            // Then
+            XCTAssertTrue(result)
+
+            let isFavorite = viewModel.isFavorite()
+            sleep(1)
+
+            XCTAssertTrue(isFavorite)
+        }
+    }
+
+    func testGivenRecipeInDatabase_WhenDropingRecipeFromDatabase_ThenRecipeShouldntBeInFavoriteAnymore() {
+
+        var dropSuccess = false
+
+        DispatchQueue(label: "AddingAndDroppingRecipe").async { [self] in
+            // Given setUp()
+            let addSuccess = viewModel.addRecipe()
+            sleep(1)
+
+            // When
+            dropSuccess = self.viewModel.dropRecipe()
+            sleep(1)
+
+            // then
+            XCTAssertTrue(addSuccess)
+            XCTAssertTrue(dropSuccess)
+        }
     }
 }

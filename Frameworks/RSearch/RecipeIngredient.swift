@@ -7,6 +7,7 @@
 
 import Foundation
 import RStorage
+import CoreData
 
 public class RecipeIngredient: Decodable {
 
@@ -37,8 +38,8 @@ public class RecipeIngredient: Decodable {
         food = try container.decodeIfPresent(String.self, forKey: .food)
     }
 
-    func toCDRecipeIngredient() -> CDRecipeIngredient {
-        let cdRecipeIngredient = CDRecipeIngredient(context: StoreManager.shared.context)
+    func toCDRecipeIngredient(context: NSManagedObjectContext) -> CDRecipeIngredient {
+        let cdRecipeIngredient = CDRecipeIngredient(context: context)
 
         cdRecipeIngredient.nameTitle = nameTitle
         cdRecipeIngredient.quantity = quantity
