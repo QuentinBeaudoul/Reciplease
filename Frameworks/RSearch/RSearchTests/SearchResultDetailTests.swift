@@ -12,7 +12,7 @@ import RStorage
 
 class SearchResultDetailTests: XCTestCase {
 
-    let viewModel = SearchResultDetailViewModel(favManager: FavoriteManager(manager: StoreManager(coreDataService: StubCoreDataService())))
+    var viewModel: SearchResultDetailViewModel?
 
     var recipe: Recipe?
 
@@ -22,8 +22,10 @@ class SearchResultDetailTests: XCTestCase {
                                from: "ResponseContainer.json",
                                in: Bundle(for: Self.self)).recipes?.first
 
+        viewModel = SearchResultDetailViewModel(favManager: FavoriteManager(manager: StoreManager(coreDataService: StubCoreDataService())))
+
         if let recipe = recipe {
-            viewModel.loadData(recipe: recipe)
+            viewModel?.loadData(recipe: recipe)
         }
     }
 
@@ -37,14 +39,14 @@ class SearchResultDetailTests: XCTestCase {
         // When setUp()
 
         // Then
-        XCTAssertNotNil(viewModel.recipe)
+        XCTAssertNotNil(viewModel?.recipe)
     }
 
     func testGivenRecipe_WhenGettingRecipeTitle_ThenTitleMustBeGet() {
         // Given setUp()
 
         // When
-        let title = viewModel.getTitle()
+        let title = viewModel?.getTitle()
 
         // Then
         XCTAssertNotEqual(title, "")
@@ -54,7 +56,7 @@ class SearchResultDetailTests: XCTestCase {
         // Given setUp()
 
         // When
-        let count = viewModel.getNumberOfItems()
+        let count = viewModel?.getNumberOfItems()
 
         // Then
         XCTAssertNotEqual(count, 0)
@@ -64,7 +66,7 @@ class SearchResultDetailTests: XCTestCase {
         // Given setUp()
 
         // When
-        let ingredient = viewModel.getIngredient(at: IndexPath(row: 0, section: 0))
+        let ingredient = viewModel?.getIngredient(at: IndexPath(row: 0, section: 0))
 
         // Then
         XCTAssertEqual(ingredient, "12 eggs, beaten")
@@ -74,7 +76,7 @@ class SearchResultDetailTests: XCTestCase {
         // Given setUp()
 
         // When
-        let timeToDo = viewModel.hasTimeToDo()
+        let timeToDo = viewModel?.hasTimeToDo() ?? false
 
         // Then
         XCTAssertTrue(timeToDo)
@@ -84,7 +86,7 @@ class SearchResultDetailTests: XCTestCase {
         // Given setUp()
 
         // When
-        let timeToDo = viewModel.getTimeToDo()
+        let timeToDo = viewModel?.getTimeToDo()
 
         // Then
         XCTAssertEqual(timeToDo, "20m")
@@ -94,7 +96,7 @@ class SearchResultDetailTests: XCTestCase {
         // Given setUp()
 
         // When
-        let imageUrl = viewModel.getImageUrl()!
+        let imageUrl = viewModel!.getImageUrl()!
 
         XCTAssertNotEqual(imageUrl.absoluteString, "")
     }
@@ -103,37 +105,26 @@ class SearchResultDetailTests: XCTestCase {
 
         // Given setUp()
 
-        DispatchQueue(label: "Test insertion").async { [self] in
             // When
-            let result = viewModel.addRecipe()
-            sleep(1)
+            let result = viewModel!.addRecipe()
 
             // Then
-            XCTAssertTrue(result)
-
-            let isFavorite = viewModel.isFavorite()
-            sleep(1)
-
-            XCTAssertTrue(isFavorite)
-        }
+            let isFavorite = viewModel!.isFavorite()
+            XCTAssertTrue(result && isFavorite)
     }
 
     func testGivenRecipeInDatabase_WhenDropingRecipeFromDatabase_ThenRecipeShouldntBeInFavoriteAnymore() {
 
         var dropSuccess = false
 
-        DispatchQueue(label: "AddingAndDroppingRecipe").async { [self] in
             // Given setUp()
-            let addSuccess = viewModel.addRecipe()
-            sleep(1)
+            let addSuccess = viewModel!.addRecipe()
 
             // When
-            dropSuccess = self.viewModel.dropRecipe()
-            sleep(1)
+            dropSuccess = viewModel!.dropRecipe()
 
             // then
             XCTAssertTrue(addSuccess)
             XCTAssertTrue(dropSuccess)
-        }
     }
 }
