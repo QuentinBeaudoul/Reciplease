@@ -24,6 +24,10 @@ class SearchResultViewController: UIViewController {
         tableView.register(UINib(nibName: SearchResultCell.getCellIdentifier(),
                                  bundle: Bundle(for: Self.self)),
                            forCellReuseIdentifier: SearchResultCell.getCellIdentifier())
+
+        if viewModel.displayFavorites && viewModel.getNumberOfItems() == 0 {
+            tableView.backgroundView = NoFavoritesView()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,10 +57,15 @@ class SearchResultViewController: UIViewController {
             tableView.insertRows(at: indexPaths, with: .automatic)
         }
     }
+
+    private func updateUI() {
+        tableView.backgroundView?.isHidden = !(viewModel.displayFavorites && viewModel.getNumberOfItems() == 0)
+    }
 }
 
 extension SearchResultViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        updateUI()
         return viewModel.getNumberOfItems()
     }
 

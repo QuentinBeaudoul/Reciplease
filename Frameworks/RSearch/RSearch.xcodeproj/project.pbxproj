@@ -40,6 +40,8 @@
 		66A6F71127DA53A70030717F /* SearchResultDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6F71027DA53A70030717F /* SearchResultDetailViewModel.swift */; };
 		66A6F71427DA564B0030717F /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66A6F71327DA564B0030717F /* SearchCell.xib */; };
 		66A6F71627DA56700030717F /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6F71527DA56700030717F /* SearchCell.swift */; };
+		66C3B22627EDAFC6001F2051 /* NoFavoritesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C3B22527EDAFC6001F2051 /* NoFavoritesView.xib */; };
+		66C3B22827EDB031001F2051 /* NoFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3B22727EDB031001F2051 /* NoFavoritesView.swift */; };
 		66D4FDCD27E33E2500EA361F /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDC927E33E2400EA361F /* RecipeImage.swift */; };
 		66D4FDCE27E33E2500EA361F /* RecipeImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDCA27E33E2400EA361F /* RecipeImageContainer.swift */; };
 		66D4FDCF27E33E2500EA361F /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4FDCB27E33E2500EA361F /* RecipeIngredient.swift */; };
@@ -125,6 +127,8 @@
 		66A6F71027DA53A70030717F /* SearchResultDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDetailViewModel.swift; sourceTree = "<group>"; };
 		66A6F71327DA564B0030717F /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		66A6F71527DA56700030717F /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		66C3B22527EDAFC6001F2051 /* NoFavoritesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoFavoritesView.xib; sourceTree = "<group>"; };
+		66C3B22727EDB031001F2051 /* NoFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoritesView.swift; sourceTree = "<group>"; };
 		66D4FDC927E33E2400EA361F /* RecipeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
 		66D4FDCA27E33E2400EA361F /* RecipeImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeImageContainer.swift; sourceTree = "<group>"; };
 		66D4FDCB27E33E2500EA361F /* RecipeIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
@@ -350,6 +354,15 @@
 			name = SearchCell;
 			sourceTree = "<group>";
 		};
+		66C3B22427EDAFA8001F2051 /* NoFavorites */ = {
+			isa = PBXGroup;
+			children = (
+				66C3B22527EDAFC6001F2051 /* NoFavoritesView.xib */,
+				66C3B22727EDB031001F2051 /* NoFavoritesView.swift */,
+			);
+			name = NoFavorites;
+			sourceTree = "<group>";
+		};
 		66D4FDD127E38A1E00EA361F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +385,7 @@
 		66FD4A9D27D114E2002F9525 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				66C3B22427EDAFA8001F2051 /* NoFavorites */,
 				66A1D44327E1D7D900FCF58B /* RecipeDetail */,
 				66A1D44227E1D7C500FCF58B /* RecipeList */,
 				6660CD7E27DB61D700010717 /* Loading */,
@@ -539,6 +553,7 @@
 				6638AAB827DA411D0084DCE1 /* HeaderView.xib in Resources */,
 				662FC51427DF8EBC00567B37 /* SearchResultDetailCell.xib in Resources */,
 				66A6F70127DA43600030717F /* FooterView.xib in Resources */,
+				66C3B22627EDAFC6001F2051 /* NoFavoritesView.xib in Resources */,
 				6660CD8727DB91D000010717 /* SearchResultCell.xib in Resources */,
 				66A6F70D27DA53110030717F /* SearchResultDetail.storyboard in Resources */,
 				66A6F71427DA564B0030717F /* SearchCell.xib in Resources */,
@@ -659,6 +674,7 @@
 				66A2F0D827D647420062302B /* ResponseLinks.swift in Sources */,
 				66A2F0D427D612030062302B /* RequestParams.swift in Sources */,
 				66A6F70F27DA53280030717F /* SearchResultDetailViewController.swift in Sources */,
+				66C3B22827EDB031001F2051 /* NoFavoritesView.swift in Sources */,
 				66FD4AA427D11531002F9525 /* SearchViewModel.swift in Sources */,
 				66A6F70A27DA51F30030717F /* SearchResultViewModel.swift in Sources */,
 				662FC51627DF8ED500567B37 /* SearchResultDetailCell.swift in Sources */,

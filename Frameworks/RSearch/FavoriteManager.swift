@@ -41,7 +41,7 @@ public final class FavoriteManager: FavoriteManagerProtocol {
 
         navController.tabBarItem = UITabBarItem(title: "",
                                                 image: UIImage(systemName: "star.circle"),
-                                                selectedImage: UIImage(systemName: "star.cicle.fill"))
+                                                selectedImage: UIImage(systemName: "star.circle.fill"))
 
         // preload data for favorites
         if let favoriteViewController =

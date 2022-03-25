@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoFavoritesView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="524"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't favorites yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6T-R1-FI7">
+                    <rect key="frame" x="16" y="161.5" width="343" height="38.5"/>
+                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="32"/>
+                    <color key="textColor" name="onBackground"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.slash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GoG-Zo-TM7">
+                    <rect key="frame" x="155.5" y="229.5" width="64" height="64"/>
+                    <color key="tintColor" name="primary"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="nGd-bk-jBw"/>
+                        <constraint firstAttribute="width" constant="64" id="ozg-z6-GP8"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstItem="GoG-Zo-TM7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2v8-oC-2bJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="h6T-R1-FI7" secondAttribute="trailing" constant="16" id="7Hh-Kt-Ivf"/>
+                <constraint firstItem="GoG-Zo-TM7" firstAttribute="top" secondItem="h6T-R1-FI7" secondAttribute="bottom" constant="30" id="ATP-od-KK0"/>
+                <constraint firstItem="GoG-Zo-TM7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pok-ZP-Yaj"/>
+                <constraint firstItem="h6T-R1-FI7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="edF-i2-mjX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="67"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="star.slash.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="background">
+            <color red="0.97399997711181641" green="0.90200001001358032" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onBackground">
+            <color red="0.11999999731779099" green="0.1080000028014183" blue="0.086999997496604919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.52999997138977051" green="0.32499998807907104" blue="0.0010000000474974513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
