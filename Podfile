@@ -1,4 +1,4 @@
-platform :ios, '15.2'
+platform :ios, '13.0'
 workspace 'Reciplease.xcworkspace'
 inhibit_all_warnings!
 
