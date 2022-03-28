@@ -17,7 +17,6 @@ class SearchResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationItem.title = "Recipes"
 
         tableView.dataSource = self
         tableView.delegate = self

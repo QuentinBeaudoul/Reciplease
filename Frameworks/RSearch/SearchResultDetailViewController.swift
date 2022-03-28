@@ -14,6 +14,7 @@ class SearchResultDetailViewController: UIViewController {
     let viewModel = SearchResultDetailViewModel()
 
     @IBOutlet weak var recipeImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeToDoView: UIView!
     @IBOutlet weak var timeToDoLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -24,9 +25,12 @@ class SearchResultDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationItem.title = viewModel.getTitle()
+        navigationItem.title = "Detail"
+
         recipeImageView.kf.setImage(with: viewModel.getImageUrl(),
                                     placeholder: R.image.icone(compatibleWith: traitCollection))
+
+        titleLabel.text = viewModel.getTitle()
 
         timeToDoView.isHidden = !viewModel.hasTimeToDo()
         timeToDoLabel.text = viewModel.getTimeToDo()
