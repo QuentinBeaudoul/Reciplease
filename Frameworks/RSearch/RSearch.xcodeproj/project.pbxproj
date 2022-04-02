@@ -285,13 +285,13 @@
 			name = Constantes;
 			sourceTree = "<group>";
 		};
-		66A2F0D027D60F690062302B /* Modèles */ = {
+		66A2F0D027D60F690062302B /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				66A2F0D227D60FF10062302B /* Responses */,
 				66A2F0D127D60FE80062302B /* Requests */,
 			);
-			name = "Modèles";
+			name = Models;
 			sourceTree = "<group>";
 		};
 		66A2F0D127D60FE80062302B /* Requests */ = {
@@ -374,7 +374,7 @@
 		66FD4A9C27D114CE002F9525 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				66A2F0D027D60F690062302B /* Modèles */,
+				66A2F0D027D60F690062302B /* Models */,
 				66A2F0CD27D6084A0062302B /* Constantes */,
 				66FD4AAE27D118DD002F9525 /* Managers */,
 				66FD4A9D27D114E2002F9525 /* Interface */,
